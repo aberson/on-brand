@@ -1,0 +1,2174 @@
+{
+  "note": "Pinned pre-change output of analyzeImageRaster()/measureImagePalette() for the Step 41 merge speedup. Generated once from the pre-change implementation; regenerating it after an implementation change would pin the new behaviour and destroy the output-preservation gate. The generator refuses to overwrite this file without --rebaseline, and the source block below is pinned by test/extract.image-palette.test.ts.",
+  "generator": "test/helpers/gen-image-merge-baseline.ts",
+  "source": {
+    "commit": "88bc3d2deee652ef672500b8dcff9e06b2f80180",
+    "module": "src/extract/image-palette.ts",
+    "moduleSha256": "2e1bb2d8e7b1645e35d64ae98dd2012dc2d4eb7f9c1906d7a5ddebf1760939b6"
+  },
+  "fixtures": {
+    "low-png": {
+      "cardinality": "low",
+      "format": "png",
+      "sourceWidth": 48,
+      "sourceHeight": 48,
+      "workingWidth": 48,
+      "workingHeight": 48,
+      "assetSha256": "3be0ba8447b8f1c8c163e5ff8fdee3651a03b038398056573079846eb86f20aa",
+      "clusterCount": 8,
+      "clustersSha256": "299c84491a14e919db9332bcb24906c2deb4ee68c655f55328ac31ab69a80b39",
+      "clustersHead": [
+        {
+          "count": 512,
+          "red": 211,
+          "green": 14,
+          "blue": 185,
+          "hex": "#d30eb9"
+        },
+        {
+          "count": 256,
+          "red": 23,
+          "green": 190,
+          "blue": 143,
+          "hex": "#17be8f"
+        },
+        {
+          "count": 256,
+          "red": 96,
+          "green": 110,
+          "blue": 15,
+          "hex": "#606e0f"
+        },
+        {
+          "count": 256,
+          "red": 129,
+          "green": 120,
+          "blue": 205,
+          "hex": "#8178cd"
+        },
+        {
+          "count": 256,
+          "red": 180,
+          "green": 193,
+          "blue": 205,
+          "hex": "#b4c1cd"
+        },
+        {
+          "count": 256,
+          "red": 199,
+          "green": 89,
+          "blue": 224,
+          "hex": "#c759e0"
+        },
+        {
+          "count": 256,
+          "red": 214,
+          "green": 95,
+          "blue": 6,
+          "hex": "#d65f06"
+        },
+        {
+          "count": 256,
+          "red": 240,
+          "green": 4,
+          "blue": 160,
+          "hex": "#f004a0"
+        }
+      ],
+      "pixelClusterCount": 2304,
+      "pixelClustersSha256": "553e83b5e136a7fed0bcb53cc89c302c7e7b247d3aedc1d1013fdeb9be950a01",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "low-png",
+          "assetSha256": "3be0ba8447b8f1c8c163e5ff8fdee3651a03b038398056573079846eb86f20aa",
+          "mediaType": "image/png"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#d30eb9",
+            "frequency": 512,
+            "pixelShare": 0.2222222222222222,
+            "region": {
+              "x": 0,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.4444444444444444,
+            "largestFamilyRegionPixelShare": 0.3333333333333333
+          },
+          {
+            "id": "sample-02",
+            "hex": "#17be8f",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-03",
+            "hex": "#606e0f",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-04",
+            "hex": "#8178cd",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-05",
+            "hex": "#b4c1cd",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.65708333,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-06",
+            "hex": "#c759e0",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0.65708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.3333333333333333,
+            "largestFamilyRegionPixelShare": 0.2222222222222222
+          },
+          {
+            "id": "sample-07",
+            "hex": "#d65f06",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.65708333,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-08",
+            "hex": "#f004a0",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0,
+              "y": 0.65708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.3333333333333333,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 48,
+        "height": 48
+      }
+    },
+    "low-jpeg": {
+      "cardinality": "low",
+      "format": "jpeg",
+      "sourceWidth": 48,
+      "sourceHeight": 48,
+      "workingWidth": 48,
+      "workingHeight": 48,
+      "assetSha256": "53763a9e79a05df3c0ae364d3ce4f71525c4dc8fecdf2e04df4b6f476ed6438a",
+      "clusterCount": 8,
+      "clustersSha256": "27a835ceb81ea66547fedc4d7e93ff67a8744b5bc706ae4ba3b61a09fbb2ddd5",
+      "clustersHead": [
+        {
+          "count": 512,
+          "red": 211,
+          "green": 13,
+          "blue": 184,
+          "hex": "#d30db8"
+        },
+        {
+          "count": 256,
+          "red": 23,
+          "green": 190,
+          "blue": 144,
+          "hex": "#17be90"
+        },
+        {
+          "count": 256,
+          "red": 96,
+          "green": 110,
+          "blue": 15,
+          "hex": "#606e0f"
+        },
+        {
+          "count": 256,
+          "red": 129,
+          "green": 119,
+          "blue": 205,
+          "hex": "#8177cd"
+        },
+        {
+          "count": 256,
+          "red": 180,
+          "green": 192,
+          "blue": 204,
+          "hex": "#b4c0cc"
+        },
+        {
+          "count": 256,
+          "red": 199,
+          "green": 89,
+          "blue": 224,
+          "hex": "#c759e0"
+        },
+        {
+          "count": 256,
+          "red": 214,
+          "green": 95,
+          "blue": 5,
+          "hex": "#d65f05"
+        },
+        {
+          "count": 256,
+          "red": 239,
+          "green": 4,
+          "blue": 159,
+          "hex": "#ef049f"
+        }
+      ],
+      "pixelClusterCount": 2304,
+      "pixelClustersSha256": "553e83b5e136a7fed0bcb53cc89c302c7e7b247d3aedc1d1013fdeb9be950a01",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "low-jpeg",
+          "assetSha256": "53763a9e79a05df3c0ae364d3ce4f71525c4dc8fecdf2e04df4b6f476ed6438a",
+          "mediaType": "image/jpeg"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#d30db8",
+            "frequency": 512,
+            "pixelShare": 0.2222222222222222,
+            "region": {
+              "x": 0,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.4444444444444444,
+            "largestFamilyRegionPixelShare": 0.3333333333333333
+          },
+          {
+            "id": "sample-02",
+            "hex": "#17be90",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-03",
+            "hex": "#606e0f",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-04",
+            "hex": "#8177cd",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-05",
+            "hex": "#b4c0cc",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.65708333,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-06",
+            "hex": "#c759e0",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0.65708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.3333333333333333,
+            "largestFamilyRegionPixelShare": 0.2222222222222222
+          },
+          {
+            "id": "sample-07",
+            "hex": "#d65f05",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.65708333,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-08",
+            "hex": "#ef049f",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0,
+              "y": 0.65708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.3333333333333333,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 48,
+        "height": 48
+      }
+    },
+    "low-webp": {
+      "cardinality": "low",
+      "format": "webp",
+      "sourceWidth": 48,
+      "sourceHeight": 48,
+      "workingWidth": 48,
+      "workingHeight": 48,
+      "assetSha256": "a116770653993aea1f6c832d839a9f857d15c33728f8e27a1835209e24a21260",
+      "clusterCount": 8,
+      "clustersSha256": "299c84491a14e919db9332bcb24906c2deb4ee68c655f55328ac31ab69a80b39",
+      "clustersHead": [
+        {
+          "count": 512,
+          "red": 211,
+          "green": 14,
+          "blue": 185,
+          "hex": "#d30eb9"
+        },
+        {
+          "count": 256,
+          "red": 23,
+          "green": 190,
+          "blue": 143,
+          "hex": "#17be8f"
+        },
+        {
+          "count": 256,
+          "red": 96,
+          "green": 110,
+          "blue": 15,
+          "hex": "#606e0f"
+        },
+        {
+          "count": 256,
+          "red": 129,
+          "green": 120,
+          "blue": 205,
+          "hex": "#8178cd"
+        },
+        {
+          "count": 256,
+          "red": 180,
+          "green": 193,
+          "blue": 205,
+          "hex": "#b4c1cd"
+        },
+        {
+          "count": 256,
+          "red": 199,
+          "green": 89,
+          "blue": 224,
+          "hex": "#c759e0"
+        },
+        {
+          "count": 256,
+          "red": 214,
+          "green": 95,
+          "blue": 6,
+          "hex": "#d65f06"
+        },
+        {
+          "count": 256,
+          "red": 240,
+          "green": 4,
+          "blue": 160,
+          "hex": "#f004a0"
+        }
+      ],
+      "pixelClusterCount": 2304,
+      "pixelClustersSha256": "553e83b5e136a7fed0bcb53cc89c302c7e7b247d3aedc1d1013fdeb9be950a01",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "low-webp",
+          "assetSha256": "a116770653993aea1f6c832d839a9f857d15c33728f8e27a1835209e24a21260",
+          "mediaType": "image/webp"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#d30eb9",
+            "frequency": 512,
+            "pixelShare": 0.2222222222222222,
+            "region": {
+              "x": 0,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.4444444444444444,
+            "largestFamilyRegionPixelShare": 0.3333333333333333
+          },
+          {
+            "id": "sample-02",
+            "hex": "#17be8f",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-03",
+            "hex": "#606e0f",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-04",
+            "hex": "#8178cd",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-05",
+            "hex": "#b4c1cd",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.65708333,
+              "y": 0.32375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-06",
+            "hex": "#c759e0",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.32375,
+              "y": 0.65708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.3333333333333333,
+            "largestFamilyRegionPixelShare": 0.2222222222222222
+          },
+          {
+            "id": "sample-07",
+            "hex": "#d65f06",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0.65708333,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.1111111111111111,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          },
+          {
+            "id": "sample-08",
+            "hex": "#f004a0",
+            "frequency": 256,
+            "pixelShare": 0.1111111111111111,
+            "region": {
+              "x": 0,
+              "y": 0.65708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.3333333333333333,
+            "largestFamilyRegionPixelShare": 0.1111111111111111
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 48,
+        "height": 48
+      }
+    },
+    "medium-png": {
+      "cardinality": "medium",
+      "format": "png",
+      "sourceWidth": 160,
+      "sourceHeight": 160,
+      "workingWidth": 160,
+      "workingHeight": 160,
+      "assetSha256": "99d738e12bc8aa19a2e9ea438c78e72bccd75a3b2c1b93a0e611b7efe4836970",
+      "clusterCount": 172,
+      "clustersSha256": "fcf5770b53acd159d6254fbcd7a19bcd9c397a1a28ea484e87faefa231739839",
+      "clustersHead": [
+        {
+          "count": 256,
+          "red": 68,
+          "green": 54,
+          "blue": 83,
+          "hex": "#443653"
+        },
+        {
+          "count": 256,
+          "red": 28,
+          "green": 144,
+          "blue": 42,
+          "hex": "#1c902a"
+        },
+        {
+          "count": 128,
+          "red": 3,
+          "green": 220,
+          "blue": 61,
+          "hex": "#03dc3d"
+        },
+        {
+          "count": 256,
+          "red": 6,
+          "green": 78,
+          "blue": 168,
+          "hex": "#064ea8"
+        },
+        {
+          "count": 128,
+          "red": 11,
+          "green": 64,
+          "blue": 203,
+          "hex": "#0b40cb"
+        },
+        {
+          "count": 128,
+          "red": 11,
+          "green": 140,
+          "blue": 237,
+          "hex": "#0b8ced"
+        },
+        {
+          "count": 128,
+          "red": 12,
+          "green": 65,
+          "blue": 151,
+          "hex": "#0c4197"
+        },
+        {
+          "count": 128,
+          "red": 12,
+          "green": 131,
+          "blue": 112,
+          "hex": "#0c8370"
+        }
+      ],
+      "pixelClusterCount": 25600,
+      "pixelClustersSha256": "15d07aa7d119fb02b08801da000940f2382fa5a6972e553f4173aa6ffe85e924",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "medium-png",
+          "assetSha256": "99d738e12bc8aa19a2e9ea438c78e72bccd75a3b2c1b93a0e611b7efe4836970",
+          "mediaType": "image/png"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#90b512",
+            "frequency": 512,
+            "pixelShare": 0.02,
+            "region": {
+              "x": 0.483125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.03,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-02",
+            "hex": "#380ade",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.433125,
+              "y": 0.383125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.04,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-03",
+            "hex": "#e73405",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0.183125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.05,
+            "largestFamilyRegionPixelShare": 0.0075
+          },
+          {
+            "id": "sample-04",
+            "hex": "#56c0e5",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.483125,
+              "y": 0.083125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.035,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-05",
+            "hex": "#324428",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.015,
+            "largestFamilyRegionPixelShare": 0.0075
+          },
+          {
+            "id": "sample-06",
+            "hex": "#f17cf8",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.683125,
+              "y": 0.333125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.045,
+            "largestFamilyRegionPixelShare": 0.01
+          },
+          {
+            "id": "sample-07",
+            "hex": "#6d5f6e",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0.083125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-08",
+            "hex": "#faae58",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.833125,
+              "y": 0.383125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.02,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-09",
+            "hex": "#76fed7",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.083125,
+              "y": 0.133125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.045,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-10",
+            "hex": "#876902",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.583125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-11",
+            "hex": "#6676fd",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.133125,
+              "y": 0.233125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.035,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-12",
+            "hex": "#227a83",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.533125,
+              "y": 0.333125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 160,
+        "height": 160
+      }
+    },
+    "medium-jpeg": {
+      "cardinality": "medium",
+      "format": "jpeg",
+      "sourceWidth": 160,
+      "sourceHeight": 160,
+      "workingWidth": 160,
+      "workingHeight": 160,
+      "assetSha256": "eb156ebcddf393ad26f4cf04551e0be686cdca6cda2799ef458493de4e822c06",
+      "clusterCount": 172,
+      "clustersSha256": "1d827bb23e9313c6f227e477593f4bf5d7abe2b2620ea25a5ee7e5d27e105d3a",
+      "clustersHead": [
+        {
+          "count": 128,
+          "red": 2,
+          "green": 220,
+          "blue": 61,
+          "hex": "#02dc3d"
+        },
+        {
+          "count": 256,
+          "red": 29,
+          "green": 144,
+          "blue": 43,
+          "hex": "#1d902b"
+        },
+        {
+          "count": 256,
+          "red": 6,
+          "green": 78,
+          "blue": 169,
+          "hex": "#064ea9"
+        },
+        {
+          "count": 128,
+          "red": 11,
+          "green": 64,
+          "blue": 202,
+          "hex": "#0b40ca"
+        },
+        {
+          "count": 128,
+          "red": 11,
+          "green": 139,
+          "blue": 236,
+          "hex": "#0b8bec"
+        },
+        {
+          "count": 128,
+          "red": 12,
+          "green": 131,
+          "blue": 112,
+          "hex": "#0c8370"
+        },
+        {
+          "count": 128,
+          "red": 13,
+          "green": 65,
+          "blue": 151,
+          "hex": "#0d4197"
+        },
+        {
+          "count": 128,
+          "red": 13,
+          "green": 170,
+          "blue": 91,
+          "hex": "#0daa5b"
+        }
+      ],
+      "pixelClusterCount": 25600,
+      "pixelClustersSha256": "4c1d1e6dd848fe3bf70e0d8bc172803cdb761e4914fe64eef86345aa9e5612c0",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "medium-jpeg",
+          "assetSha256": "eb156ebcddf393ad26f4cf04551e0be686cdca6cda2799ef458493de4e822c06",
+          "mediaType": "image/jpeg"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#90b512",
+            "frequency": 512,
+            "pixelShare": 0.02,
+            "region": {
+              "x": 0.483125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.03,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-02",
+            "hex": "#380ade",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.433125,
+              "y": 0.383125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.04,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-03",
+            "hex": "#e63404",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0.183125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.05,
+            "largestFamilyRegionPixelShare": 0.0075
+          },
+          {
+            "id": "sample-04",
+            "hex": "#56c1e5",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.483125,
+              "y": 0.083125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.035,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-05",
+            "hex": "#314428",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-06",
+            "hex": "#f17bf8",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.733125,
+              "y": 0.283125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.05,
+            "largestFamilyRegionPixelShare": 0.01
+          },
+          {
+            "id": "sample-07",
+            "hex": "#6d5f6e",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0.083125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-08",
+            "hex": "#faad57",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.733125,
+              "y": 0.383125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.025,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-09",
+            "hex": "#866901",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.583125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-10",
+            "hex": "#76fed8",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.083125,
+              "y": 0.133125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.04,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-11",
+            "hex": "#6676fd",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.133125,
+              "y": 0.233125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.04,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-12",
+            "hex": "#227b83",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.533125,
+              "y": 0.333125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 160,
+        "height": 160
+      }
+    },
+    "medium-webp": {
+      "cardinality": "medium",
+      "format": "webp",
+      "sourceWidth": 160,
+      "sourceHeight": 160,
+      "workingWidth": 160,
+      "workingHeight": 160,
+      "assetSha256": "43ac255cce996fbfaadd95078e6fd354e989d9c397588546b28e25dce64f4448",
+      "clusterCount": 172,
+      "clustersSha256": "fcf5770b53acd159d6254fbcd7a19bcd9c397a1a28ea484e87faefa231739839",
+      "clustersHead": [
+        {
+          "count": 256,
+          "red": 68,
+          "green": 54,
+          "blue": 83,
+          "hex": "#443653"
+        },
+        {
+          "count": 256,
+          "red": 28,
+          "green": 144,
+          "blue": 42,
+          "hex": "#1c902a"
+        },
+        {
+          "count": 128,
+          "red": 3,
+          "green": 220,
+          "blue": 61,
+          "hex": "#03dc3d"
+        },
+        {
+          "count": 256,
+          "red": 6,
+          "green": 78,
+          "blue": 168,
+          "hex": "#064ea8"
+        },
+        {
+          "count": 128,
+          "red": 11,
+          "green": 64,
+          "blue": 203,
+          "hex": "#0b40cb"
+        },
+        {
+          "count": 128,
+          "red": 11,
+          "green": 140,
+          "blue": 237,
+          "hex": "#0b8ced"
+        },
+        {
+          "count": 128,
+          "red": 12,
+          "green": 65,
+          "blue": 151,
+          "hex": "#0c4197"
+        },
+        {
+          "count": 128,
+          "red": 12,
+          "green": 131,
+          "blue": 112,
+          "hex": "#0c8370"
+        }
+      ],
+      "pixelClusterCount": 25600,
+      "pixelClustersSha256": "15d07aa7d119fb02b08801da000940f2382fa5a6972e553f4173aa6ffe85e924",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "medium-webp",
+          "assetSha256": "43ac255cce996fbfaadd95078e6fd354e989d9c397588546b28e25dce64f4448",
+          "mediaType": "image/webp"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#90b512",
+            "frequency": 512,
+            "pixelShare": 0.02,
+            "region": {
+              "x": 0.483125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.03,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-02",
+            "hex": "#380ade",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.433125,
+              "y": 0.383125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.04,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-03",
+            "hex": "#e73405",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0.183125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.05,
+            "largestFamilyRegionPixelShare": 0.0075
+          },
+          {
+            "id": "sample-04",
+            "hex": "#56c0e5",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.483125,
+              "y": 0.083125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.035,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-05",
+            "hex": "#324428",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.015,
+            "largestFamilyRegionPixelShare": 0.0075
+          },
+          {
+            "id": "sample-06",
+            "hex": "#f17cf8",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.683125,
+              "y": 0.333125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.045,
+            "largestFamilyRegionPixelShare": 0.01
+          },
+          {
+            "id": "sample-07",
+            "hex": "#6d5f6e",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.383125,
+              "y": 0.083125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-08",
+            "hex": "#faae58",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.833125,
+              "y": 0.383125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.02,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-09",
+            "hex": "#76fed7",
+            "frequency": 256,
+            "pixelShare": 0.01,
+            "region": {
+              "x": 0.083125,
+              "y": 0.133125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.045,
+            "largestFamilyRegionPixelShare": 0.005
+          },
+          {
+            "id": "sample-10",
+            "hex": "#876902",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.583125,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-11",
+            "hex": "#6676fd",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.133125,
+              "y": 0.233125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.035,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-12",
+            "hex": "#227a83",
+            "frequency": 128,
+            "pixelShare": 0.005,
+            "region": {
+              "x": 0.533125,
+              "y": 0.333125,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.01,
+            "largestFamilyRegionPixelShare": 0.0025
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 160,
+        "height": 160
+      }
+    },
+    "high-png": {
+      "cardinality": "high",
+      "format": "png",
+      "sourceWidth": 240,
+      "sourceHeight": 240,
+      "workingWidth": 240,
+      "workingHeight": 240,
+      "assetSha256": "4604f375a7a8a303b1e604f9de1c3f6d6a21491e6910fbaf9a0b33946e942757",
+      "clusterCount": 456,
+      "clustersSha256": "d8a4a6cd42cea533d0d5e2a9ac2a98a0a52fff568e2e119dd478678481e1ecd9",
+      "clustersHead": [
+        {
+          "count": 324,
+          "red": 197,
+          "green": 164,
+          "blue": 75,
+          "hex": "#c5a44b"
+        },
+        {
+          "count": 468,
+          "red": 90,
+          "green": 35,
+          "blue": 146,
+          "hex": "#5a2392"
+        },
+        {
+          "count": 288,
+          "red": 80,
+          "green": 226,
+          "blue": 209,
+          "hex": "#50e2d1"
+        },
+        {
+          "count": 324,
+          "red": 106,
+          "green": 153,
+          "blue": 15,
+          "hex": "#6a990f"
+        },
+        {
+          "count": 288,
+          "red": 4,
+          "green": 137,
+          "blue": 20,
+          "hex": "#048914"
+        },
+        {
+          "count": 108,
+          "red": 0,
+          "green": 200,
+          "blue": 239,
+          "hex": "#00c8ef"
+        },
+        {
+          "count": 288,
+          "red": 7,
+          "green": 15,
+          "blue": 197,
+          "hex": "#070fc5"
+        },
+        {
+          "count": 108,
+          "red": 3,
+          "green": 63,
+          "blue": 18,
+          "hex": "#033f12"
+        }
+      ],
+      "pixelClusterCount": 57600,
+      "pixelClustersSha256": "2a3f08df9b2d8d936dc0527aeb6eed34ed83dd3132959cd0e6b599928b6e5400",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "high-png",
+          "assetSha256": "4604f375a7a8a303b1e604f9de1c3f6d6a21491e6910fbaf9a0b33946e942757",
+          "mediaType": "image/png"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#23c836",
+            "frequency": 1044,
+            "pixelShare": 0.018125,
+            "region": {
+              "x": 0.50708333,
+              "y": 0.00708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.09,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-02",
+            "hex": "#fc13f0",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.48208333,
+              "y": 0.10708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.034375,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-03",
+            "hex": "#543a11",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.50708333,
+              "y": 0.23208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.00875,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-04",
+            "hex": "#1cace6",
+            "frequency": 180,
+            "pixelShare": 0.003125,
+            "region": {
+              "x": 0.00708333,
+              "y": 0.18208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.02125,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-05",
+            "hex": "#eaa052",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.20708333,
+              "y": 0.10708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.03,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-06",
+            "hex": "#130e62",
+            "frequency": 216,
+            "pixelShare": 0.00375,
+            "region": {
+              "x": 0.60708333,
+              "y": 0.08208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.021875,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-07",
+            "hex": "#dbcadc",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.28208333,
+              "y": 0.05708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.0125,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-08",
+            "hex": "#b8093d",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.45708333,
+              "y": 0.25708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.050625,
+            "largestFamilyRegionPixelShare": 0.001875
+          },
+          {
+            "id": "sample-09",
+            "hex": "#116c0e",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.63208333,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.02875,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-10",
+            "hex": "#f8f640",
+            "frequency": 216,
+            "pixelShare": 0.00375,
+            "region": {
+              "x": 0.75708333,
+              "y": 0.18208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.03,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-11",
+            "hex": "#12627d",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.78208333,
+              "y": 0.30708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.019375,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-12",
+            "hex": "#2dfaf2",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.30708333,
+              "y": 0.05708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.024375,
+            "largestFamilyRegionPixelShare": 0.001875
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 240,
+        "height": 240
+      }
+    },
+    "high-jpeg": {
+      "cardinality": "high",
+      "format": "jpeg",
+      "sourceWidth": 240,
+      "sourceHeight": 240,
+      "workingWidth": 240,
+      "workingHeight": 240,
+      "assetSha256": "5687df335d48ddbd8c35a58bccda9d3343f17cb3206d4fdf5ef7c5b1e9bbc521",
+      "clusterCount": 460,
+      "clustersSha256": "a90509871b335f314e6784370895d309938487f2237c702ed3af670a04aed7f9",
+      "clustersHead": [
+        {
+          "count": 222,
+          "red": 195,
+          "green": 163,
+          "blue": 68,
+          "hex": "#c3a344"
+        },
+        {
+          "count": 324,
+          "red": 106,
+          "green": 153,
+          "blue": 15,
+          "hex": "#6a990f"
+        },
+        {
+          "count": 216,
+          "red": 94,
+          "green": 225,
+          "blue": 210,
+          "hex": "#5ee1d2"
+        },
+        {
+          "count": 288,
+          "red": 30,
+          "green": 130,
+          "blue": 193,
+          "hex": "#1e82c1"
+        },
+        {
+          "count": 110,
+          "red": 84,
+          "green": 86,
+          "blue": 73,
+          "hex": "#545649"
+        },
+        {
+          "count": 180,
+          "red": 122,
+          "green": 60,
+          "blue": 202,
+          "hex": "#7a3cca"
+        },
+        {
+          "count": 288,
+          "red": 173,
+          "green": 168,
+          "blue": 240,
+          "hex": "#ada8f0"
+        },
+        {
+          "count": 288,
+          "red": 176,
+          "green": 180,
+          "blue": 79,
+          "hex": "#b0b44f"
+        }
+      ],
+      "pixelClusterCount": 57600,
+      "pixelClustersSha256": "a2bce9ec0243131f01652b735a63d33d1331d06150226328009384d599bf86ba",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "high-jpeg",
+          "assetSha256": "5687df335d48ddbd8c35a58bccda9d3343f17cb3206d4fdf5ef7c5b1e9bbc521",
+          "mediaType": "image/jpeg"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#25cb3a",
+            "frequency": 970,
+            "pixelShare": 0.016840277777777777,
+            "region": {
+              "x": 0.03625,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.113125,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-02",
+            "hex": "#fd13f0",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.48208333,
+              "y": 0.10708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.034375,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-03",
+            "hex": "#362e00",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.10708333,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.009375,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-04",
+            "hex": "#1f97e5",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.38208333,
+              "y": 0.28208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.025,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-05",
+            "hex": "#f2944e",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.80708333,
+              "y": 0.23208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.025625,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-06",
+            "hex": "#120e61",
+            "frequency": 216,
+            "pixelShare": 0.00375,
+            "region": {
+              "x": 0.62375,
+              "y": 0.87375,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.023038194444444444,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-07",
+            "hex": "#b00122",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.55708333,
+              "y": 0.33208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.0325,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-08",
+            "hex": "#dbcadc",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.28208333,
+              "y": 0.05708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.0125,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-09",
+            "hex": "#2dfaf3",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.31125,
+              "y": 0.05708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.025,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-10",
+            "hex": "#4e716a",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.35708333,
+              "y": 0.28208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.016875,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-11",
+            "hex": "#ece109",
+            "frequency": 71,
+            "pixelShare": 0.0012326388888888888,
+            "region": {
+              "x": 0.30708333,
+              "y": 0.20708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.030677083333333334,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-12",
+            "hex": "#796777",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.88625,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.008125,
+            "largestFamilyRegionPixelShare": 0.000625
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 240,
+        "height": 240
+      }
+    },
+    "high-webp": {
+      "cardinality": "high",
+      "format": "webp",
+      "sourceWidth": 240,
+      "sourceHeight": 240,
+      "workingWidth": 240,
+      "workingHeight": 240,
+      "assetSha256": "6a7145d2433c32f34916814f29a01339a22d99eaf73a409f1490827d501474e2",
+      "clusterCount": 456,
+      "clustersSha256": "d8a4a6cd42cea533d0d5e2a9ac2a98a0a52fff568e2e119dd478678481e1ecd9",
+      "clustersHead": [
+        {
+          "count": 324,
+          "red": 197,
+          "green": 164,
+          "blue": 75,
+          "hex": "#c5a44b"
+        },
+        {
+          "count": 468,
+          "red": 90,
+          "green": 35,
+          "blue": 146,
+          "hex": "#5a2392"
+        },
+        {
+          "count": 288,
+          "red": 80,
+          "green": 226,
+          "blue": 209,
+          "hex": "#50e2d1"
+        },
+        {
+          "count": 324,
+          "red": 106,
+          "green": 153,
+          "blue": 15,
+          "hex": "#6a990f"
+        },
+        {
+          "count": 288,
+          "red": 4,
+          "green": 137,
+          "blue": 20,
+          "hex": "#048914"
+        },
+        {
+          "count": 108,
+          "red": 0,
+          "green": 200,
+          "blue": 239,
+          "hex": "#00c8ef"
+        },
+        {
+          "count": 288,
+          "red": 7,
+          "green": 15,
+          "blue": 197,
+          "hex": "#070fc5"
+        },
+        {
+          "count": 108,
+          "red": 3,
+          "green": 63,
+          "blue": 18,
+          "hex": "#033f12"
+        }
+      ],
+      "pixelClusterCount": 57600,
+      "pixelClustersSha256": "2a3f08df9b2d8d936dc0527aeb6eed34ed83dd3132959cd0e6b599928b6e5400",
+      "evidence": {
+        "source": {
+          "kind": "image",
+          "assetPath": "high-webp",
+          "assetSha256": "6a7145d2433c32f34916814f29a01339a22d99eaf73a409f1490827d501474e2",
+          "mediaType": "image/webp"
+        },
+        "algorithm": "image-cluster-v2",
+        "samples": [
+          {
+            "id": "sample-01",
+            "hex": "#23c836",
+            "frequency": 1044,
+            "pixelShare": 0.018125,
+            "region": {
+              "x": 0.50708333,
+              "y": 0.00708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.09,
+            "largestFamilyRegionPixelShare": 0.0025
+          },
+          {
+            "id": "sample-02",
+            "hex": "#fc13f0",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.48208333,
+              "y": 0.10708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.034375,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-03",
+            "hex": "#543a11",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.50708333,
+              "y": 0.23208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.00875,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-04",
+            "hex": "#1cace6",
+            "frequency": 180,
+            "pixelShare": 0.003125,
+            "region": {
+              "x": 0.00708333,
+              "y": 0.18208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.02125,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-05",
+            "hex": "#eaa052",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.20708333,
+              "y": 0.10708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.03,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-06",
+            "hex": "#130e62",
+            "frequency": 216,
+            "pixelShare": 0.00375,
+            "region": {
+              "x": 0.60708333,
+              "y": 0.08208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.021875,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-07",
+            "hex": "#dbcadc",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.28208333,
+              "y": 0.05708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.0125,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-08",
+            "hex": "#b8093d",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.45708333,
+              "y": 0.25708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.050625,
+            "largestFamilyRegionPixelShare": 0.001875
+          },
+          {
+            "id": "sample-09",
+            "hex": "#116c0e",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.63208333,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.02875,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-10",
+            "hex": "#f8f640",
+            "frequency": 216,
+            "pixelShare": 0.00375,
+            "region": {
+              "x": 0.75708333,
+              "y": 0.18208333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.03,
+            "largestFamilyRegionPixelShare": 0.00125
+          },
+          {
+            "id": "sample-11",
+            "hex": "#12627d",
+            "frequency": 72,
+            "pixelShare": 0.00125,
+            "region": {
+              "x": 0.78208333,
+              "y": 0.30708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.019375,
+            "largestFamilyRegionPixelShare": 0.000625
+          },
+          {
+            "id": "sample-12",
+            "hex": "#2dfaf2",
+            "frequency": 108,
+            "pixelShare": 0.001875,
+            "region": {
+              "x": 0.30708333,
+              "y": 0.05708333,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "familyPixelShare": 0.024375,
+            "largestFamilyRegionPixelShare": 0.001875
+          }
+        ],
+        "nonColor": {
+          "fonts": [],
+          "typeSizes": [],
+          "spacing": [],
+          "radii": [],
+          "shadows": []
+        },
+        "width": 240,
+        "height": 240
+      }
+    }
+  }
+}

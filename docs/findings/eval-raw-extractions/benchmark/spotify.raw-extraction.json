@@ -1,0 +1,798 @@
+{
+  "url": "https://open.spotify.com/",
+  "extractedAt": "2026-07-19T06:31:09.632Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#ffffff",
+      "frequency": 1414,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#b3b3b3",
+      "frequency": 1319,
+      "roles": [
+        {
+          "role": "text",
+          "count": 1319
+        },
+        {
+          "role": "border",
+          "count": 4
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 424,
+      "roles": []
+    },
+    {
+      "hex": "#121212",
+      "frequency": 50,
+      "roles": [
+        {
+          "role": "background",
+          "count": 50
+        },
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#1ed760",
+      "frequency": 50,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "hex": "#696969",
+      "frequency": 14,
+      "roles": []
+    },
+    {
+      "hex": "#333333",
+      "frequency": 9,
+      "roles": []
+    },
+    {
+      "hex": "#e9e9e9",
+      "frequency": 7,
+      "roles": [
+        {
+          "role": "border",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "hex": "#808080",
+      "frequency": 6,
+      "roles": []
+    },
+    {
+      "hex": "#1f1f1f",
+      "frequency": 5,
+      "roles": []
+    },
+    {
+      "hex": "#292929",
+      "frequency": 5,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#0000ee",
+      "frequency": 4,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "hex": "#101010",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#dddddd",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#346e4a",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#437e9b",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#4f7f77",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#767676",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#7c7c7c",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#a16387",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#a3694f",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#00000000",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#00000099",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#002038",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#082040",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#104880",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#204090",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#248383",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#284038",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#2a2a2a",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#32ae88",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#380808",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#385858",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#403840",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#405820",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#418369",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#484848",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#501820",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#509bf5",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#535353",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#5878a1",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#601810",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#6f74a4",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#6f7a74",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#701818",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#702040",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#707070",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#747878",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#76767b",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#7a757e",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#803040",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#827560",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#901018",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#983028",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#983840",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#986c66",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#9b6f21",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#ae625b",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#af2896",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#bbbbbb",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#c0574a",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#c1c1c1",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#c5c5c5",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#d8d8d8",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#e4078b",
+      "frequency": 1,
+      "roles": []
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "SpotifyMixUITitle",
+        "CircularSp-Arab",
+        "CircularSp-Hebr",
+        "CircularSp-Cyrl",
+        "CircularSp-Grek",
+        "CircularSp-Deva",
+        "Helvetica Neue",
+        "helvetica",
+        "arial",
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Meiryo",
+        "MS Gothic"
+      ],
+      "role": "heading",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "SpotifyMixUITitle",
+        "CircularSp-Arab",
+        "CircularSp-Hebr",
+        "CircularSp-Cyrl",
+        "CircularSp-Grek",
+        "CircularSp-Deva",
+        "Helvetica Neue",
+        "helvetica",
+        "arial",
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Meiryo",
+        "MS Gothic"
+      ],
+      "role": "unknown",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "SpotifyMixUI",
+        "CircularSp-Arab",
+        "CircularSp-Hebr",
+        "CircularSp-Cyrl",
+        "CircularSp-Grek",
+        "CircularSp-Deva",
+        "Helvetica Neue",
+        "helvetica",
+        "arial",
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Meiryo",
+        "MS Gothic"
+      ],
+      "role": "body",
+      "frequency": 8
+    },
+    {
+      "families": [
+        "SpotifyMixUI",
+        "CircularSp-Arab",
+        "CircularSp-Hebr",
+        "CircularSp-Cyrl",
+        "CircularSp-Grek",
+        "CircularSp-Deva",
+        "Helvetica Neue",
+        "helvetica",
+        "arial",
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Meiryo",
+        "MS Gothic"
+      ],
+      "role": "heading",
+      "frequency": 8
+    },
+    {
+      "families": [
+        "SpotifyMixUI",
+        "CircularSp-Arab",
+        "CircularSp-Hebr",
+        "CircularSp-Cyrl",
+        "CircularSp-Grek",
+        "CircularSp-Deva",
+        "Helvetica Neue",
+        "helvetica",
+        "arial",
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Meiryo",
+        "MS Gothic"
+      ],
+      "role": "unknown",
+      "frequency": 16
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 10.5,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 13.965
+    },
+    {
+      "px": 11,
+      "frequency": 1,
+      "fontWeight": 400
+    },
+    {
+      "px": 12,
+      "frequency": 3,
+      "fontWeight": 400
+    },
+    {
+      "px": 13.008,
+      "frequency": 3,
+      "fontWeight": 400,
+      "lineHeightPx": 19.512
+    },
+    {
+      "px": 13.3333,
+      "frequency": 2,
+      "fontWeight": 400
+    },
+    {
+      "px": 13.6,
+      "frequency": 2,
+      "fontWeight": 400
+    },
+    {
+      "px": 14,
+      "frequency": 5,
+      "fontWeight": 700
+    },
+    {
+      "px": 14.08,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 21.12
+    },
+    {
+      "px": 14.4,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 14.4
+    },
+    {
+      "px": 16,
+      "frequency": 10,
+      "fontWeight": 400
+    },
+    {
+      "px": 18,
+      "frequency": 2,
+      "fontWeight": 700,
+      "lineHeightPx": 21.599999999999998
+    },
+    {
+      "px": 24,
+      "frequency": 5,
+      "fontWeight": 700
+    }
+  ],
+  "spacing": [
+    {
+      "px": 1,
+      "frequency": 26
+    },
+    {
+      "px": 2,
+      "frequency": 18
+    },
+    {
+      "px": 4,
+      "frequency": 12
+    },
+    {
+      "px": 5,
+      "frequency": 18
+    },
+    {
+      "px": 6,
+      "frequency": 3
+    },
+    {
+      "px": 7,
+      "frequency": 2
+    },
+    {
+      "px": 8,
+      "frequency": 86
+    },
+    {
+      "px": 10,
+      "frequency": 12
+    },
+    {
+      "px": 11,
+      "frequency": 1
+    },
+    {
+      "px": 11.2,
+      "frequency": 4
+    },
+    {
+      "px": 12,
+      "frequency": 118
+    },
+    {
+      "px": 15,
+      "frequency": 10
+    },
+    {
+      "px": 16,
+      "frequency": 167
+    },
+    {
+      "px": 19,
+      "frequency": 1
+    },
+    {
+      "px": 20,
+      "frequency": 5
+    },
+    {
+      "px": 24,
+      "frequency": 5
+    },
+    {
+      "px": 25,
+      "frequency": 1
+    },
+    {
+      "px": 32,
+      "frequency": 11
+    },
+    {
+      "px": 40,
+      "frequency": 3
+    },
+    {
+      "px": 171.5,
+      "frequency": 50
+    }
+  ],
+  "radii": [
+    {
+      "px": 1,
+      "frequency": 4
+    },
+    {
+      "px": 2,
+      "frequency": 32
+    },
+    {
+      "px": 3,
+      "frequency": 2
+    },
+    {
+      "px": 4,
+      "frequency": 4
+    },
+    {
+      "px": 6,
+      "frequency": 135
+    },
+    {
+      "px": 8,
+      "frequency": 7
+    },
+    {
+      "px": 17,
+      "frequency": 1
+    },
+    {
+      "px": 20,
+      "frequency": 4
+    },
+    {
+      "px": 32,
+      "frequency": 1
+    },
+    {
+      "px": 50,
+      "frequency": 1
+    },
+    {
+      "px": 50,
+      "frequency": 37
+    },
+    {
+      "px": 500,
+      "frequency": 51
+    },
+    {
+      "px": 9999,
+      "frequency": 127
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(0, 0, 0, 0.5) 0px 8px 24px 0px",
+      "frequency": 50
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.3) 0px 8px 8px 0px",
+      "frequency": 50
+    },
+    {
+      "css": "rgb(18, 18, 18) 0px 1px 0px 0px, rgb(124, 124, 124) 0px 0px 0px 1px inset",
+      "frequency": 3
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.5) 0px 2px 4px 0px",
+      "frequency": 2
+    },
+    {
+      "css": "rgb(128, 128, 128) 0px 0px 5px 0px",
+      "frequency": 1
+    },
+    {
+      "css": "rgb(124, 124, 124) 0px 0px 0px 1px inset",
+      "frequency": 1
+    },
+    {
+      "css": "rgb(153, 153, 153) 0px 2px 10px -3px",
+      "frequency": 1
+    },
+    {
+      "css": "rgb(199, 197, 199) -3px -3px 5px -2px",
+      "frequency": 1
+    },
+    {
+      "css": "rgb(199, 197, 199) 0px 0px 12px 2px",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/spotify.viewport.png"
+    }
+  ],
+  "warnings": [
+    "2 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

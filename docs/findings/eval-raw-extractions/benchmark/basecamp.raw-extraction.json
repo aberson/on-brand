@@ -1,0 +1,207 @@
+{
+  "url": "https://basecamp.com/",
+  "extractedAt": "2026-07-19T06:30:54.607Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#2377d2",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#000000",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#0465be",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#263340",
+      "frequency": 1,
+      "roles": []
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Graphik"
+      ],
+      "role": "heading",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "Graphik"
+      ],
+      "role": "body",
+      "frequency": 9
+    },
+    {
+      "families": [
+        "Graphik"
+      ],
+      "role": "unknown",
+      "frequency": 8
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 17.2698,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 17.2698
+    },
+    {
+      "px": 20.3174,
+      "frequency": 8,
+      "fontWeight": 400,
+      "lineHeightPx": 30.4761
+    },
+    {
+      "px": 22.8576,
+      "frequency": 3,
+      "fontWeight": 500,
+      "lineHeightPx": 27.42912
+    },
+    {
+      "px": 25.3978,
+      "frequency": 4,
+      "fontWeight": 400,
+      "lineHeightPx": 38.0967
+    },
+    {
+      "px": 35.5565,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 46.22345
+    },
+    {
+      "px": 36.5714,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 36.5714
+    },
+    {
+      "px": 50.7936,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 58.412639999999996
+    },
+    {
+      "px": 55.8739,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 64.25498499999999
+    }
+  ],
+  "spacing": [
+    {
+      "px": 0.482539,
+      "frequency": 11
+    },
+    {
+      "px": 2.53978,
+      "frequency": 2
+    },
+    {
+      "px": 6.90793,
+      "frequency": 12
+    },
+    {
+      "px": 7.61904,
+      "frequency": 7
+    },
+    {
+      "px": 15.2381,
+      "frequency": 27
+    },
+    {
+      "px": 28.572,
+      "frequency": 2
+    },
+    {
+      "px": 30.4762,
+      "frequency": 2
+    },
+    {
+      "px": 34.2864,
+      "frequency": 2
+    },
+    {
+      "px": 40.6349,
+      "frequency": 4
+    },
+    {
+      "px": 88.8888,
+      "frequency": 1
+    },
+    {
+      "px": 121.905,
+      "frequency": 8
+    }
+  ],
+  "radii": [
+    {
+      "px": 7.61904,
+      "frequency": 17
+    },
+    {
+      "px": 10.1587,
+      "frequency": 6
+    },
+    {
+      "px": 11.4288,
+      "frequency": 1
+    },
+    {
+      "px": 15.2381,
+      "frequency": 4
+    },
+    {
+      "px": 17.1432,
+      "frequency": 1
+    },
+    {
+      "px": 100,
+      "frequency": 1
+    }
+  ],
+  "shadows": [
+    {
+      "css": "oklch(0 0 0 / 0.1125) 0px 0px 0px 1.01587px inset, oklch(0 0 0 / 0.04) 0px 4.06349px 32.5079px -10.1587px, oklch(0 0 0 / 0.04) 0px 6.09523px 40.6349px -12.1905px, oklch(0 0 0 / 0.04) 0px 6.09523px 16.254px -14.2222px, oklch(0 0 0 / 0.04) 0px 10.1587px 24.3809px -18.2857px, oklch(0 0 0 / 0.04) 0px 14.2222px 32.5079px -22.3492px",
+      "frequency": 6
+    },
+    {
+      "css": "oklch(0 0 0 / 0.1) 0px 4.06349px 32.5079px -10.1587px, oklch(0 0 0 / 0.1) 0px 6.09523px 40.6349px -12.1905px, oklch(0 0 0 / 0.1) 0px 6.09523px 16.254px -14.2222px, oklch(0 0 0 / 0.1) 0px 10.1587px 24.3809px -18.2857px, oklch(0 0 0 / 0.1) 0px 14.2222px 32.5079px -22.3492px",
+      "frequency": 2
+    },
+    {
+      "css": "oklch(0 0 0 / 0.1) 0px 4.57152px 36.5722px -11.4288px, oklch(0 0 0 / 0.1) 0px 6.85728px 45.7152px -13.7146px, oklch(0 0 0 / 0.1) 0px 6.85728px 18.2861px -16.0003px, oklch(0 0 0 / 0.1) 0px 11.4288px 27.4291px -20.5718px, oklch(0 0 0 / 0.1) 0px 16.0003px 36.5722px -25.1434px",
+      "frequency": 2
+    },
+    {
+      "css": "oklch(1 0 0 / 0.25) 0px 0px 0px 1.01587px inset",
+      "frequency": 1
+    },
+    {
+      "css": "oklch(0 0 0 / 0.05) 0px 2.03174px 32.5079px -10.1587px, oklch(0 0 0 / 0.05) 0px 4.06349px 40.6349px -12.1905px, oklch(0 0 0 / 0.05) 0px 4.06349px 16.254px -14.2222px, oklch(0 0 0 / 0.05) 0px 8.12698px 24.3809px -18.2857px, oklch(0 0 0 / 0.05) 0px 12.1905px 32.5079px -22.3492px",
+      "frequency": 1
+    },
+    {
+      "css": "oklch(0 0 0 / 0.0625) 0px 0px 0px 1.01587px, oklch(0 0 0 / 0.04) 0px 4.06349px 32.5079px -10.1587px, oklch(0 0 0 / 0.04) 0px 6.09523px 40.6349px -12.1905px, oklch(0 0 0 / 0.04) 0px 6.09523px 16.254px -14.2222px, oklch(0 0 0 / 0.04) 0px 10.1587px 24.3809px -18.2857px, oklch(0 0 0 / 0.04) 0px 14.2222px 32.5079px -22.3492px",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/basecamp.viewport.png"
+    }
+  ]
+}

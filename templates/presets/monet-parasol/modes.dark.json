@@ -1,0 +1,106 @@
+{
+  "$description": "on-brand monet-parasol preset — dark-mode overlay (dusk/night variant of the same sky-blue mood). Same shape as tokens.json; overrides COLOR values only (plan.md §4 convention).",
+  "$extensions": {
+    "onbrand": {
+      "schemaVersion": 1
+    }
+  },
+  "color": {
+    "$type": "color",
+    "primitive": {
+      "brand": {
+        "1": { "$value": "#0e1a23" },
+        "2": { "$value": "#11202c" },
+        "3": { "$value": "#162a3a" },
+        "4": { "$value": "#1c3549" },
+        "5": { "$value": "#224158" },
+        "6": { "$value": "#2b526f" },
+        "7": { "$value": "#37698e" },
+        "8": { "$value": "#4481af" },
+        "9": { "$value": "#58abea" },
+        "10": { "$value": "#7ebeef" },
+        "11": { "$value": "#93c9f2" },
+        "12": { "$value": "#dcedfb" }
+      },
+      "neutral": {
+        "1": { "$value": "#151a1e" },
+        "2": { "$value": "#181e23" },
+        "3": { "$value": "#1e262c" },
+        "4": { "$value": "#242d34" },
+        "5": { "$value": "#2a353e" },
+        "6": { "$value": "#33404a" },
+        "7": { "$value": "#3e4f5c" },
+        "8": { "$value": "#506576" },
+        "9": { "$value": "#627c90" },
+        "10": { "$value": "#748da0" },
+        "11": { "$value": "#a1b2bf" },
+        "12": { "$value": "#edf0f3" }
+      }
+    },
+    "semantic": {
+      "bg": { "$value": "#151a1e" },
+      "surface": { "$value": "#1e262c" },
+      "text": { "$value": "#edf0f3" },
+      "text-muted": { "$value": "#a1b2bf" },
+      "border": { "$value": "#33404a" },
+      "accent": { "$value": "#7ebeef" },
+      "code-bg": { "$value": "#242d34" },
+      "shadow-color": { "$value": "#00000080" }
+    },
+    "status": {
+      "success": {
+        "fg": { "$value": "#a0e3b7" },
+        "bg": { "$value": "#14341e" }
+      },
+      "warning": {
+        "fg": { "$value": "#eecf87" },
+        "bg": { "$value": "#3b2a11" }
+      },
+      "danger": {
+        "fg": { "$value": "#efaea4" },
+        "bg": { "$value": "#3f1812" }
+      },
+      "info": {
+        "fg": { "$value": "#97c8ed" },
+        "bg": { "$value": "#122c3f" }
+      }
+    },
+    "chart": {
+      "categorical": {
+        "1": { "$value": "#7bb4e0" },
+        "2": { "$value": "#7be08f" },
+        "3": { "$value": "#e0be7b" },
+        "4": { "$value": "#aa7be0" },
+        "5": { "$value": "#e07b88" },
+        "6": { "$value": "#7be0dd" },
+        "7": { "$value": "#e0c37b" },
+        "8": { "$value": "#c5e07b" }
+      },
+      "sequential": {
+        "1": { "$value": "#092c47" },
+        "2": { "$value": "#0d436c" },
+        "3": { "$value": "#135e98" },
+        "4": { "$value": "#197dca" },
+        "5": { "$value": "#46a2e8" },
+        "6": { "$value": "#8ac4f1" },
+        "7": { "$value": "#cfe7f9" }
+      },
+      "chrome": {
+        "grid": { "$value": "#2a353e" },
+        "axis": { "$value": "#748da0" },
+        "label": { "$value": "#b9c3cb" },
+        "tooltip-bg": { "$value": "#1e262c" }
+      }
+    },
+    "diagram": {
+      "canvas": { "$value": "#0f1e29" },
+      "node-fill": { "$value": "#1e262c" },
+      "node-stroke": { "$value": "#7ebeef" },
+      "link": { "$value": "#506576" },
+      "spine-accent": { "$value": "#7ebeef" },
+      "label": { "$value": "#e7ebef" },
+      "chip-highlight": { "$value": "#1d3649" },
+      "warning": { "$value": "#eecf87" }
+    }
+  }
+}

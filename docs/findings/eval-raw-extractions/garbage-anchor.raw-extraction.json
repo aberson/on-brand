@@ -1,0 +1,46 @@
+{
+  "url": "http://127.0.0.1:8791/blank",
+  "extractedAt": "2026-07-17T15:59:20.768Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#000000",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "text",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "background",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [],
+  "typeSizes": [],
+  "spacing": [
+    {
+      "px": 8,
+      "frequency": 2
+    }
+  ],
+  "radii": [],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "brand/assets/127.0.0.1-39078ea0.png"
+    }
+  ]
+}

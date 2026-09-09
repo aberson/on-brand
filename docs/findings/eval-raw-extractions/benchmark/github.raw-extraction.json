@@ -1,0 +1,895 @@
+{
+  "url": "https://github.com/",
+  "extractedAt": "2026-07-18T04:17:24.885Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#ffffff",
+      "frequency": 1516,
+      "roles": [
+        {
+          "role": "border",
+          "count": 37
+        },
+        {
+          "role": "text",
+          "count": 2
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#8dd6ff",
+      "frequency": 226,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 227
+        },
+        {
+          "role": "text",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#a4aea6",
+      "frequency": 194,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#f0f6fc",
+      "frequency": 36,
+      "roles": [
+        {
+          "role": "text",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "hex": "#21262d",
+      "frequency": 26,
+      "roles": [
+        {
+          "role": "border",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 17,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#1e2327",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#353d37",
+      "frequency": 9,
+      "roles": []
+    },
+    {
+      "hex": "#484f58",
+      "frequency": 8,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#191f1b",
+      "frequency": 7,
+      "roles": [
+        {
+          "role": "border",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "hex": "#0d1117",
+      "frequency": 6,
+      "roles": [
+        {
+          "role": "background",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "hex": "#59636e",
+      "frequency": 6,
+      "roles": []
+    },
+    {
+      "hex": "#5fed83",
+      "frequency": 6,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#808080",
+      "frequency": 6,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#d8b9ff",
+      "frequency": 5,
+      "roles": []
+    },
+    {
+      "hex": "#24292f",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#7c8980",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#08872b",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "hex": "#484f5880",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff0f",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff4d",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff99",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#0f1511",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#1f2328",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#1f232826",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#5049c2",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#574eff00",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#5993d4",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#7873cb33",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#8c93fb",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#9350ff",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#9350ff80",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#a7a2ff",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#e6b7fe",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff1a",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        },
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff91",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#fffffff2",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#00000000",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#000240",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#090d0a",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#0e0aa280",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#151a22",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#1f232866",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#1f6feb",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#2732e700",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#2a486a",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#2e374a",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#36435e00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#3a37ff00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#3d444d",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#5fed8380",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#818b98",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#bb800966",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#d1d9e0",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "hex": "#d1d9e0b3",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#f8514966",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff1f",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff26",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Mona Sans",
+        "MonaSansFallback",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Helvetica",
+        "Arial",
+        "Apple Color Emoji",
+        "Segoe UI Emoji"
+      ],
+      "role": "unknown",
+      "frequency": 26
+    },
+    {
+      "families": [
+        "Mona Sans",
+        "MonaSansFallback",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Helvetica",
+        "Arial",
+        "Apple Color Emoji",
+        "Segoe UI Emoji"
+      ],
+      "role": "heading",
+      "frequency": 4
+    },
+    {
+      "families": [
+        "Mona Sans VF",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Noto Sans",
+        "Helvetica",
+        "Arial",
+        "Apple Color Emoji",
+        "Segoe UI Emoji"
+      ],
+      "role": "heading",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Mona Sans",
+        "Mona Sans Fallback",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Helvetica",
+        "Arial",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "Mona Sans VF",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Noto Sans",
+        "Helvetica",
+        "Arial",
+        "Apple Color Emoji",
+        "Segoe UI Emoji"
+      ],
+      "role": "body",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "Mona Sans VF",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Noto Sans",
+        "Helvetica",
+        "Arial",
+        "Apple Color Emoji",
+        "Segoe UI Emoji"
+      ],
+      "role": "unknown",
+      "frequency": 9
+    },
+    {
+      "families": [
+        "Mona Sans Mono"
+      ],
+      "role": "unknown",
+      "frequency": 4
+    },
+    {
+      "families": [
+        "Mona Sans Mono"
+      ],
+      "role": "heading",
+      "frequency": 2
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 12,
+      "frequency": 7,
+      "fontWeight": 600,
+      "lineHeightPx": 19.56
+    },
+    {
+      "px": 14,
+      "frequency": 16,
+      "fontWeight": 400,
+      "lineHeightPx": 21
+    },
+    {
+      "px": 16,
+      "frequency": 15,
+      "fontWeight": 500,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 18,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 27
+    },
+    {
+      "px": 22,
+      "frequency": 6,
+      "fontWeight": 400,
+      "lineHeightPx": 30.799999999999997
+    },
+    {
+      "px": 24,
+      "frequency": 2,
+      "fontWeight": 600,
+      "lineHeightPx": 36
+    },
+    {
+      "px": 32,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 48
+    },
+    {
+      "px": 40,
+      "frequency": 3,
+      "fontWeight": 460,
+      "lineHeightPx": 48
+    },
+    {
+      "px": 48,
+      "frequency": 2,
+      "fontWeight": 800,
+      "lineHeightPx": 48
+    },
+    {
+      "px": 64,
+      "frequency": 1,
+      "fontWeight": 425,
+      "lineHeightPx": 69.12
+    }
+  ],
+  "spacing": [
+    {
+      "px": 1,
+      "frequency": 4
+    },
+    {
+      "px": 2,
+      "frequency": 6
+    },
+    {
+      "px": 2.1,
+      "frequency": 37
+    },
+    {
+      "px": 2.4,
+      "frequency": 18
+    },
+    {
+      "px": 3,
+      "frequency": 4
+    },
+    {
+      "px": 4,
+      "frequency": 36
+    },
+    {
+      "px": 5,
+      "frequency": 12
+    },
+    {
+      "px": 6,
+      "frequency": 20
+    },
+    {
+      "px": 8,
+      "frequency": 48
+    },
+    {
+      "px": 12,
+      "frequency": 6
+    },
+    {
+      "px": 15,
+      "frequency": 6
+    },
+    {
+      "px": 16,
+      "frequency": 22
+    },
+    {
+      "px": 20,
+      "frequency": 14
+    },
+    {
+      "px": 24,
+      "frequency": 20
+    },
+    {
+      "px": 32,
+      "frequency": 19
+    },
+    {
+      "px": 40,
+      "frequency": 7
+    },
+    {
+      "px": 48,
+      "frequency": 4
+    },
+    {
+      "px": 64,
+      "frequency": 15
+    },
+    {
+      "px": 96,
+      "frequency": 6
+    },
+    {
+      "px": 384,
+      "frequency": 6
+    }
+  ],
+  "radii": [
+    {
+      "px": 3,
+      "frequency": 1
+    },
+    {
+      "px": 6,
+      "frequency": 48
+    },
+    {
+      "px": 8,
+      "frequency": 6
+    },
+    {
+      "px": 12,
+      "frequency": 9
+    },
+    {
+      "px": 12,
+      "frequency": 1
+    },
+    {
+      "px": 16,
+      "frequency": 2
+    },
+    {
+      "px": 16,
+      "frequency": 6
+    },
+    {
+      "px": 16,
+      "frequency": 1
+    },
+    {
+      "px": 24,
+      "frequency": 5
+    },
+    {
+      "px": 24,
+      "frequency": 2
+    },
+    {
+      "px": 48,
+      "frequency": 1
+    },
+    {
+      "px": 50,
+      "frequency": 3
+    },
+    {
+      "px": 60,
+      "frequency": 12
+    },
+    {
+      "px": 9999.01,
+      "frequency": 1
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(209, 217, 224, 0.25) 0px 0px 0px 1px, rgba(37, 41, 46, 0.04) 0px 6px 12px -3px, rgba(37, 41, 46, 0.12) 0px 6px 18px 0px",
+      "frequency": 5
+    },
+    {
+      "css": "rgba(31, 35, 40, 0.04) 0px 1px 0px 0px inset",
+      "frequency": 5
+    },
+    {
+      "css": "rgba(209, 217, 224, 0) 0px 0px 0px 1px, rgba(37, 41, 46, 0.24) 0px 40px 80px 0px",
+      "frequency": 1
+    },
+    {
+      "css": "rgb(209, 217, 224) 0px -1px 0px 0px inset",
+      "frequency": 1
+    },
+    {
+      "css": "rgb(209, 217, 224) 0px 1px 0px 0px inset",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/github.viewport.png"
+    }
+  ],
+  "warnings": [
+    "232 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "url": "https://www.for-living.it/",
+  "extractedAt": "2026-07-19T23:18:05.783Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#ffffff",
+      "frequency": 2733,
+      "roles": [
+        {
+          "role": "background",
+          "count": 2733
+        },
+        {
+          "role": "border",
+          "count": 5
+        },
+        {
+          "role": "gradient",
+          "count": 2
+        },
+        {
+          "role": "text",
+          "count": 2
+        },
+        {
+          "role": "accent",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 422,
+      "roles": [
+        {
+          "role": "text",
+          "count": 423
+        },
+        {
+          "role": "accent",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#1863dc",
+      "frequency": 6,
+      "roles": [
+        {
+          "role": "border",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "hex": "#f4f4f4",
+      "frequency": 6,
+      "roles": [
+        {
+          "role": "border",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "hex": "#212121",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#d37955",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#f2e8d4",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff4d",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#00000000",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#0000003d",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#0056a7",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#0f0f0f",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#1b1613",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#1e1e1e",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#313729",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#8a7d76",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#f8e7c380",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff3d",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Ppfragment",
+        "Verdana"
+      ],
+      "role": "unknown",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Ppfragment",
+        "Verdana"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "Adobehandwriting Ernie",
+        "Verdana"
+      ],
+      "role": "unknown",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "Instrument Sans"
+      ],
+      "role": "body",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Instrument Sans"
+      ],
+      "role": "unknown",
+      "frequency": 7
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 12,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 0
+    },
+    {
+      "px": 14,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 23.939999999999998
+    },
+    {
+      "px": 15.75,
+      "frequency": 5,
+      "fontWeight": 400,
+      "lineHeightPx": 20.475
+    },
+    {
+      "px": 18,
+      "frequency": 5,
+      "fontWeight": 400,
+      "lineHeightPx": 27
+    },
+    {
+      "px": 20.25,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 28.349999999999998
+    },
+    {
+      "px": 22.5,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 36
+    },
+    {
+      "px": 24.75,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 19.8
+    },
+    {
+      "px": 27,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 40.5
+    },
+    {
+      "px": 54,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 59.400000000000006
+    },
+    {
+      "px": 81,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 89.10000000000001
+    }
+  ],
+  "spacing": [
+    {
+      "px": 2.25,
+      "frequency": 6
+    },
+    {
+      "px": 3,
+      "frequency": 20
+    },
+    {
+      "px": 3.15,
+      "frequency": 4
+    },
+    {
+      "px": 4.5,
+      "frequency": 28
+    },
+    {
+      "px": 8,
+      "frequency": 12
+    },
+    {
+      "px": 9,
+      "frequency": 63
+    },
+    {
+      "px": 10,
+      "frequency": 17
+    },
+    {
+      "px": 12,
+      "frequency": 7
+    },
+    {
+      "px": 13.5,
+      "frequency": 20
+    },
+    {
+      "px": 15,
+      "frequency": 8
+    },
+    {
+      "px": 16,
+      "frequency": 5
+    },
+    {
+      "px": 18,
+      "frequency": 102
+    },
+    {
+      "px": 22,
+      "frequency": 2
+    },
+    {
+      "px": 24,
+      "frequency": 2
+    },
+    {
+      "px": 27,
+      "frequency": 12
+    },
+    {
+      "px": 36,
+      "frequency": 5
+    },
+    {
+      "px": 54,
+      "frequency": 4
+    },
+    {
+      "px": 72,
+      "frequency": 3
+    },
+    {
+      "px": 90,
+      "frequency": 5
+    },
+    {
+      "px": 126,
+      "frequency": 13
+    }
+  ],
+  "radii": [
+    {
+      "px": 0,
+      "frequency": 2
+    },
+    {
+      "px": 0,
+      "frequency": 3
+    },
+    {
+      "px": 2,
+      "frequency": 6
+    },
+    {
+      "px": 4.5,
+      "frequency": 9
+    },
+    {
+      "px": 6,
+      "frequency": 7
+    },
+    {
+      "px": 9,
+      "frequency": 67
+    },
+    {
+      "px": 13.5,
+      "frequency": 2
+    },
+    {
+      "px": 50,
+      "frequency": 1
+    },
+    {
+      "px": 50,
+      "frequency": 1
+    },
+    {
+      "px": 81,
+      "frequency": 1
+    },
+    {
+      "px": 100,
+      "frequency": 6
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(0, 0, 0, 0.25) 0px 4px 14px 0px",
+      "frequency": 6
+    },
+    {
+      "css": "rgba(172, 171, 171, 0.3) 0px -1px 10px 0px",
+      "frequency": 1
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.3) 0px 32px 68px 0px",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/forliving.viewport.png"
+    }
+  ],
+  "warnings": [
+    "3 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

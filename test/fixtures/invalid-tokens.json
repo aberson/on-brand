@@ -1,0 +1,15 @@
+{
+  "$description": "Committed invalid fixture — color.semantic.bg.$value is a number, not a color string. validate() must reject it with the path-precise error `color.semantic.bg.$value`.",
+  "$extensions": {
+    "onbrand": {
+      "schemaVersion": 1
+    }
+  },
+  "color": {
+    "$type": "color",
+    "semantic": {
+      "bg": { "$value": 4276545 },
+      "text": { "$value": "#1f242c" }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "nytimes",
+  "url": "https://www.nytimes.com",
+  "archetype": "media",
+  "sliderTags": {
+    "warmth": 0.45,
+    "saturation": 0.1,
+    "lightness": 0.9,
+    "contrast": 0.9,
+    "hueDiversity": 0.15,
+    "accentDominance": 0.2,
+    "neutralRatio": 0.95,
+    "vibrancy": 0.2
+  },
+  "isControl": false,
+  "isMultiAccent": true,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#326891",
+      "evidenceCount": 73,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "frequency": 37,
+      "lightness": 1
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#363636",
+        "frequency": 3502,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#000000",
+        "frequency": 2847,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#121212",
+        "frequency": 1219,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#5a5a5a",
+        "frequency": 568,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#727272",
+        "frequency": 262,
+        "dominantRole": null
+      },
+      {
+        "hex": "#f8f8f8",
+        "frequency": 117,
+        "dominantRole": null
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#000000",
+      "source": "monochrome-brand",
+      "confidence": "medium"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": null,
+    "fonts": {
+      "heading": {
+        "family": "NYT Cheltenham",
+        "lookalikes": [
+          "Domine",
+          "Georgia"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "NYT Imperial",
+        "lookalikes": [
+          "Source Serif 4",
+          "Georgia"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": null
+    },
+    "secondaryAccents": [
+      {
+        "hex": "#326891",
+        "label": "link/steel blue (UI accent)",
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      {
+        "hex": "#d0021b",
+        "label": "Monza red (breaking-news)",
+        "source": "reputable-aggregator",
+        "confidence": "low"
+      }
+    ]
+  },
+  "goldHex": "#000000",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "nytimes",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/nytimes.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

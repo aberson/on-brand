@@ -1,0 +1,20 @@
+node_modules/
+coverage/
+*.tsbuildinfo
+*.log
+.DS_Store
+
+# Private operator data and generated proposals are never part of the tool source.
+/brand/
+brands/
+proposals/
+m1-proposals/
+onbrand-proposal-*/
+private/
+.observatory/
+.build-step/
+.plan-expedite-state*
+.claude/task-state/
+.env
+.env.*
+!.env.example

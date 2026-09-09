@@ -1,0 +1,34 @@
+{
+  "onbrandVersion": "0.1.0",
+  "schemaVersion": 1,
+  "sourceHash": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+  "sources": [
+    {
+      "path": "tokens.json",
+      "sha256": "d0acf03f095a20bd85a3ce7ec498a50f2a633d1d4986bd7b672d0972c073157e"
+    },
+    {
+      "path": "modes.dark.json",
+      "sha256": "c49eb262c74bafa557766636f1f654921894ee3d84e36abfcb81a86e8541d90a"
+    }
+  ],
+  "emitters": [
+    "css",
+    "tw",
+    "ts",
+    "py",
+    "svg",
+    "components"
+  ],
+  "outputs": {
+    "components.css": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+    "diagram-palette.json": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+    "palette.svg": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+    "theme.ts": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+    "theme.tw.css": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+    "tokens.css": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+    "tokens.py": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0"
+  },
+  "llm": "none",
+  "timestamp": "2026-07-16T21:54:26.857Z"
+}

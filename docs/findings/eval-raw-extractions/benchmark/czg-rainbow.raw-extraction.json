@@ -1,0 +1,173 @@
+{
+  "url": "fixture://czg-rainbow",
+  "extractedAt": "2026-07-18T12:00:00.000Z",
+  "engine": {
+    "name": "synthetic-czg-skin",
+    "version": "1"
+  },
+  "colors": [
+    {
+      "hex": "#ffffff",
+      "frequency": 40,
+      "roles": [
+        {
+          "role": "background",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "hex": "#1a1a1a",
+      "frequency": 44,
+      "roles": [
+        {
+          "role": "text",
+          "count": 44
+        }
+      ]
+    },
+    {
+      "hex": "#e5342b",
+      "frequency": 30,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "hex": "#f28c00",
+      "frequency": 28,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "hex": "#f4c800",
+      "frequency": 26,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "hex": "#2fb84f",
+      "frequency": 27,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 22
+        }
+      ]
+    },
+    {
+      "hex": "#12b5c9",
+      "frequency": 25,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "hex": "#2563e6",
+      "frequency": 29,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 26
+        }
+      ]
+    },
+    {
+      "hex": "#7b3ff2",
+      "frequency": 24,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "hex": "#d4239e",
+      "frequency": 23,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 18
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Georgia",
+        "serif"
+      ],
+      "role": "heading",
+      "frequency": 6
+    },
+    {
+      "families": [
+        "Verdana",
+        "sans-serif"
+      ],
+      "role": "body",
+      "frequency": 12
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 16,
+      "frequency": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 24,
+      "frequency": 4,
+      "fontWeight": 700,
+      "lineHeightPx": 30
+    },
+    {
+      "px": 40,
+      "frequency": 2,
+      "fontWeight": 700,
+      "lineHeightPx": 48
+    }
+  ],
+  "spacing": [
+    {
+      "px": 8,
+      "frequency": 30
+    },
+    {
+      "px": 16,
+      "frequency": 24
+    },
+    {
+      "px": 32,
+      "frequency": 10
+    }
+  ],
+  "radii": [
+    {
+      "px": 4,
+      "frequency": 8
+    }
+  ],
+  "shadows": [],
+  "screenshots": [],
+  "warnings": [
+    "SYNTHETIC control fixture: hand-authored palette (no live site); non-colour signal is a fixed csszengarden-DOM scaffold shared across skins."
+  ]
+}

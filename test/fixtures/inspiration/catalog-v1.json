@@ -1,0 +1,182 @@
+{
+  "schema": "onbrand.inspiration-to-implementation",
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-12T20:00:00.000Z",
+  "limits": {
+    "maxItems": 50,
+    "maxMappingsPerItem": 12,
+    "maxTargetsPerMapping": 4,
+    "maxTextLength": 240,
+    "maxAssetBytes": 5000000,
+    "maxAssetDimension": 8192,
+    "maxDecodedPixels": 20000000,
+    "maxBytes": 1000000
+  },
+  "summary": {
+    "discoveredTraceCount": 1,
+    "emittedItemCount": 1,
+    "itemsTruncated": false,
+    "finalCount": 0,
+    "proposalCount": 0,
+    "brandStatusCounts": {
+      "adopted": 0,
+      "proposal": 0,
+      "incomplete": 0,
+      "stale": 1,
+      "invalid": 0
+    },
+    "traceStateCounts": {
+      "available": 0,
+      "stale": 1,
+      "invalid": 0,
+      "unavailable": 0
+    }
+  },
+  "items": [
+    {
+      "id": "inspiration-509569644672266a00c0dff7",
+      "label": "Synthetic blue — unknown",
+      "summary": "A compact measured blue palette.",
+      "relPath": "fixture",
+      "brandStatus": "stale",
+      "brandProvenance": "adopted",
+      "final": false,
+      "traceState": "stale",
+      "traceReviewStatus": "generated-draft",
+      "reason": "Trace is valid, but its generated-view manifest cannot be read.",
+      "inspiration": {
+        "creator": "unknown",
+        "title": "Synthetic blue",
+        "date": "unknown",
+        "sourceUrl": null,
+        "rights": "unknown",
+        "licenseUrl": null,
+        "retrievedAt": null,
+        "assetPath": "fixture/brand/assets/inspiration.png",
+        "assetSha256": "a1619d1201d50e874a78af76d79aa2830a16587b5e4f90c35889212c2a36ac6b",
+        "assetMediaType": "image/png",
+        "alt": "One blue pixel.",
+        "width": 1,
+        "height": 1,
+        "analysisAlgorithm": "image-cluster-v1"
+      },
+      "implementation": {
+        "sourceId": "image-a1619d1201d50e87",
+        "basePreset": "default",
+        "tokenSourceHash": "cc6ba6ee362fc1356c3de3a5f0d1cbb48164c26debb4f69562c777cd1c02d1a0",
+        "unobservedDefaults": [
+          "typography",
+          "spacing",
+          "radius",
+          "shadow",
+          "motion",
+          "status"
+        ],
+        "defaultDerivedColorTargets": [
+          {
+            "tokenPath": "color.chart.categorical.2",
+            "role": "categorical",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.diagram.node-stroke",
+            "role": "diagram",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.chart.categorical.3",
+            "role": "categorical",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.diagram.chip-highlight",
+            "role": "diagram",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.chart.categorical.4",
+            "role": "categorical",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.diagram.link",
+            "role": "diagram",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.chart.categorical.5",
+            "role": "categorical",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.chart.categorical.6",
+            "role": "categorical",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.chart.categorical.7",
+            "role": "categorical",
+            "reason": "no-qualifying-image-sample"
+          },
+          {
+            "tokenPath": "color.chart.categorical.8",
+            "role": "categorical",
+            "reason": "no-qualifying-image-sample"
+          }
+        ],
+        "mappings": [
+          {
+            "id": "sample-01",
+            "label": "Measured blue",
+            "region": {
+              "x": 0,
+              "y": 0,
+              "width": 0.04,
+              "height": 0.04
+            },
+            "sampleHex": "#3b63a8",
+            "sampleMethod": "image-cluster-v1",
+            "selectionSource": "deterministic",
+            "pixelShare": 1,
+            "targets": [
+              {
+                "tokenPath": "color.chart.categorical.1",
+                "presentation": "swatch-only",
+                "relationship": "sampled",
+                "usage": "Synthetic color.chart.categorical.1 assignment.",
+                "lightHex": "#3b63a8",
+                "darkHex": "#6e9bff"
+              },
+              {
+                "tokenPath": "color.diagram.spine-accent",
+                "presentation": "swatch-only",
+                "relationship": "sampled",
+                "usage": "Synthetic color.diagram.spine-accent assignment.",
+                "lightHex": "#3b63a8",
+                "darkHex": "#6e9bff"
+              },
+              {
+                "tokenPath": "color.primitive.brand.9",
+                "presentation": "swatch-only",
+                "relationship": "sampled",
+                "usage": "Synthetic color.primitive.brand.9 assignment.",
+                "lightHex": "#3b63a8",
+                "darkHex": "#5c8ae6"
+              },
+              {
+                "tokenPath": "color.semantic.accent",
+                "presentation": "swatch-only",
+                "relationship": "sampled",
+                "usage": "Synthetic color.semantic.accent assignment.",
+                "lightHex": "#3b63a8",
+                "darkHex": "#6e9bff"
+              }
+            ],
+            "rationale": "Measured sample mapped deterministically.",
+            "confidence": "high"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "kurzgesagt",
+  "url": "https://kurzgesagt.org",
+  "archetype": "media",
+  "sliderTags": {
+    "warmth": 0.5,
+    "saturation": 0.9,
+    "lightness": 0.3,
+    "contrast": 0.8,
+    "hueDiversity": 0.9,
+    "accentDominance": 0.4,
+    "neutralRatio": 0.2,
+    "vibrancy": 0.95
+  },
+  "isControl": false,
+  "isMultiAccent": true,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#0a1439",
+      "evidenceCount": 465,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "frequency": 132,
+      "lightness": 1
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#e5e7eb",
+        "frequency": 549,
+        "dominantRole": null
+      },
+      {
+        "hex": "#0a1439",
+        "frequency": 463,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#ffffff",
+        "frequency": 132,
+        "dominantRole": "background"
+      },
+      {
+        "hex": "#47cc5e",
+        "frequency": 5,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#970cda",
+        "frequency": 3,
+        "dominantRole": null
+      },
+      {
+        "hex": "#0c46da",
+        "frequency": 2,
+        "dominantRole": null
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#002fff",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": {
+      "hex": "#001f40",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Montserrat",
+        "lookalikes": [
+          "Montserrat",
+          "Poppins"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Montserrat",
+        "lookalikes": [
+          "Montserrat"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": null
+    },
+    "secondaryAccents": [
+      {
+        "hex": "#1ec96b",
+        "label": "green",
+        "source": "official-site-css",
+        "confidence": "medium"
+      },
+      {
+        "hex": "#ff9500",
+        "label": "orange",
+        "source": "official-site-css",
+        "confidence": "medium"
+      },
+      {
+        "hex": "#ff5490",
+        "label": "magenta",
+        "source": "official-site-css",
+        "confidence": "medium"
+      },
+      {
+        "hex": "#fbbe00",
+        "label": "mascot gold",
+        "source": "official-site-css",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "goldHex": "#002fff",
+  "status": "pinned",
+  "notes": "Deliberately polychromatic brand; the secondaries are a representative sample of a larger rainbow palette.",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "kurzgesagt",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/kurzgesagt.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

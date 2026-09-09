@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand-Fidelity Step 3 — Ground-Truth Pinning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@500;800&family=Poppins:wght@500;700&family=Nunito:wght@700;900&family=Manrope:wght@500;800&family=Overpass:wght@600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&family=Domine:wght@500;700&family=Playfair+Display:wght@600;800&family=Fraunces:opsz,wght@9..144,500;9..144,800&family=Instrument+Sans:wght@400;600&family=JetBrains+Mono&family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#eceef1; --card:#ffffff; --stage:#f4f5f7; --ink:#14161a; --muted:#5b6570; --line:#e0e4ea; --code:#eef0f3;
+    --cf:#1a7f3c; --cr:#1f5fd0; --cj:#a5680a; --ca:#6b3fc0; --cft:#0f7b8c;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0b0d10; --card:#16191e; --stage:#1e2228; --ink:#e8eaed; --muted:#9aa4b0; --line:#2a2f37; --code:#0f1216;
+      --cf:#5fd98a; --cr:#7fa9ff; --cj:#f2c164; --ca:#b79bf0; --cft:#63c8d6; }
+  }
+  :root[data-theme="light"]{ --bg:#eceef1; --card:#ffffff; --stage:#f4f5f7; --ink:#14161a; --muted:#5b6570; --line:#e0e4ea; --code:#eef0f3;
+    --cf:#1a7f3c; --cr:#1f5fd0; --cj:#a5680a; --ca:#6b3fc0; --cft:#0f7b8c; }
+  :root[data-theme="dark"]{ --bg:#0b0d10; --card:#16191e; --stage:#1e2228; --ink:#e8eaed; --muted:#9aa4b0; --line:#2a2f37; --code:#0f1216;
+    --cf:#5fd98a; --cr:#7fa9ff; --cj:#f2c164; --ca:#b79bf0; --cft:#63c8d6; }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1240px;margin:0 auto;padding:22px 20px 90px}
+  h1{font-size:25px;margin:0 0 4px}
+  .sub{color:var(--muted);margin:0 0 16px}
+  code{background:var(--code);padding:1px 6px;border-radius:5px;font:12.5px/1.4 ui-monospace,Menlo,Consolas,monospace}
+  a{color:var(--cr);text-decoration:none} a:hover{text-decoration:underline}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:18px}
+  .panel h2{margin:0 0 9px;font-size:16px} .panel.reframe{border-left:4px solid var(--cr)}
+  .how ol{margin:8px 0 4px;padding-left:22px} .how li{margin-bottom:7px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center}
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:650;padding:2px 8px;border-radius:999px;white-space:nowrap}
+  .chip.cf{background:color-mix(in srgb,var(--cf) 16%,transparent);color:var(--cf)}
+  .chip.cr{background:color-mix(in srgb,var(--cr) 16%,transparent);color:var(--cr)}
+  .chip.cj{background:color-mix(in srgb,var(--cj) 18%,transparent);color:var(--cj)}
+  .chip.ca{background:color-mix(in srgb,var(--ca) 16%,transparent);color:var(--ca)}
+  .chip.cft{background:color-mix(in srgb,var(--cft) 16%,transparent);color:var(--cft)}
+  .chip.tiny{font-size:10px;padding:1px 6px}
+  .toolbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:9px 0;margin:-8px 0 12px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center}
+  .toolbar button{font:13px/1 inherit;padding:6px 11px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+  .toolbar .prog{font-size:14px;color:var(--muted)} .prog b{color:var(--ink)}
+  .note{font-size:11.5px;color:var(--muted)}
+
+  .site{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:22px;overflow:hidden}
+  .site.judge{border-color:var(--cj)}
+  .shead{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;padding:14px 18px 8px}
+  .shead .n{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .shead .name{font-size:18px;font-weight:700} .shead .arch{font-size:11.5px;color:var(--muted);background:var(--code);padding:2px 8px;border-radius:6px}
+  .shead .spacer{flex:1}
+  .headline{padding:0 18px 12px;color:var(--muted);font-size:13px}
+
+  /* ZONE A — colour stage: neutral surround, NO decision chrome */
+  .stage{background:var(--stage);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 18px;display:grid;grid-template-columns:220px 1fr;gap:18px}
+  @media (max-width:860px){ .stage{grid-template-columns:1fr} }
+  .zlabel{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:700;margin:0 0 8px}
+  .shot{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--code);position:relative;max-height:180px}
+  .shot img{display:block;width:100%;height:auto}
+  .shot .ovl{position:absolute;left:0;right:0;bottom:0;background:rgba(180,90,10,.92);color:#fff;font-size:10.5px;font-weight:600;padding:3px 6px;text-align:center}
+  .shotcap{font-size:11px;color:var(--muted);text-align:center;padding:5px 0 0}
+  .cands{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px}
+  .cand{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .cand .sw{width:58px;height:58px;border-radius:9px;border:1px solid rgba(128,128,128,.3)}
+  .cand .hx{font:11.5px/1.1 ui-monospace,Menlo,Consolas,monospace;font-weight:600}
+  .cand .rl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .cand.fork .sw{width:52px;height:52px}
+  .forkwrap{display:flex;gap:8px;align-items:flex-start;padding:8px 10px;border:1px dashed var(--cj);border-radius:9px}
+  .forkwrap .fl{font-size:10.5px;color:var(--cj);font-weight:700;align-self:center;writing-mode:vertical-rl;transform:rotate(180deg)}
+  .kbadge{font:11px/1 ui-monospace,Menlo,Consolas,monospace;font-weight:700;color:var(--cj)}
+
+  .spec{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:560px){ .spec{grid-template-columns:1fr} }
+  .pane{border:1px solid var(--line);border-radius:10px;padding:13px 14px;overflow:hidden}
+  .pane .pl{font-size:9.5px;text-transform:uppercase;letter-spacing:.5px;opacity:.55;margin-bottom:7px}
+  .pane h3{font-size:20px;font-weight:800;margin:0 0 3px;line-height:1.1}
+  .pane p{font-size:12.5px;margin:0 0 10px;opacity:.85}
+  .pane .btn{display:inline-block;font-size:12px;font-weight:650;padding:6px 12px;border-radius:7px;border:0;cursor:default;margin-right:6px}
+  .pane .btn2{display:inline-block;font-size:12px;font-weight:600;padding:5px 11px;border-radius:7px;background:transparent;cursor:default;margin-right:18px}
+  .pane .lnk{font-size:12px;font-weight:600;margin-right:4px} .pane .bdg{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:999px;margin-left:14px}
+  /* click-to-expand lightbox for the "brand in context" mini-specimen */
+  .stagewrap{position:relative;cursor:zoom-in} .lbhint{position:absolute;top:0;right:0;font-size:10px;color:var(--muted);font-weight:600;background:var(--stage);padding:1px 6px;border-radius:5px;z-index:2}
+  .stagewrap:hover .lbhint{color:var(--cr)}
+  .lb{position:fixed;inset:0;background:rgba(0,0,0,.76);display:none;align-items:center;justify-content:center;z-index:60;padding:28px}
+  .lb.on{display:flex}
+  .lbbox{width:min(1120px,95vw);max-height:92vh;overflow:auto}
+  .lbclose{color:#fff;font-size:13px;text-align:center;margin-bottom:12px;opacity:.85}
+  .lbbox .spec{grid-template-columns:1fr 1fr;gap:22px}
+  @media (max-width:600px){ .lbbox .spec{grid-template-columns:1fr} }
+  .lbbox .pane{padding:26px 28px} .lbbox .pane .pl{font-size:12px;margin-bottom:12px}
+  .lbbox .pane h3{font-size:38px;margin-bottom:8px} .lbbox .pane p{font-size:17px;margin-bottom:20px}
+  .lbbox .pane .btn{font-size:16px;padding:11px 22px;margin-right:16px} .lbbox .pane .btn2{font-size:16px;padding:10px 20px;margin-right:22px}
+  .lbbox .pane .lnk{font-size:16px} .lbbox .pane .bdg{font-size:13px;padding:4px 11px;margin-left:16px}
+  .lbbox{background:var(--stage);border-radius:12px;padding:22px 24px}
+  .lbbox .cands{gap:18px} .lbbox .cand .sw{width:72px;height:72px} .lbbox .cand .hx{font-size:13px} .lbbox .cand .rl{font-size:11px}
+  .lbbox .zlabel{font-size:11px;margin-top:16px}
+
+  /* ZONE B — decisions: all chrome lives here, below the divider */
+  .zb{padding:14px 18px}
+  .zb .cols{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}
+  @media (max-width:760px){ .zb .cols{grid-template-columns:1fr} }
+  .drow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:6px 0;border-bottom:1px solid var(--line)}
+  .drow:last-child{border-bottom:0}
+  .drow .fld{font-size:12.5px;font-weight:700;min-width:62px}
+  .drow .hx{font:12px/1.1 ui-monospace,Menlo,Consolas,monospace;font-weight:700}
+  .drow .did{font:10px/1.2 ui-monospace,Menlo,Consolas,monospace;color:var(--muted);background:var(--code);padding:1px 5px;border-radius:5px;margin-left:auto}
+  .prov{font-size:10.5px;color:var(--muted)} .prov b{color:var(--ink);font-weight:600}
+  .conf.high{color:var(--cf);font-weight:700} .conf.medium{color:var(--cj);font-weight:700} .conf.low{color:#d0563f;font-weight:700}
+  .dnote{font-size:11px;color:var(--muted);flex-basis:100%;margin:1px 0 2px}
+  .fname{font-weight:700} .research{font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:9px;margin-top:10px}
+  .research b{color:var(--ink)} .exsaw{font-size:11px;color:var(--muted);margin-top:6px}
+  .swi{display:inline-block;width:13px;height:13px;border-radius:3px;border:1px solid rgba(128,128,128,.35);vertical-align:-2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Brand-Fidelity · Step 3 — Ground-Truth Pinning</h1>
+  <p class="sub">Pin the <b>seed</b> ground truth for 12 real sites: true accent, backgrounds, <b>fonts</b>, gold-hex — each independently sourced. Two zones per card: a neutral <b>colour stage</b> to judge, walled off from the <b>decision paperwork</b>.</p>
+  <div class="toolbar">
+    <button onclick="document.documentElement.setAttribute('data-theme','light')">☀ Light</button>
+    <button onclick="document.documentElement.setAttribute('data-theme','dark')">☾ Dark</button>
+    <span class="prog"><b>0</b> / 12 pinned</span>
+  </div>
+
+  <div class="panel reframe">
+    <h2>What this is (and why it's seed-level, not a full specimen)</h2>
+    <p style="margin:0 0 8px">You're building an <b>independent reference</b> the benchmark scores against — not approving a generated brand. The M1 specimen (type scale, ramps, chart colours, components) is a <b>deterministic expansion</b> of a tiny seed; the only thing extracted from a site — and the only thing worth human ground-truth — is that <b>seed</b>: accent, backgrounds, fonts.</p>
+    <p style="margin:0" class="note">The <b>mini-specimen</b> in each card's colour stage is rendered purely from <b>your pinned hexes</b> (this sheet's own CSS) — never the on-brand tool's output, which is deliberately withheld (judging your pin against the tool's aesthetic would contaminate the ground truth). It's the "does this read as the brand" view, done safely.</p>
+  </div>
+
+  <div class="panel how">
+    <h2>How to sign off</h2>
+    <ol>
+      <li><b>Accept everything:</b> <code>pin all</code> — recommended value for every field (colours + fonts) + option <b>A</b> for each ⚖ fork.</li>
+      <li><b>Accept with exceptions:</b> <code>pin all except &lt;id&gt;=&lt;value&gt;, …</code> — e.g. <code>pin all except imprintgenius/accent=B, spotify/light=null</code>. Each field shows its id (in Zone B).</li>
+      <li><b>Site by site:</b> <code>stripe: ok</code>, <code>github: accent B</code>.</li>
+    </ol>
+    <div class="legend">
+      <span class="chip cf">✓ CONFIRM</span><span class="note">extractor already matched the source</span>
+      <span class="chip cr">◆ RECOMMENDED</span><span class="note">clear correction</span>
+      <span class="chip cj">⚖ YOUR CALL</span><span class="note">real fork — pick A/B (adjacent swatches on the stage)</span>
+      <span class="chip ca">+ ADD</span><span class="note">extractor left null</span>
+      <span class="chip cft">Aa FONT</span><span class="note">researched typeface</span>
+    </div>
+    <p class="note" style="margin-top:10px"><b>GOLD vs ACCENT — they can be the same, and usually are:</b> <b>accent</b> = the site's true on-screen accent (the tool's per-site scoring target). <b>gold</b> = the brand's independently-published hex (the scorer's non-circular calibration anchor — a gold-matched proposal must score high, proving the metric isn't garbage). For a well-branded site the two are the SAME value (Duolingo's Feather Green #58cc02 is both its true accent and its published hex). They diverge only when a site drifts from its published guide — see <b>imprintgenius</b>: live-navy accent #060640 vs 2021-guide gold #4343FF.</p>
+  </div>
+
+  <div id="sites"></div>
+</div>
+<div class="lb" id="lb" onclick="if(event.target.id==='lb')this.classList.remove('on')"><div class="lbbox" id="lbbox"></div></div>
+
+<script>
+const SHOT="../eval-raw-extractions/benchmark/";
+const CAT={confirm:["cf","✓ CONFIRM"],recommend:["cr","◆ RECOMMENDED"],judgment:["cj","⚖ YOUR CALL"],add:["ca","+ ADD"]};
+
+const SITES=[
+ { id:"stripe",name:"stripe",arch:"fintech",url:"https://stripe.com",shot:"stripe.viewport.png",
+   headline:"Correct accent to true blurple; add the signature slate dark surface. Fonts: Söhne + Source Code Pro.",
+   multi:true,sec:[["#ff6118","gradient orange","official-site-css","medium"],["#f44bcc","gradient magenta","official-site-css","medium"]],
+   ex:{accent:"#533afd",bgL:"#ffffff",bgD:null,fonts:"sohne-var (h/b) · SourceCodePro"},
+   c:{accent:{v:"#635bff",cat:"recommend",src:"official-site-css",conf:"high",note:"Extractor's #533afd is a close-but-off shade of blurple."},
+      light:{v:"#ffffff",cat:"confirm",src:"official-site-css",conf:"high",note:"Matches extractor. Tinted #f6f9fc is an alt."},
+      dark:{v:"#0a2540",cat:"add",src:"official-site-css",conf:"medium",note:"'Stripe slate' signature dark hero."},
+      gold:{v:"#635bff",cat:"recommend",src:"official-site-css",conf:"high",note:"Published blurple."}},
+   f:{heading:{fam:"Söhne",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},body:{fam:"Söhne",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},mono:{fam:"Source Code Pro",kls:"mono",look:["JetBrains Mono"],src:"official-site-css",conf:"high"}},
+   research:'Colours: <b>blurple #635BFF</b> (verify CONFIRMED). Fonts from live @font-face.' },
+
+ { id:"github",name:"github",arch:"developer-tool",url:"https://github.com",shot:"github.viewport.png",overlay:"cookie-consent modal",
+   headline:"Extractor grabbed a hero blue off the dark homepage; the brand is GitHub Green. Fonts: Mona Sans + Mona Sans Mono.",
+   multi:true,sec:[["#8534f3","Copilot purple (sub-brand)","official-brand-guide","high"],["#3094ff","Security blue (sub-brand)","official-brand-guide","high"]],
+   ex:{accent:"#8dd6ff",bgL:"#0d1117",bgD:"#0d1117",fonts:"Mona Sans (h/b)"},
+   c:{accent:{v:"#0fbf3e",cat:"judgment",src:"official-brand-guide",conf:"high",fork:[["A","#0fbf3e","GitHub Green — 2024 Brand-Toolkit signature (recommended)"],["B","#8dd6ff","hero blue the dark homepage shows"]],note:"Brand identity vs what the dark homepage renders."},
+      light:{v:"#ffffff",cat:"recommend",src:"official-site-css",conf:"medium",note:"Product light; brand Gray-1 #f2f5f3 alt."},
+      dark:{v:"#0d1117",cat:"confirm",src:"official-site-css",conf:"high",note:"≈ brand Gray-6 #101411."},
+      gold:{v:"#0fbf3e",cat:"recommend",src:"official-brand-guide",conf:"high",note:"GitHub Green, brand.github.com."}},
+   f:{heading:{fam:"Mona Sans",kls:"sans",look:["Inter","Overpass"],src:"official-site-css",conf:"high"},body:{fam:"Mona Sans",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},mono:{fam:"Mona Sans Mono",kls:"mono",look:["JetBrains Mono"],src:"official-site-css",conf:"high",note:"CORRECTED: custom face, not system SFMono."}},
+   research:'Colours: <b>GitHub Green #0FBF3E</b> (verify CONFIRMED). Fonts from Primer tokens.' },
+
+ { id:"basecamp",name:"basecamp",arch:"saas",url:"https://basecamp.com",shot:"basecamp.viewport.png",thin:"extractor missed the yellow (OKLCH)",
+   headline:"Extractor found NO accent (fell back to a blue); the signature is the rebrand yellow. Fonts: Graphik + Berkeley Mono.",
+   multi:true,sec:[["#2377d2","Bright Blue (interactive)","official-site-css","high"],["#5d4186","Lavender (dark-mode highlight)","official-site-css","high"]],
+   ex:{accent:"#2377d2",bgL:"#2377d2",bgD:null,fonts:"Graphik (h/b)"},
+   c:{accent:{v:"#ffdc74",cat:"recommend",src:"official-site-css",conf:"high",note:"Rebrand yellow (OKLCH token). Extractor had zero accent evidence."},
+      light:{v:"#f5faf6",cat:"recommend",src:"official-site-css",conf:"high",note:"Near-white green tint; #ffffff alt."},
+      dark:{v:"#0b151b",cat:"add",src:"official-site-css",conf:"medium",note:"'Bunker' near-black."},
+      gold:{v:"#ffdc74",cat:"recommend",src:"official-site-css",conf:"high",note:"Site-CSS token; no formal guide."}},
+   f:{heading:{fam:"Graphik",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},body:{fam:"Graphik",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},mono:{fam:"Berkeley Mono",kls:"mono",look:["JetBrains Mono"],src:"official-site-css",conf:"high"}},
+   research:'Colours: <b>yellow #ffdc74</b> (verify CONFIRMED; gold is site-CSS). Fonts from live fonts.css.' },
+
+ { id:"nytimes",name:"nytimes",arch:"media",url:"https://www.nytimes.com",shot:"nytimes.viewport.png",
+   headline:"Monochrome brand — black is the identity; extractor picked a link-blue. Fonts: NYT Cheltenham + Imperial (serif).",
+   multi:true,sec:[["#326891","link/steel blue (UI accent)","official-site-css","high"],["#d0021b","Monza red (breaking-news)","reputable-aggregator","low"]],
+   ex:{accent:"#326891",bgL:"#ffffff",bgD:null,fonts:"nyt-cheltenham, franklin"},
+   c:{accent:{v:"#000000",cat:"judgment",src:"monochrome-brand",conf:"medium",fork:[["A","#000000","black — monochrome masthead brand (recommended)"],["B","#326891","the site's link-blue"]],note:"NYT publishes no colourful accent; black doubles as brand + text."},
+      light:{v:"#ffffff",cat:"confirm",src:"official-site-css",conf:"high",note:"Matches extractor."},
+      dark:{v:null,cat:"confirm",src:"operator-judgment",conf:"high",note:"Light-only web property — leave null."},
+      gold:{v:"#000000",cat:"judgment",src:"monochrome-brand",conf:"medium",note:"Monochrome — no published colourful signature."}},
+   f:{heading:{fam:"NYT Cheltenham",kls:"serif",look:["Domine","Georgia"],src:"official-site-css",conf:"high"},body:{fam:"NYT Imperial",kls:"serif",look:["Source Serif 4","Georgia"],src:"official-site-css",conf:"high"},mono:null},
+   research:'Colours: <b>black #000000</b> (verify CONFIRMED monochrome). Fonts from inline @font-face.' },
+
+ { id:"imprintgenius",name:"imprintgenius",arch:"ecommerce",url:"https://www.imprintgenius.com",shot:"imprintgenius.viewport.png",judge:true,
+   headline:"⚑ FORK: 2021 guide = bright blue #4343FF, but the live site rebranded to navy #060640 (which the extractor captured). Font: Noi Grotesk.",
+   multi:true,sec:[["#970a52","illustration magenta (--medium-violet-red)","official-site-css","medium"],["#ff4443","ribbon red (hero illustration)","live-site-observed","medium"]],
+   ex:{accent:"#060640",bgL:"#ffffff",bgD:null,fonts:"Noi Grotesk (h/b)"},
+   c:{accent:{v:"#060640",cat:"judgment",src:"live-site-observed",conf:"high",fork:[["A","#060640","live-site navy — the site today; matches extractor (recommended: track live)"],["B","#4343FF","the 2021 published brand-guide blue"]],note:"Philosophy call: truth follows the live site or the guide? Only site where accent≠gold by design."},
+      light:{v:"#ffffff",cat:"confirm",src:"official-site-css",conf:"high",note:"Matches extractor."},
+      dark:{v:null,cat:"add",src:"operator-judgment",conf:"medium",note:"Live site is light-only; recommend null."},
+      gold:{v:"#4343FF",cat:"recommend",src:"official-brand-guide",conf:"high",note:"Published 2021 guide hex — the independent anchor regardless of accent choice."}},
+   f:{heading:{fam:"Noi Grotesk",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},body:{fam:"Noi Grotesk",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},mono:null},
+   research:'Colours: <b>guide #4343FF vs live #060640</b> (verify CONFIRMED both). Font from Webflow CSS.' },
+
+ { id:"duolingo",name:"duolingo",arch:"education",url:"https://www.duolingo.com",shot:"duolingo.viewport.png",
+   headline:"Correct to official Feather Green (extractor picked a lighter tint). Fonts: Feather Bold + Duolingo Sans.",
+   multi:true,sec:[["#1cb0f6","Macaw blue","official-brand-guide","high"],["#ff4b4b","Cardinal red","official-brand-guide","high"],["#ffc800","Bee yellow","official-brand-guide","medium"]],
+   ex:{accent:"#a5ed6e",bgL:"#ffffff",bgD:null,fonts:"feather, duolingo-sans"},
+   c:{accent:{v:"#58cc02",cat:"recommend",src:"official-brand-guide",conf:"high",note:"'Feather Green', official. Extractor chose lighter #a5ed6e."},
+      light:{v:"#ffffff",cat:"confirm",src:"official-site-css",conf:"high",note:"Matches extractor."},
+      dark:{v:"#4b4b4b",cat:"add",src:"official-brand-guide",conf:"medium",note:"'Eel' dark neutral."},
+      gold:{v:"#58cc02",cat:"recommend",src:"official-brand-guide",conf:"high",note:"design.duolingo.com."}},
+   f:{heading:{fam:"Feather Bold",kls:"sans",look:["Nunito","Baloo 2"],src:"official-site-css",conf:"high"},body:{fam:"Duolingo Sans",kls:"sans",look:["Nunito"],src:"official-site-css",conf:"high",note:"CORRECTED from 'DIN Next Rounded'."},mono:null},
+   research:'Colours: <b>#58CC02</b> (verify CONFIRMED). Fonts CORRECTED via live loader.' },
+
+ { id:"kurzgesagt",name:"kurzgesagt",arch:"media",url:"https://kurzgesagt.org",shot:"kurzgesagt.viewport.png",overlay:"privacy-settings overlay",
+   headline:"Vivid blue #002fff, not the text-navy. Deliberately polychromatic — primary + representative secondaries. Font: Montserrat.",
+   multi:true,sec:[["#1ec96b","green","official-site-css","medium"],["#ff9500","orange","official-site-css","medium"],["#ff5490","magenta","official-site-css","medium"],["#fbbe00","mascot gold","official-site-css","medium"]],
+   ex:{accent:"#0a1439",bgL:"#ffffff",bgD:null,fonts:"Montserrat"},
+   c:{accent:{v:"#002fff",cat:"recommend",src:"official-site-css",conf:"medium",note:"Dominant brand blue (48 SVG fills). Extractor picked the text navy. Polychromatic — pinning the dominant hue for v1."},
+      light:{v:"#ffffff",cat:"confirm",src:"official-site-css",conf:"high",note:"Matches extractor."},
+      dark:{v:"#001f40",cat:"add",src:"official-site-css",conf:"medium",note:"Deep space-navy section."},
+      gold:{v:"#002fff",cat:"recommend",src:"official-site-css",conf:"medium",note:"Site vector art; no formal guide."}},
+   f:{heading:{fam:"Montserrat",kls:"sans",look:["Montserrat","Poppins"],src:"official-site-css",conf:"high"},body:{fam:"Montserrat",kls:"sans",look:["Montserrat"],src:"official-site-css",conf:"high"},mono:null},
+   research:'Colours: <b>#002FFF</b> (verify CONFIRMED dominant). Font from CSS bundle.' },
+
+ { id:"forliving",name:"forliving",arch:"luxury",url:"https://www.for-living.it/",shot:"forliving.viewport.png",
+   headline:"⟲ SWAPPED IN for the louisvuitton bot-block. True accent is terracotta (extractor's blue is Webflow's default link colour). Fonts: PP Fragment + Instrument Sans.",
+   ex:{accent:"#1863dc",bgL:"#ffffff",bgD:null,fonts:"(Webflow default)"},
+   c:{accent:{v:"#d37955",cat:"recommend",src:"official-site-css",conf:"high",note:"Brand 'orange' token (--color-scheme-1--orange). The extractor's #1863dc is Webflow's DEFAULT link colour, not the brand. Fill variant #B65234 on buttons."},
+      light:{v:"#ffffff",cat:"confirm",src:"official-site-css",conf:"high",note:"--color-scheme-1--background: white."},
+      dark:{v:"#080e00",cat:"add",src:"official-site-css",conf:"medium",note:"'deep-green' near-black surface token."},
+      gold:{v:"#d37955",cat:"recommend",src:"official-site-css",conf:"high",note:"Webflow design token; no formal guide."}},
+   f:{heading:{fam:"PP Fragment",kls:"serif",look:["Playfair Display","Fraunces"],src:"official-site-css",conf:"high",note:"Pangram Pangram display face."},body:{fam:"Instrument Sans",kls:"sans",look:["Instrument Sans","Inter"],src:"official-site-css",conf:"high",note:"Free Google font."},mono:null},
+   research:'Colours: <b>terracotta #d37955</b> (verified from live Webflow CSS tokens; blue is the Webflow default). Awwwards luxury; captured clean (20 colours, 4/4 structural).' },
+
+ { id:"spotify",name:"spotify",arch:"media",url:"https://www.spotify.com",shot:"spotify.viewport.png",overlay:"OneTrust + language modal",
+   headline:"Extractor nailed the CURRENT green #1ed760 (verify corrected legacy #1db954). Font: Spotify Mix. Dark-first.",
+   ex:{accent:"#1ed760",bgL:"#121212",bgD:"#121212",fonts:"SpotifyMixUI (h/b)"},
+   c:{accent:{v:"#1ed760",cat:"confirm",src:"official-brand-guide",conf:"high",matches:true,note:"Current Spotify Green. Legacy #1db954 alt."},
+      light:{v:"#ffffff",cat:"recommend",src:"official-site-css",conf:"medium",note:"Dark-first site; #ffffff is the light marketing surface. Or pin null."},
+      dark:{v:"#121212",cat:"confirm",src:"official-site-css",conf:"high",note:"App dark bg. Brand 'Spotify Black' #191414 alt."},
+      gold:{v:"#1ed760",cat:"confirm",src:"official-brand-guide",conf:"high",note:"Current green."}},
+   f:{heading:{fam:"Spotify Mix",kls:"sans",look:["Poppins","Montserrat"],src:"official-site-css",conf:"high"},body:{fam:"Spotify Mix",kls:"sans",look:["Poppins"],src:"official-site-css",conf:"high"},mono:null},
+   research:'Colours: <b>#1ED760</b> (verify CORRECTED legacy→current). Font from CSS.' },
+
+ { id:"linear",name:"linear",arch:"developer-tool",url:"https://linear.app",shot:"linear.viewport.png",
+   headline:"Extractor picked a stray page-green; the accent is Linear's indigo. Fonts: Inter + Berkeley Mono. Dark-first.",
+   ex:{accent:"#27a644",bgL:"#08090a",bgD:"#08090a",fonts:"Inter Variable, Berkeley Mono"},
+   c:{accent:{v:"#5e6ad2",cat:"recommend",src:"official-site-css",conf:"high",note:"Linear indigo (--accent). Extractor's #27a644 is an unrelated green."},
+      light:{v:"#f4f5f8",cat:"recommend",src:"official-brand-guide",conf:"high",note:"'Mercury White'; #ffffff alt. Or null."},
+      dark:{v:"#08090a",cat:"confirm",src:"official-site-css",conf:"high",note:"Product canvas. 'Nordic Gray' #222326 alt."},
+      gold:{v:"#5e6ad2",cat:"recommend",src:"official-site-css",conf:"high",note:"Site --accent."}},
+   f:{heading:{fam:"Inter",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},body:{fam:"Inter",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},mono:{fam:"Berkeley Mono",kls:"mono",look:["JetBrains Mono"],src:"official-site-css",conf:"high"}},
+   research:'Colours: <b>indigo #5E6AD2</b> (verify CONFIRMED). Fonts from live @font-face.' },
+
+ { id:"robinhood",name:"robinhood",arch:"fintech",url:"https://robinhood.com",shot:"robinhood.viewport.png",
+   headline:"Extractor matched 'Robin Neon' #ccff00. But its FONT read (Phonic) is wrong — true is Capsule Sans. Black-first.",
+   ex:{accent:"#ccff00",bgL:"#000000",bgD:"#000000",fonts:"Phonic (WRONG)"},
+   c:{accent:{v:"#ccff00",cat:"confirm",src:"reputable-aggregator",conf:"medium",matches:true,note:"'Robin Neon', current identity. Legacy green #00c805 alt."},
+      light:{v:"#ffffff",cat:"recommend",src:"official-site-css",conf:"medium",note:"Black-first site; #ffffff is the light surface. Or null."},
+      dark:{v:"#000000",cat:"confirm",src:"official-site-css",conf:"high",note:"Matches extractor."},
+      gold:{v:"#ccff00",cat:"confirm",src:"reputable-aggregator",conf:"medium",note:"Aggregator estimate; no official hex."}},
+   f:{heading:{fam:"Capsule Sans Display",kls:"sans",look:["Inter","Manrope"],src:"official-site-css",conf:"high",note:"CORRECTS extractor's 'Phonic'."},body:{fam:"Capsule Sans Text",kls:"sans",look:["Inter"],src:"official-site-css",conf:"high"},mono:{fam:"Capsule Sans Text Mono",kls:"mono",look:["JetBrains Mono"],src:"official-site-css",conf:"high"}},
+   research:'Colours: <b>#CCFF00</b> (verify CONFIRMED current). Fonts CORRECT the extractor — true is Capsule Sans.' },
+
+ { id:"medium",name:"medium",arch:"media",url:"https://medium.com",shot:"medium.viewport.png",
+   headline:"Extractor grabbed the black button; accent is the green CTA. Fonts: Söhne + Charter serif + Source Code Pro.",
+   ex:{accent:"#191919",bgL:"#ffffff",bgD:null,fonts:"gt-super, sohne (roles off)"},
+   c:{accent:{v:"#1a8917",cat:"recommend",src:"official-site-css",conf:"high",note:"Green 'Start reading' CTA (Playwright-verified). Extractor picked the black button."},
+      light:{v:"#ffffff",cat:"confirm",src:"official-site-css",conf:"high",note:"Matches extractor."},
+      dark:{v:"#242424",cat:"add",src:"official-site-css",conf:"medium",note:"Medium dark surface."},
+      gold:{v:"#1a8917",cat:"recommend",src:"official-site-css",conf:"high",note:"Site accent token."}},
+   f:{heading:{fam:"Söhne",kls:"sans",look:["Inter"],src:"official-site-css",conf:"medium"},body:{fam:"Charter",kls:"serif",look:["Source Serif 4","Georgia"],src:"official-site-css",conf:"high",note:"CORRECTED: reading body serif is Charter."},mono:{fam:"Source Code Pro",kls:"mono",look:["JetBrains Mono"],src:"official-site-css",conf:"medium"}},
+   research:'Colours: <b>green #1A8917</b> (verify CONFIRMED via computed styles). Fonts CORRECTED.' },
+];
+
+function textOn(hex){ if(!hex) return "var(--muted)"; const h=hex.replace("#",""); if(h.length<6) return "#000";
+  const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+  return (0.2126*r+0.7152*g+0.0722*b)/255>0.55?"#111":"#fff"; }
+function fstack(kls,look){ const f=look&&look[0]?"'"+look[0]+"',":"";
+  if(kls==="serif") return f+"'Source Serif 4',Georgia,serif";
+  if(kls==="mono") return f+"'JetBrains Mono',ui-monospace,monospace";
+  return f+"Inter,system-ui,-apple-system,sans-serif"; }
+function candEl(role,hex){
+  const sw = hex===null ? '<div class="sw" style="background:repeating-linear-gradient(45deg,var(--code),var(--code)6px,transparent 6px,transparent 12px)"></div>'
+                        : '<div class="sw" style="background:'+hex+'"></div>';
+  return '<div class="cand">'+sw+'<div class="hx">'+(hex===null?"null":hex)+'</div><div class="rl">'+role+'</div></div>'; }
+function forkEl(fork,recV){
+  const items=fork.map(([k,hex])=>{ const reco=hex.toLowerCase()===String(recV).toLowerCase();
+    return '<div class="cand fork"><div class="sw" style="background:'+hex+';outline:'+(reco?'2px solid var(--cr)':'none')+';outline-offset:2px"></div><div class="hx"><span class="kbadge">'+k+'</span> '+hex+'</div></div>'; }).join("");
+  return '<div class="forkwrap"><span class="fl">FORK</span>'+items+'</div>'; }
+function secCandEl(hex,label){ return '<div class="cand" style="max-width:90px"><div class="sw" style="width:44px;height:44px;background:'+hex+'"></div><div class="hx">'+hex+'</div><div class="rl" style="text-transform:none;font-size:9px;line-height:1.15">'+label+'</div></div>'; }
+function secBlock(s){ if(!s.sec||!s.sec.length) return ''; return '<div style="margin-top:12px"><div class="zlabel" style="margin-bottom:5px">＋ secondary accents — captured, NOT v1-scored (frozen for the tune-loop)</div><div class="cands">'+s.sec.map(function(x){return secCandEl(x[0],x[1]);}).join("")+'</div></div>'; }
+function secRow(s){ if(!s.sec||!s.sec.length) return ''; return '<div class="drow"><span class="chip cr">◆ 2nd accents</span><span class="fld">multi</span><span class="did">'+s.id+'/secondary</span><div class="dnote">'+s.sec.map(function(x){return '<span class="swi" style="background:'+x[0]+'"></span> <b>'+x[0]+'</b> '+x[1]+' <span class="prov">('+x[2]+' · <span class="conf '+x[3]+'">'+x[3]+'</span>)</span>';}).join('<br>')+'<br><i>isMultiAccent = true. Captured now, NOT scored in v1 — frozen so a future tune-loop can’t game the single-accent target.</i></div></div>'; }
+function pane(mode,bg,accent,hfont){
+  const ink=textOn(bg), sub=(ink==="#fff"?"rgba(255,255,255,.68)":"rgba(0,0,0,.58)");
+  return '<div class="pane" style="background:'+bg+';color:'+ink+'"><div class="pl">'+mode+' · '+bg+'</div>'+
+    '<h3 style="font-family:'+hfont+'">Aa The quick brown fox</h3>'+
+    '<p style="color:'+sub+'">Body copy on this surface, set in the pinned font.</p>'+
+    '<span class="btn" style="background:'+accent+';color:'+textOn(accent)+';font-family:'+hfont+'">Primary</span>'+
+    '<span class="btn2" style="border:1px solid '+accent+';color:'+accent+'">Secondary</span>'+
+    '<span class="lnk" style="color:'+accent+'">Accent link →</span>'+
+    '<span class="bdg" style="background:'+accent+';color:'+textOn(accent)+'">badge</span></div>'; }
+function provEl(d){ return '<span class="prov">src <b>'+d.src+'</b> · <span class="conf '+d.conf+'">'+d.conf+'</span>'+(d.matches?' · <span style="color:var(--cf);font-weight:600">✓ matches extractor (re-sourced)</span>':'')+'</span>'; }
+function drow(fld,id,d){ const [cls,txt]=CAT[d.cat];
+  return '<div class="drow"><span class="chip '+cls+'">'+txt+'</span><span class="fld">'+fld+'</span><span class="swi" style="background:'+(d.v===null?'var(--code)':d.v)+'"></span><span class="hx">'+(d.v===null?"null":d.v)+'</span><span class="did">'+id+'</span><div class="dnote">'+provEl(d)+' — '+d.note+'</div></div>'; }
+function frow(role,id,f){
+  if(f===null) return '<div class="drow" style="opacity:.55"><span class="chip cft">Aa FONT</span><span class="fld">'+role+'</span><span>— not distinctly branded</span><span class="did">'+id+'</span></div>';
+  return '<div class="drow"><span class="chip cft">Aa FONT</span><span class="fld">'+role+'</span><span class="fname" style="font-family:'+fstack(f.kls,f.look)+'">'+f.fam+'</span><span class="did">'+id+'</span><div class="dnote"><span class="prov">src <b>'+f.src+'</b> · <span class="conf '+f.conf+'">'+f.conf+'</span></span> · lookalikes: '+f.look.join(", ")+(f.note?' — '+f.note:'')+'</div></div>'; }
+
+function render(){
+  let out="";
+  SITES.forEach((s,i)=>{
+    const c=s.c, ex=s.ex;
+    const changes=[c.accent,c.light,c.dark,c.gold].filter(d=>d.cat!=="confirm"&&!(d.cat==="add"&&d.v===null)).length;
+    const hfont=fstack(s.f.heading.kls,s.f.heading.look);
+    const acc=c.accent.v, bgLight=c.light.v||"#ffffff", bgDark=c.dark.v||"#101418";
+    // Zone A — candidate swatches (accent, forks, backgrounds, gold)
+    let cands=candEl("accent",acc);
+    if(c.accent.fork) cands+=forkEl(c.accent.fork,c.accent.v);
+    cands+=candEl("bg light",c.light.v)+candEl("bg dark",c.dark.v)+candEl("gold",c.gold.v);
+    const flag = s.overlay ? '<div class="ovl">⚠ screenshot has a '+s.overlay+' — extraction/brand colours still valid</div>'
+               : s.thin ? '<div class="ovl">⚠ '+s.thin+' — pins are research-sourced</div>' : '';
+    out+=
+    '<div class="site'+(s.judge||c.accent.fork?" judge":"")+'" id="site-'+s.id+'">'+
+      '<div class="shead"><span class="n">'+(i+1)+'</span><a class="name" href="'+s.url+'">'+s.name+' ↗</a><span class="arch">'+s.arch+'</span><span class="spacer"></span><span class="note">'+changes+' to decide + fonts</span></div>'+
+      '<div class="headline">'+s.headline+'</div>'+
+      '<div class="stage">'+
+        '<div><div class="zlabel">Source capture</div><div class="shot"><img src="'+SHOT+s.shot+'" alt="'+s.name+'" loading="lazy">'+flag+'</div><div class="shotcap"><a href="'+s.url+'">open live ↗</a></div></div>'+
+        '<div class="stagewrap" onclick="openLB(this)"><span class="lbhint">⤢ click to enlarge what you’re approving</span>'+
+          '<div class="zlabel">Colour stage — candidates (judge these; hex only, neutral surround)</div><div class="cands">'+cands+'</div>'+secBlock(s)+
+          '<div class="zlabel" style="margin-top:12px">What you’re approving looks like — rendered from YOUR pinned hexes (not the tool)</div>'+
+          '<div class="spec">'+pane("light",bgLight,acc,hfont)+pane("dark",bgDark,acc,hfont)+'</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="zb"><div class="zlabel" style="margin-bottom:8px">Decisions — chips · provenance · ids (kept off the colours)</div><div class="cols">'+
+        '<div>'+drow("accent",s.id+"/accent",c.accent)+drow("bg light",s.id+"/light",c.light)+drow("bg dark",s.id+"/dark",c.dark)+drow("gold hex",s.id+"/gold",c.gold)+secRow(s)+'</div>'+
+        '<div>'+frow("heading",s.id+"/font.heading",s.f.heading)+frow("body",s.id+"/font.body",s.f.body)+frow("mono",s.id+"/font.mono",s.f.mono)+'</div>'+
+      '</div><div class="research">'+s.research+'</div><div class="exsaw"><b style="color:var(--muted)">Reference only — NOT part of your approval.</b> The extractor auto-detected accent <span class="swi" style="background:'+ex.accent+'"></span> '+ex.accent+(ex.accent.toLowerCase()===String(c.accent.v).toLowerCase()?' <span style="color:var(--cf);font-weight:600">✓ matches your pin</span>':' <span style="color:var(--muted)">→ your pin corrects it to</span> <span class="swi" style="background:'+c.accent.v+'"></span> <b>'+c.accent.v+'</b>')+' · bg '+ex.bgL+(ex.bgD?' / '+ex.bgD:'')+' · fonts '+ex.fonts+'</div></div>'+
+    '</div>';
+  });
+  document.getElementById("sites").innerHTML=out;
+}
+function openLB(wrap){ const clone=wrap.cloneNode(true); const h=clone.querySelector('.lbhint'); if(h) h.remove(); document.getElementById('lbbox').innerHTML='<div class="lbclose">✕ click outside to close (or Esc)</div>'+clone.innerHTML; document.getElementById('lb').classList.add('on'); }
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ const lb=document.getElementById('lb'); if(lb) lb.classList.remove('on'); } });
+render();
+</script>
+</body>
+</html>

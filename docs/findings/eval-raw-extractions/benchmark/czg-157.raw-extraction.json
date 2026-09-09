@@ -1,0 +1,157 @@
+{
+  "url": "https://www.csszengarden.com/157/",
+  "extractedAt": "2026-07-19T06:31:45.489Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#000000",
+      "frequency": 160,
+      "roles": [
+        {
+          "role": "text",
+          "count": 160
+        }
+      ]
+    },
+    {
+      "hex": "#8b3c12",
+      "frequency": 62,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 63
+        }
+      ]
+    },
+    {
+      "hex": "#2b7f01",
+      "frequency": 16,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 10,
+      "roles": [
+        {
+          "role": "background",
+          "count": 10
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#fbd1bc",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#eeffc5",
+      "frequency": 1,
+      "roles": []
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Times"
+      ],
+      "role": "heading",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "Times"
+      ],
+      "role": "unknown",
+      "frequency": 3
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 11,
+      "frequency": 3,
+      "fontWeight": 400,
+      "lineHeightPx": 15.399999999999999
+    },
+    {
+      "px": 12.87,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 15.443999999999999
+    },
+    {
+      "px": 16.5,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 15.345
+    },
+    {
+      "px": 22,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 15.399999999999999
+    }
+  ],
+  "spacing": [
+    {
+      "px": 5,
+      "frequency": 29
+    },
+    {
+      "px": 10,
+      "frequency": 15
+    },
+    {
+      "px": 13.695,
+      "frequency": 2
+    },
+    {
+      "px": 14.74,
+      "frequency": 2
+    },
+    {
+      "px": 20,
+      "frequency": 4
+    },
+    {
+      "px": 30,
+      "frequency": 2
+    },
+    {
+      "px": 70,
+      "frequency": 1
+    },
+    {
+      "px": 330,
+      "frequency": 1
+    },
+    {
+      "px": 360,
+      "frequency": 1
+    }
+  ],
+  "radii": [],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/czg-157.viewport.png"
+    }
+  ]
+}

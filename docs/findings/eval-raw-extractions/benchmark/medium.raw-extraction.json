@@ -1,0 +1,266 @@
+{
+  "url": "https://medium.com/",
+  "extractedAt": "2026-07-19T06:31:06.885Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#000000",
+      "frequency": 130,
+      "roles": []
+    },
+    {
+      "hex": "#242424",
+      "frequency": 26,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#6b6b6b",
+      "frequency": 22,
+      "roles": []
+    },
+    {
+      "hex": "#191919",
+      "frequency": 4,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 6
+        },
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#f7f4ed",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "background",
+          "count": 3
+        },
+        {
+          "role": "text",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#000000cc",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "border",
+          "count": 3
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#080808",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#1a8917",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#c1c1c1",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "gt-super",
+        "Georgia",
+        "Cambria",
+        "Times New Roman",
+        "Times"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "sohne",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "sohne",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial"
+      ],
+      "role": "unknown",
+      "frequency": 4
+    },
+    {
+      "families": [
+        "medium-content-sans-serif-font",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue"
+      ],
+      "role": "unknown",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "sohne",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial"
+      ],
+      "role": "body",
+      "frequency": 2
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 13,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 20.02
+    },
+    {
+      "px": 14,
+      "frequency": 3,
+      "fontWeight": 400,
+      "lineHeightPx": 20.02
+    },
+    {
+      "px": 16,
+      "frequency": 2,
+      "fontWeight": 400
+    },
+    {
+      "px": 20,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 28
+    },
+    {
+      "px": 22,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 27.94
+    },
+    {
+      "px": 120,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 99.6
+    }
+  ],
+  "spacing": [
+    {
+      "px": 8,
+      "frequency": 6
+    },
+    {
+      "px": 10,
+      "frequency": 2
+    },
+    {
+      "px": 24,
+      "frequency": 2
+    },
+    {
+      "px": 25,
+      "frequency": 2
+    },
+    {
+      "px": 48,
+      "frequency": 2
+    },
+    {
+      "px": 75,
+      "frequency": 1
+    }
+  ],
+  "radii": [
+    {
+      "px": 2,
+      "frequency": 1
+    },
+    {
+      "px": 1386,
+      "frequency": 1
+    },
+    {
+      "px": 1980,
+      "frequency": 2
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgb(128, 128, 128) 0px 0px 5px 0px",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/medium.viewport.png"
+    }
+  ],
+  "warnings": [
+    "4 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

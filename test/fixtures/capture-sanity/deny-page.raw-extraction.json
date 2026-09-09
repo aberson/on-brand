@@ -1,0 +1,113 @@
+{
+  "url": "https://www.louisvuitton.com/",
+  "extractedAt": "2026-07-19T06:30:50.166Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#000000",
+      "frequency": 26,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 26
+        },
+        {
+          "role": "text",
+          "count": 26
+        }
+      ]
+    },
+    {
+      "hex": "#19110b",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 10,
+      "roles": [
+        {
+          "role": "background",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Louis Vuitton Web",
+        "Louis Vuitton",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial"
+      ],
+      "role": "heading",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "Louis Vuitton Web",
+        "Louis Vuitton",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial"
+      ],
+      "role": "body",
+      "frequency": 1
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 16,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 18,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 23.94
+    },
+    {
+      "px": 24,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 31.92
+    }
+  ],
+  "spacing": [
+    {
+      "px": 8,
+      "frequency": 4
+    },
+    {
+      "px": 16,
+      "frequency": 1
+    },
+    {
+      "px": 32,
+      "frequency": 1
+    },
+    {
+      "px": 40,
+      "frequency": 2
+    },
+    {
+      "px": 80,
+      "frequency": 1
+    }
+  ],
+  "radii": [],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/louisvuitton.viewport.png"
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "url": "https://www.nytimes.com/",
+  "extractedAt": "2026-07-19T06:31:28.120Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#363636",
+      "frequency": 3502,
+      "roles": [
+        {
+          "role": "text",
+          "count": 3502
+        },
+        {
+          "role": "border",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 2847,
+      "roles": [
+        {
+          "role": "border",
+          "count": 21
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#121212",
+      "frequency": 1219,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#5a5a5a",
+      "frequency": 568,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#727272",
+      "frequency": 262,
+      "roles": []
+    },
+    {
+      "hex": "#f8f8f8",
+      "frequency": 117,
+      "roles": []
+    },
+    {
+      "hex": "#326891",
+      "frequency": 72,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 73
+        },
+        {
+          "role": "border",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "hex": "#808080",
+      "frequency": 48,
+      "roles": []
+    },
+    {
+      "hex": "#666666",
+      "frequency": 42,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 37,
+      "roles": [
+        {
+          "role": "background",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "hex": "#dfdfdf",
+      "frequency": 21,
+      "roles": [
+        {
+          "role": "border",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "hex": "#ebebeb",
+      "frequency": 19,
+      "roles": [
+        {
+          "role": "border",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "hex": "#333333",
+      "frequency": 12,
+      "roles": []
+    },
+    {
+      "hex": "#d0021b",
+      "frequency": 12,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "hex": "#008742",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#055cca",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#2b8ad8",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#999999",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#d40c30",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#f4564a",
+      "frequency": 10,
+      "roles": []
+    },
+    {
+      "hex": "#e2e2e2",
+      "frequency": 6,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#fee6ec",
+      "frequency": 6,
+      "roles": []
+    },
+    {
+      "hex": "#c7c7c7",
+      "frequency": 5,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#7a2e14",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#567b95",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#8c640a",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#a61b1e",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#cb5171",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#cccccc",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#f7f7f7",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#faaf96",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#787878",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#b40633",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#ededed",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#ffe8b0",
+      "frequency": 1,
+      "roles": []
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "nyt-cheltenham",
+        "cheltenham-fallback-georgia",
+        "cheltenham-fallback-noto",
+        "georgia",
+        "times new roman",
+        "times"
+      ],
+      "role": "unknown",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "cheltenham",
+        "nyt-cheltenham",
+        "Georgia",
+        "Times New Roman",
+        "times"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-karnak",
+        "georgia",
+        "times new roman",
+        "times"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-cheltenham-text-cond",
+        "nyt-cheltenham",
+        "cheltenham-fallback-georgia",
+        "cheltenham-fallback-noto",
+        "georgia",
+        "times new roman",
+        "times"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-franklin",
+        "helvetica",
+        "arial"
+      ],
+      "role": "unknown",
+      "frequency": 52
+    },
+    {
+      "families": [
+        "Times New Roman"
+      ],
+      "role": "unknown",
+      "frequency": 4
+    },
+    {
+      "families": [
+        "Times New Roman"
+      ],
+      "role": "heading",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "nyt-franklin",
+        "arial",
+        "helvetica"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-franklin",
+        "arial",
+        "helvetica"
+      ],
+      "role": "unknown",
+      "frequency": 6
+    },
+    {
+      "families": [
+        "nyt-cheltenham"
+      ],
+      "role": "unknown",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "nyt-karnak",
+        "georgia",
+        "times new roman",
+        "times"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-franklin",
+        "helvetica",
+        "arial"
+      ],
+      "role": "heading",
+      "frequency": 6
+    },
+    {
+      "families": [
+        "nyt-imperial",
+        "georgia",
+        "times new roman",
+        "times",
+        "Songti SC",
+        "simsun"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-cheltenham-small",
+        "nyt-cheltenham",
+        "cheltenham-fallback-georgia",
+        "cheltenham-fallback-noto",
+        "georgia",
+        "times new roman",
+        "times"
+      ],
+      "role": "body",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-cheltenham-small"
+      ],
+      "role": "body",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "nyt-cheltenham-small",
+        "nyt-cheltenham",
+        "cheltenham-fallback-georgia",
+        "cheltenham-fallback-noto",
+        "georgia",
+        "times new roman",
+        "times"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 0,
+      "frequency": 1,
+      "fontWeight": 400
+    },
+    {
+      "px": 8.96,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 10.752
+    },
+    {
+      "px": 9,
+      "frequency": 1,
+      "fontWeight": 500,
+      "lineHeightPx": 16.02
+    },
+    {
+      "px": 10,
+      "frequency": 7,
+      "fontWeight": 400,
+      "lineHeightPx": 10
+    },
+    {
+      "px": 11,
+      "frequency": 16,
+      "fontWeight": 700,
+      "lineHeightPx": 11
+    },
+    {
+      "px": 12,
+      "frequency": 1,
+      "fontWeight": 500,
+      "lineHeightPx": 15.600000000000001
+    },
+    {
+      "px": 13,
+      "frequency": 7,
+      "fontWeight": 500,
+      "lineHeightPx": 17.939999999999998
+    },
+    {
+      "px": 14,
+      "frequency": 19,
+      "fontWeight": 400,
+      "lineHeightPx": 20.02
+    },
+    {
+      "px": 15,
+      "frequency": 1,
+      "fontWeight": 500,
+      "lineHeightPx": 34.05
+    },
+    {
+      "px": 16,
+      "frequency": 17,
+      "fontWeight": 400,
+      "lineHeightPx": 16
+    },
+    {
+      "px": 17,
+      "frequency": 3,
+      "fontWeight": 500,
+      "lineHeightPx": 23.459999999999997
+    },
+    {
+      "px": 18,
+      "frequency": 7,
+      "fontWeight": 600,
+      "lineHeightPx": 23.04
+    },
+    {
+      "px": 20,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 21.008,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 24.999519999999997
+    },
+    {
+      "px": 22,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 25.299999999999997
+    },
+    {
+      "px": 24,
+      "frequency": 1,
+      "fontWeight": 300,
+      "lineHeightPx": 27.599999999999998
+    }
+  ],
+  "spacing": [
+    {
+      "px": 1,
+      "frequency": 38
+    },
+    {
+      "px": 2,
+      "frequency": 15
+    },
+    {
+      "px": 3,
+      "frequency": 109
+    },
+    {
+      "px": 4,
+      "frequency": 169
+    },
+    {
+      "px": 5,
+      "frequency": 28
+    },
+    {
+      "px": 6,
+      "frequency": 15
+    },
+    {
+      "px": 7,
+      "frequency": 19
+    },
+    {
+      "px": 8,
+      "frequency": 115
+    },
+    {
+      "px": 10,
+      "frequency": 169
+    },
+    {
+      "px": 11,
+      "frequency": 39
+    },
+    {
+      "px": 12,
+      "frequency": 469
+    },
+    {
+      "px": 15,
+      "frequency": 8
+    },
+    {
+      "px": 16,
+      "frequency": 232
+    },
+    {
+      "px": 18,
+      "frequency": 204
+    },
+    {
+      "px": 20,
+      "frequency": 113
+    },
+    {
+      "px": 24,
+      "frequency": 133
+    },
+    {
+      "px": 30,
+      "frequency": 46
+    },
+    {
+      "px": 40,
+      "frequency": 67
+    },
+    {
+      "px": 151.953,
+      "frequency": 12
+    },
+    {
+      "px": 347.906,
+      "frequency": 9
+    }
+  ],
+  "radii": [
+    {
+      "px": 3,
+      "frequency": 21
+    },
+    {
+      "px": 4,
+      "frequency": 18
+    },
+    {
+      "px": 5,
+      "frequency": 4
+    },
+    {
+      "px": 50,
+      "frequency": 13
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(0, 0, 0, 0.1) 0px 10px 10px 0px",
+      "frequency": 24
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.28) 0px 0px 5px 1px",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/nytimes.viewport.png"
+    }
+  ],
+  "warnings": [
+    "101 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schema": "onbrand.observatory",
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-08T12:00:00.000Z",
+  "limits": {
+    "maxBrands": 50,
+    "maxFindingsPerBrand": 12,
+    "maxTokenGroupsPerBrand": 16,
+    "maxEvidenceFields": 12,
+    "maxTextLength": 160,
+    "maxBytes": 1000000
+  },
+  "summary": {
+    "discoveredBrandCount": 3,
+    "emittedBrandCount": 3,
+    "brandsTruncated": false,
+    "finalCount": 1,
+    "proposalCount": 1,
+    "statusCounts": {
+      "adopted": 1,
+      "proposal": 1,
+      "incomplete": 0,
+      "stale": 1,
+      "invalid": 0
+    }
+  },
+  "brands": [
+    {
+      "id": "brand-a172cedcae47474b615c54d5",
+      "name": "app",
+      "relPath": "app",
+      "status": "adopted",
+      "provenance": "adopted",
+      "final": true,
+      "hasTokens": true,
+      "hasDist": true,
+      "incompleteMarker": false,
+      "darkMode": true,
+      "tokenGroups": ["color", "font", "motion", "radius", "shadow", "space", "type"],
+      "tokenGroupsTruncated": false,
+      "reason": "valid adopted brand with a fresh committed dist — current and final",
+      "specimenPath": "app/brand/dist/specimen.html",
+      "check": {
+        "state": "available",
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "advisoryCount": 0,
+        "findingCount": 0,
+        "findingsTruncated": false,
+        "findings": []
+      }
+    },
+    {
+      "id": "brand-c9e5dfbdfb45ab463cdf82ea",
+      "name": "onbrand-proposal-acme-20260101",
+      "relPath": "onbrand-proposal-acme-20260101",
+      "status": "proposal",
+      "provenance": "proposal",
+      "final": false,
+      "hasTokens": true,
+      "hasDist": true,
+      "incompleteMarker": false,
+      "darkMode": true,
+      "tokenGroups": ["color", "font", "motion", "radius", "shadow", "space", "type"],
+      "tokenGroupsTruncated": false,
+      "reason": "valid from-url proposal with a built dist — visibly separate from adopted brands",
+      "check": {
+        "state": "available",
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "advisoryCount": 0,
+        "findingCount": 0,
+        "findingsTruncated": false,
+        "findings": []
+      }
+    },
+    {
+      "id": "brand-f6bb3f6d2f37f845e53209db",
+      "name": "stale-app",
+      "relPath": "stale-app",
+      "status": "stale",
+      "provenance": "adopted",
+      "final": false,
+      "hasTokens": true,
+      "hasDist": true,
+      "incompleteMarker": false,
+      "darkMode": true,
+      "tokenGroups": ["color", "font", "motion", "radius", "shadow", "space", "type"],
+      "tokenGroupsTruncated": false,
+      "reason": "adopted brand dist is drifted from its sources — run \"onbrand build\" (the gallery would show an old design as current)",
+      "check": {
+        "state": "available",
+        "ok": false,
+        "errorCount": 1,
+        "warningCount": 0,
+        "advisoryCount": 0,
+        "findingCount": 1,
+        "findingsTruncated": false,
+        "findings": [
+          {
+            "severity": "error",
+            "category": "stale-dist",
+            "code": "stale-dist-output-outdated",
+            "path": "tokens.css",
+            "message": "stale dist output \"tokens.css\" — built from sources aaa…, current sources are bbb…; run \"onbrand build\"",
+            "evidence": {
+              "output": "tokens.css",
+              "recordedSourceHash": "aaaaaaaa",
+              "currentSourceHash": "bbbbbbbb",
+              "hashesMatch": false
+            },
+            "evidenceTruncated": false,
+            "nextCommand": "onbrand build"
+          }
+        ]
+      }
+    }
+  ]
+}

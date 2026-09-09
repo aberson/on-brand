@@ -1,0 +1,164 @@
+{
+  "skill": "brand-fidelity",
+  "version": "1.0",
+  "description": "True/false evaluation for the brand-fidelity skill. Assertions test the observable output of a run: the generated Markdown report, and whether it reproduces the three known findings (#25/#26/#27) from real computed scores rather than hard-coding them.",
+  "passing_threshold": "16/18",
+  "categories": [
+    {
+      "name": "Corpus + replay (SKILL.md What it does, Steps 1-2)",
+      "evals": [
+        {
+          "id": 1,
+          "statement": "The default run replays the v1 corpus tier (12 real sites + 8 csszengarden controls) via the committed raw-extraction.json fixtures, not a live network fetch.",
+          "source": "SKILL.md, What it does Step 2; Design constraints",
+          "defect_type": "conditional-behavior — wrong default data source",
+          "result": null
+        },
+        {
+          "id": 2,
+          "statement": "The replay path uses the production FixtureEngine + normalize() with no boundary mock — a report produced from a hand-rolled stand-in extraction grades FALSE.",
+          "source": "SKILL.md, What it does Step 2",
+          "defect_type": "anti-pattern — bench-vs-production drift",
+          "result": null
+        },
+        {
+          "id": 3,
+          "statement": "`--refresh` triggers a SEPARATE live-extraction diff and never overwrites/feeds the scored fidelity numbers used by the report's per-site table or rollups.",
+          "source": "SKILL.md, Design constraints",
+          "defect_type": "conditional-behavior — refresh must not touch scoring",
+          "result": null
+        }
+      ]
+    },
+    {
+      "name": "Rollup weighting + exclusions (SKILL.md Design constraints)",
+      "evals": [
+        {
+          "id": 4,
+          "statement": "csszengarden (czg-*) control sites are weighted strictly less than 0.5x a real site in the fidelity rollup's weighted pass rate / weighted mean score.",
+          "source": "SKILL.md, Design constraints; score.ts CZG_CONTROL_WEIGHT",
+          "defect_type": "conditional-behavior — control weighting not applied",
+          "result": null
+        },
+        {
+          "id": 5,
+          "statement": "No Monet mood-anchor preset (monet-parasol / monet-san-giorgio / monet-water-lily / monet-mismatch-anchor) appears as a row in the fidelity rollup or the per-site fidelity table.",
+          "source": "SKILL.md, Design constraints",
+          "defect_type": "structural — Monet leaked into fidelity rollup",
+          "result": null
+        },
+        {
+          "id": 6,
+          "statement": "The a11y/CVD summary is reported as its own section/axis and is never derived from or folded into the composite fidelity pass rate.",
+          "source": "SKILL.md, Design constraints",
+          "defect_type": "structural — a11y axis conflated with fidelity",
+          "result": null
+        }
+      ]
+    },
+    {
+      "name": "Known-finding reproduction, score-derived not hard-coded (SKILL.md Known findings)",
+      "evals": [
+        {
+          "id": 7,
+          "statement": "The report's #25 section lists only sites whose shipped background FAILS the calibrated backgroundMatch pass gate (a material mismatch, sorted worst-first by ΔE) — not every non-exact reproduction, and not a literal 'github' string check. It also states, honestly, whether github itself is flagged as material or not.",
+          "source": "SKILL.md, Known findings #25",
+          "defect_type": "anti-pattern — hard-coded or non-discriminating finding",
+          "result": null
+        },
+        {
+          "id": 8,
+          "statement": "The report's #27 section lists real sites whose colour-fidelity accentRecovered is false, computed from the real accent-recovery gate — not a literal site-id allowlist.",
+          "source": "SKILL.md, Known findings #27",
+          "defect_type": "anti-pattern — hard-coded finding",
+          "result": null
+        },
+        {
+          "id": 9,
+          "statement": "The report's #26 section is derived by comparing each site's ACTUAL shipped chart.categorical.2-8 values across the corpus, not a fixed narrative string.",
+          "source": "SKILL.md, Known findings #26",
+          "defect_type": "anti-pattern — hard-coded finding",
+          "result": null
+        },
+        {
+          "id": 10,
+          "statement": "Mutating a site's frozen truth (e.g. its pinned accent or background) so a finding's condition no longer holds causes that finding to no longer include that site on a re-run — proving the finding is score-driven.",
+          "source": "SKILL.md, Known findings; measurement-validity anti-hardcode discipline",
+          "defect_type": "anti-pattern — finding does not respond to score changes",
+          "result": null
+        }
+      ]
+    },
+    {
+      "name": "Mood-axis graceful degradation (SKILL.md Step 4)",
+      "evals": [
+        {
+          "id": 11,
+          "statement": "When the vision judge is unavailable (claude absent/unauthenticated) or fails calibration against the Monet mismatch anchor, the report's mood section reads UNAVAILABLE with a real reason string, never a fabricated PASS/FAIL/verdict.",
+          "source": "SKILL.md, What it does Step 4",
+          "defect_type": "anti-pattern — fabricated score on degrade",
+          "result": null
+        },
+        {
+          "id": 12,
+          "statement": "When the mood axis is unavailable, the colour-fidelity, font-fidelity, and structural (#25/#26/#27) sections of the report still render completely and correctly.",
+          "source": "SKILL.md, What it does Step 4",
+          "defect_type": "conditional-behavior — mood failure should not block other sections",
+          "result": null
+        },
+        {
+          "id": 13,
+          "statement": "Calibration against the Monet mismatch anchor happens BEFORE any per-site mood judgment is attempted — no per-site score is produced from an uncalibrated judge.",
+          "source": "SKILL.md, What it does Step 4",
+          "defect_type": "conditional-behavior — calibration ordering",
+          "result": null
+        }
+      ]
+    },
+    {
+      "name": "Report shape + purity",
+      "evals": [
+        {
+          "id": 14,
+          "statement": "The report includes a per-site fidelity table, a slider-coverage rollup, a weak-region rollup, and a punch list — omitting any of the four grades FALSE.",
+          "source": "SKILL.md, What it does Steps 5-6",
+          "defect_type": "structural — missing required section",
+          "result": null
+        },
+        {
+          "id": 15,
+          "statement": "The report generator itself makes no network/LLM call and reads no filesystem path directly — it is a pure function of already-scored, already-captured structured input.",
+          "source": "SKILL.md, Design constraints",
+          "defect_type": "structural — report generator not pure",
+          "result": null
+        },
+        {
+          "id": 16,
+          "statement": "The report's opening scope note correctly states whether the run was replay (default) or refresh mode, and a replay report never claims to measure live extraction.",
+          "source": "SKILL.md, What it does Step 2; Design constraints",
+          "defect_type": "content — scope note mismatch",
+          "result": null
+        }
+      ]
+    },
+    {
+      "name": "Scope + safety",
+      "evals": [
+        {
+          "id": 17,
+          "statement": "Running the skill does not mutate any committed fixture, truth file, or corpus manifest — it only writes the generated report file.",
+          "source": "SKILL.md, Commands",
+          "defect_type": "anti-pattern — mutates benchmark ground truth",
+          "result": null
+        },
+        {
+          "id": 18,
+          "statement": "The produced output is a well-formed, parseable Markdown report (no unclosed table rows, no truncated sections).",
+          "source": "SKILL.md, What it does Step 6",
+          "defect_type": "n/a-sanity",
+          "result": null
+        }
+      ]
+    }
+  ]
+}

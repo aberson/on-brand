@@ -1,0 +1,27 @@
+{
+  "skill": "brand-fidelity",
+  "version": "1.0",
+  "scenarios": [
+    {
+      "id": "scenario_1",
+      "name": "Default replay run — full v1 corpus, mood unavailable (no claude auth)",
+      "description": "The common case on a machine without live claude auth: the skill replays the full v1 corpus (12 real + 8 czg control sites) via the committed fixtures, scores colour+font+a11y, attempts mood calibration against the Monet mismatch anchor, finds the judge unavailable (auth-dead), and reports mood as UNAVAILABLE with the real reason while every other section renders in full — including the #25/#26/#27 known-finding reproductions derived from the real scores.",
+      "context": "Invoked as `npx tsx src/eval/corpus-runner.ts`. All 20 v1-tier corpus sites replay deterministically. The mood-suite calibration attempt against the Monet mismatch anchor spawns `claude` once; it reports auth-dead. The report's mood section says UNAVAILABLE with the auth-dead reason. The per-site table, fidelity rollup (czg weighted 0.4x), a11y summary, slider-coverage rollup, weak-region rollup, and the #25/#26/#27 known-finding sections all render with real numbers (github appears in both the #25 background-mismatch list and the #27 accent-recovery-failure list; the #26 categorical-sameness finding reports a majority of sites sharing an identical chart.categorical.2-8 tail).",
+      "expected_assertions": [1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18]
+    },
+    {
+      "id": "scenario_2",
+      "name": "Anti-hardcode proof — mutating truth removes a finding",
+      "description": "Verifies the #25/#27 findings are genuinely score-driven, not hard-coded strings: mutating a real site's frozen truth (e.g. setting its pinned accent to equal the shipped seed, or its pinned dark background to equal the shipped background) and re-scoring causes that site to disappear from the corresponding finding list on the next report, while every other site's findings are unaffected.",
+      "context": "A test (not a live operator run) constructs a CorpusFidelityEntry array from the real replayed v1 corpus, deep-clones one site's truth (e.g. github), overwrites `pinned.accent.hex` to equal the site's actual shipped seed hex, re-scores that one site with the mutated truth, rebuilds the suite rollup, and asserts github no longer appears in `findAccentRecoveryFailures`'s output (while it still appears with the ORIGINAL truth). The same style of mutation is repeated for the pinned dark background (set to equal the shipped hex) and for one site's shipped `categoricalSecondary` array (perturbed to differ from the corpus majority), each time proving the corresponding finding tracks the mutation.",
+      "expected_assertions": [7, 8, 9, 10]
+    },
+    {
+      "id": "scenario_3",
+      "name": "--refresh mode never contaminates the scored fidelity numbers",
+      "description": "Edge case: an operator runs with `--refresh` to check for live-extraction drift. The live re-extraction diff is rendered in a SEPARATE 'Live-drift' section; the per-site fidelity table, the fidelity rollup, and the known-finding sections are computed from the SAME committed-fixture replay as a plain run (byte-identical to a non-refresh run for the fidelity numbers) — refresh only adds the drift section on top.",
+      "context": "Invoked as `npx tsx src/eval/corpus-runner.ts --refresh`. For each http(s) corpus site, a live re-extraction runs via the production DembrandtEngine and is diffed against the committed fixture via the pure `diffAgainstFixture`. `fixture://` synthetic control entries are skipped (no live counterpart). The report's scope note says 'refresh mode' and includes a Live-Drift section; every other section's numbers match what a plain replay run would have produced for the same corpus and truth files.",
+      "expected_assertions": [1, 3, 14, 15, 16, 17, 18]
+    }
+  ]
+}

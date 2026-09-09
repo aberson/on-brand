@@ -1,0 +1,313 @@
+{
+  "schema": "onbrand.inspiration-producer-acceptance-evidence",
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-22T12:34:56.000Z",
+  "input": {
+    "kind": "synthetic-raster",
+    "generator": "test/inspiration.e2e.test.ts",
+    "sha256": "809387dbfd935b3a469fae56f1b38649215c41a6bf24852b161f5c0ec5ffec18",
+    "mediaType": "image/png",
+    "width": 320,
+    "height": 180
+  },
+  "viewports": [
+    {
+      "name": "wide",
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "name": "narrow",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "no-js",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "assertions": [
+    {
+      "id": "production-transaction-complete",
+      "pass": true,
+      "observed": {
+        "entryPoint": "bin/onbrand.mjs",
+        "artifactCount": 10,
+        "checkErrors": 0,
+        "incompleteMarker": false,
+        "provenanceRows": 4
+      }
+    },
+    {
+      "id": "synthetic-distributed-mappings",
+      "pass": true,
+      "observed": {
+        "count": 4
+      }
+    },
+    {
+      "id": "paired-catalog-current-once",
+      "pass": true,
+      "observed": {
+        "matchingItems": 1,
+        "traceState": "available",
+        "standalonePath": "onbrand-proposal-step-31-synthetic-20260822/brand/dist/inspiration-to-implementation.html",
+        "specimenPath": "onbrand-proposal-step-31-synthetic-20260822/brand/dist/specimen.html"
+      }
+    },
+    {
+      "id": "production-output-locator-semantics",
+      "pass": true,
+      "observed": {
+        "relativeTo": "ephemeral-production-root",
+        "retained": false,
+        "proposalRoot": "onbrand-proposal-step-31-synthetic-20260822",
+        "catalog": ".observatory/inspiration-to-implementation.json",
+        "explanation": "onbrand-proposal-step-31-synthetic-20260822/brand/dist/inspiration-to-implementation.html",
+        "specimen": "onbrand-proposal-step-31-synthetic-20260822/brand/dist/specimen.html"
+      }
+    },
+    {
+      "id": "standalone-catalog-byte-parity",
+      "pass": true,
+      "observed": {
+        "sha256": "976eac310786db7715b51450a0067d833fd935a9f0fb411aab8e48f64eb19422"
+      }
+    },
+    {
+      "id": "chromium-launched",
+      "pass": true,
+      "observed": {
+        "launched": true
+      }
+    },
+    {
+      "id": "wide-source-complete-above-fold",
+      "pass": true,
+      "observed": {
+        "bottom": 799.56,
+        "fold": 900
+      }
+    },
+    {
+      "id": "wide-palette-summary-above-fold",
+      "pass": true,
+      "observed": {
+        "bottom": 474.27,
+        "fold": 900
+      }
+    },
+    {
+      "id": "wide-screenshot-exact",
+      "pass": true,
+      "observed": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "id": "light-dark-computed-grouping",
+      "pass": true,
+      "observed": {
+        "targetCount": 9,
+        "changed": true
+      }
+    },
+    {
+      "id": "keyboard-focus-order-and-outlines",
+      "pass": true,
+      "observed": {
+        "order": [
+          "#theme-toggle",
+          "#image-zoom-open",
+          ".mapping-details > summary",
+          ".defaults > summary",
+          ".action"
+        ],
+        "positiveTabindex": 0,
+        "imageOverlayFocusInset": true,
+        "imageOverlayFocusPixelsVisible": true,
+        "imageOverlayOutlineOffset": -6,
+        "imageOverlayOutlineWidth": 4
+      }
+    },
+    {
+      "id": "keyboard-disclosure",
+      "pass": true,
+      "observed": {
+        "mappingCards": 4,
+        "returnedCollapsed": true
+      }
+    },
+    {
+      "id": "keyboard-zoom-dialog-and-focus-return",
+      "pass": true,
+      "observed": {
+        "copiedAlt": true,
+        "zoomFactorAtLeast": 1.8,
+        "focusReturned": true
+      }
+    },
+    {
+      "id": "reduced-motion-computed",
+      "pass": true,
+      "observed": {
+        "mediaMatches": true,
+        "animationName": "none",
+        "transitionDuration": "0s",
+        "scrollBehavior": "auto"
+      }
+    },
+    {
+      "id": "full-specimen-handoff",
+      "pass": true,
+      "observed": {
+        "navigated": true,
+        "headingFound": true
+      }
+    },
+    {
+      "id": "narrow-source-and-palette-above-fold",
+      "pass": true,
+      "observed": {
+        "sourceBottom": 410.66,
+        "paletteBottom": 711.34,
+        "fold": 844
+      }
+    },
+    {
+      "id": "narrow-collapsed-without-overflow",
+      "pass": true,
+      "observed": {
+        "detailsCollapsed": true,
+        "horizontalOverflow": 0
+      }
+    },
+    {
+      "id": "numbered-source-fallback-summary-and-cards",
+      "pass": true,
+      "observed": {
+        "count": 4,
+        "distinctPinCenters": 4,
+        "linkedAssociations": 4,
+        "visiblePins": 4,
+        "visibleSwatches": 13
+      }
+    },
+    {
+      "id": "narrow-screenshot-exact",
+      "pass": true,
+      "observed": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "no-js-readable-core",
+      "pass": true,
+      "observed": {
+        "mappingCount": 4,
+        "authoredAltVisible": true,
+        "staticNoteVisible": true,
+        "inertControlsHidden": true,
+        "horizontalOverflow": 0,
+        "paletteBottom": 824.34,
+        "fold": 844
+      }
+    },
+    {
+      "id": "no-js-native-disclosure-both-mode-values",
+      "pass": true,
+      "observed": {
+        "targetCount": 9,
+        "lightValuesReadable": 9,
+        "darkValuesReadable": 9
+      }
+    },
+    {
+      "id": "no-js-screenshot-exact",
+      "pass": true,
+      "observed": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "id": "browser-error-collections-empty",
+      "pass": true,
+      "observed": {
+        "consoleMessages": 0,
+        "pageErrors": 0,
+        "requestFailures": 0
+      }
+    },
+    {
+      "id": "retained-screenshot-content-hashes",
+      "pass": true,
+      "observed": {
+        "wide": "bac5c9dba8cd2622587527645a4ba0b71794cb4bb89a54b6ce4214ffef6f7255",
+        "narrow": "2152268669dd62669a9e8c0e3d6b53a6d733acc8de10f77180f8802a15b8269b",
+        "noJavaScript": "558a902a7f7c8692bb28a6bf0dc8bc698a67396b84848bf0c519000ae5f6fb06"
+      }
+    }
+  ],
+  "outputs": {
+    "proposalRoot": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "rawEvidence": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/raw-image-analysis.json",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "imageReport": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/image-report.md",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "tokens": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/brand/tokens.json",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "trace": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/brand/inspiration.json",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "copiedAsset": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/brand/assets/inspiration.png",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "manifest": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/brand/dist/manifest.json",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "explanation": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/brand/dist/inspiration-to-implementation.html",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "specimen": {
+      "locator": "onbrand-proposal-step-31-synthetic-20260822/brand/dist/specimen.html",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    },
+    "catalog": {
+      "locator": ".observatory/inspiration-to-implementation.json",
+      "relativeTo": "ephemeral-production-root",
+      "retained": false
+    }
+  },
+  "screenshots": {
+    "wide": "documentation/findings/inspiration-producer-acceptance/wide-1280x900.png",
+    "narrow": "documentation/findings/inspiration-producer-acceptance/narrow-390x844.png",
+    "noJavaScript": "documentation/findings/inspiration-producer-acceptance/no-js-390x844.png",
+    "evidence": "documentation/findings/inspiration-producer-acceptance/evidence.json"
+  }
+}

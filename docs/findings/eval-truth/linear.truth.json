@@ -1,0 +1,119 @@
+{
+  "id": "linear",
+  "url": "https://linear.app",
+  "archetype": "developer-tool",
+  "sliderTags": {
+    "warmth": 0.3,
+    "saturation": 0.55,
+    "lightness": 0.25,
+    "contrast": 0.7,
+    "hueDiversity": 0.45,
+    "accentDominance": 0.6,
+    "neutralRatio": 0.6,
+    "vibrancy": 0.55
+  },
+  "isControl": false,
+  "isMultiAccent": false,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#27a644",
+      "evidenceCount": 8,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#08090a",
+      "frequency": 22,
+      "lightness": 0.139
+    },
+    "backgroundDark": {
+      "hex": "#08090a",
+      "frequency": 22,
+      "lightness": 0.139
+    },
+    "topClusters": [
+      {
+        "hex": "#f7f8f8",
+        "frequency": 2779,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#62666d",
+        "frequency": 713,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#d0d6e0",
+        "frequency": 444,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#8a8f98",
+        "frequency": 252,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#e2e4e7",
+        "frequency": 239,
+        "dominantRole": null
+      },
+      {
+        "hex": "#ffffff",
+        "frequency": 224,
+        "dominantRole": "accent"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#5e6ad2",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#f4f5f8",
+      "source": "official-brand-guide",
+      "confidence": "high"
+    },
+    "backgroundDark": {
+      "hex": "#08090a",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Inter",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Inter",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": {
+        "family": "Berkeley Mono",
+        "lookalikes": [
+          "JetBrains Mono"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      }
+    },
+    "secondaryAccents": []
+  },
+  "goldHex": "#5e6ad2",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "linear",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/linear.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

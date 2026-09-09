@@ -1,0 +1,128 @@
+{
+  "id": "stripe",
+  "url": "https://stripe.com",
+  "archetype": "fintech",
+  "sliderTags": {
+    "warmth": 0.35,
+    "saturation": 0.65,
+    "lightness": 0.85,
+    "contrast": 0.7,
+    "hueDiversity": 0.5,
+    "accentDominance": 0.75,
+    "neutralRatio": 0.55,
+    "vibrancy": 0.7
+  },
+  "isControl": false,
+  "isMultiAccent": true,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#533afd",
+      "evidenceCount": 734,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "frequency": 283,
+      "lightness": 1
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#000000",
+        "frequency": 2583,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#533afd",
+        "frequency": 732,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#061b31",
+        "frequency": 724,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#50617a",
+        "frequency": 471,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#ffffff",
+        "frequency": 283,
+        "dominantRole": "background"
+      },
+      {
+        "hex": "#64748d",
+        "frequency": 202,
+        "dominantRole": null
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#635bff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": {
+      "hex": "#0a2540",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Söhne",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Söhne",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": {
+        "family": "Source Code Pro",
+        "lookalikes": [
+          "JetBrains Mono"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      }
+    },
+    "secondaryAccents": [
+      {
+        "hex": "#ff6118",
+        "label": "gradient orange",
+        "source": "official-site-css",
+        "confidence": "medium"
+      },
+      {
+        "hex": "#f44bcc",
+        "label": "gradient magenta",
+        "source": "official-site-css",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "goldHex": "#635bff",
+  "status": "pinned",
+  "notes": "Signature multi-hue gradient motif; the orange/pink secondaries are captured as gradient-role hues, not flat accents.",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "stripe",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/stripe.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

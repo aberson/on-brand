@@ -1,0 +1,118 @@
+{
+  "id": "basecamp",
+  "url": "https://basecamp.com",
+  "archetype": "saas",
+  "sliderTags": {
+    "warmth": 0.7,
+    "saturation": 0.6,
+    "lightness": 0.85,
+    "contrast": 0.6,
+    "hueDiversity": 0.6,
+    "accentDominance": 0.5,
+    "neutralRatio": 0.5,
+    "vibrancy": 0.65
+  },
+  "isControl": false,
+  "isMultiAccent": true,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#2377d2",
+      "evidenceCount": 0,
+      "source": "saturated-fallback"
+    },
+    "backgroundLight": {
+      "hex": "#2377d2",
+      "frequency": 10,
+      "lightness": 0.5687
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#2377d2",
+        "frequency": 10,
+        "dominantRole": null
+      },
+      {
+        "hex": "#000000",
+        "frequency": 2,
+        "dominantRole": null
+      },
+      {
+        "hex": "#0465be",
+        "frequency": 1,
+        "dominantRole": null
+      },
+      {
+        "hex": "#263340",
+        "frequency": 1,
+        "dominantRole": null
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#ffdc74",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#f5faf6",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": {
+      "hex": "#0b151b",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Graphik",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Graphik",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": {
+        "family": "Berkeley Mono",
+        "lookalikes": [
+          "JetBrains Mono"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      }
+    },
+    "secondaryAccents": [
+      {
+        "hex": "#2377d2",
+        "label": "Bright Blue (interactive)",
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      {
+        "hex": "#5d4186",
+        "label": "Lavender (dark-mode highlight)",
+        "source": "official-site-css",
+        "confidence": "high"
+      }
+    ]
+  },
+  "goldHex": "#ffdc74",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "basecamp",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/basecamp.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "url": "https://www.imprintgenius.com/",
+  "extractedAt": "2026-07-18T17:30:05.040Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#060640",
+      "frequency": 8603,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 17209
+        },
+        {
+          "role": "text",
+          "count": 8604
+        },
+        {
+          "role": "border",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "hex": "#ecf9ff",
+      "frequency": 103,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        },
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 18,
+      "roles": [
+        {
+          "role": "background",
+          "count": 18
+        },
+        {
+          "role": "border",
+          "count": 2
+        },
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#82829f",
+      "frequency": 11,
+      "roles": [
+        {
+          "role": "border",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "hex": "#333333",
+      "frequency": 10,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#222222",
+      "frequency": 6,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#c1c1c1",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#cccccc",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#1a1a7f",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#3898ec00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Noi Grotesk"
+      ],
+      "role": "unknown",
+      "frequency": 7
+    },
+    {
+      "families": [
+        "Noi Grotesk"
+      ],
+      "role": "heading",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "Noi Grotesk"
+      ],
+      "role": "body",
+      "frequency": 6
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 12,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 18
+    },
+    {
+      "px": 14,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 20.02
+    },
+    {
+      "px": 16,
+      "frequency": 4,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 18,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 23.94
+    },
+    {
+      "px": 24,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 28.799999999999997
+    },
+    {
+      "px": 28,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 36.4
+    },
+    {
+      "px": 32,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 48
+    },
+    {
+      "px": 48,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 55.199999999999996
+    },
+    {
+      "px": 64,
+      "frequency": 2,
+      "fontWeight": 600,
+      "lineHeightPx": 70.4
+    },
+    {
+      "px": 76.8,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 76.8
+    }
+  ],
+  "spacing": [
+    {
+      "px": 8,
+      "frequency": 16
+    },
+    {
+      "px": 9,
+      "frequency": 2
+    },
+    {
+      "px": 10,
+      "frequency": 4
+    },
+    {
+      "px": 12,
+      "frequency": 25
+    },
+    {
+      "px": 12.8,
+      "frequency": 4
+    },
+    {
+      "px": 18,
+      "frequency": 2
+    },
+    {
+      "px": 20,
+      "frequency": 34
+    },
+    {
+      "px": 24,
+      "frequency": 4
+    },
+    {
+      "px": 32,
+      "frequency": 6
+    },
+    {
+      "px": 40,
+      "frequency": 1
+    },
+    {
+      "px": 48,
+      "frequency": 1
+    },
+    {
+      "px": 56,
+      "frequency": 6
+    },
+    {
+      "px": 60,
+      "frequency": 5
+    },
+    {
+      "px": 64,
+      "frequency": 6
+    },
+    {
+      "px": 80,
+      "frequency": 2
+    },
+    {
+      "px": 90,
+      "frequency": 5
+    },
+    {
+      "px": 120,
+      "frequency": 3
+    }
+  ],
+  "radii": [
+    {
+      "px": 0,
+      "frequency": 1
+    },
+    {
+      "px": 8,
+      "frequency": 13
+    },
+    {
+      "px": 8,
+      "frequency": 1
+    },
+    {
+      "px": 50,
+      "frequency": 1
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(0, 0, 0, 0.2) 2px 2px 3px 0px",
+      "frequency": 2
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/imprintgenius.viewport.png"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "imprintgenius",
+  "url": "https://www.imprintgenius.com",
+  "archetype": "ecommerce",
+  "sliderTags": {
+    "warmth": 0.4,
+    "saturation": 0.5,
+    "lightness": 0.85,
+    "contrast": 0.65,
+    "hueDiversity": 0.45,
+    "accentDominance": 0.5,
+    "neutralRatio": 0.6,
+    "vibrancy": 0.5
+  },
+  "isControl": false,
+  "isMultiAccent": true,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#060640",
+      "evidenceCount": 17209,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "frequency": 18,
+      "lightness": 1
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#060640",
+        "frequency": 8603,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#ecf9ff",
+        "frequency": 103,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#ffffff",
+        "frequency": 18,
+        "dominantRole": "background"
+      },
+      {
+        "hex": "#82829f",
+        "frequency": 11,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#333333",
+        "frequency": 10,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#222222",
+        "frequency": 6,
+        "dominantRole": "accent"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#060640",
+      "source": "live-site-observed",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": null,
+    "fonts": {
+      "heading": {
+        "family": "Noi Grotesk",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Noi Grotesk",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": null
+    },
+    "secondaryAccents": [
+      {
+        "hex": "#970a52",
+        "label": "illustration magenta (--medium-violet-red)",
+        "source": "official-site-css",
+        "confidence": "medium"
+      },
+      {
+        "hex": "#ff4443",
+        "label": "ribbon red (hero illustration)",
+        "source": "live-site-observed",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "goldHex": "#4343FF",
+  "status": "pinned",
+  "notes": "Live-vs-guide drift: pinned accent tracks the live-site navy #060640; goldHex is the 2021 published-guide blue #4343FF (intentional accent != gold).",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "imprintgenius",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/imprintgenius.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

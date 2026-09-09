@@ -1,0 +1,128 @@
+{
+  "id": "duolingo",
+  "url": "https://www.duolingo.com",
+  "archetype": "education",
+  "sliderTags": {
+    "warmth": 0.5,
+    "saturation": 0.85,
+    "lightness": 0.8,
+    "contrast": 0.6,
+    "hueDiversity": 0.65,
+    "accentDominance": 0.8,
+    "neutralRatio": 0.3,
+    "vibrancy": 0.9
+  },
+  "isControl": false,
+  "isMultiAccent": true,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#a5ed6e",
+      "evidenceCount": 134,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "frequency": 8,
+      "lightness": 1
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#3c3c3c",
+        "frequency": 7581,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#777777",
+        "frequency": 268,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#a5ed6e",
+        "frequency": 133,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#4b4b4b",
+        "frequency": 30,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#58cc02",
+        "frequency": 24,
+        "dominantRole": null
+      },
+      {
+        "hex": "#1cb0f6",
+        "frequency": 14,
+        "dominantRole": "accent"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#58cc02",
+      "source": "official-brand-guide",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": {
+      "hex": "#4b4b4b",
+      "source": "official-brand-guide",
+      "confidence": "medium"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Feather Bold",
+        "lookalikes": [
+          "Nunito",
+          "Baloo 2"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Duolingo Sans",
+        "lookalikes": [
+          "Nunito"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": null
+    },
+    "secondaryAccents": [
+      {
+        "hex": "#1cb0f6",
+        "label": "Macaw blue",
+        "source": "official-brand-guide",
+        "confidence": "high"
+      },
+      {
+        "hex": "#ff4b4b",
+        "label": "Cardinal red",
+        "source": "official-brand-guide",
+        "confidence": "high"
+      },
+      {
+        "hex": "#ffc800",
+        "label": "Bee yellow",
+        "source": "official-brand-guide",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "goldHex": "#58cc02",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "duolingo",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/duolingo.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

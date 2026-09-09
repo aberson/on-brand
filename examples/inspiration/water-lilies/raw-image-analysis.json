@@ -1,0 +1,188 @@
+{
+  "source": {
+    "kind": "image",
+    "assetPath": "assets/inspiration.jpg",
+    "assetSha256": "06367197ac8d6745537dcfe6722ff4b8ef2cb33e044168d8c471782b55f7dd39",
+    "mediaType": "image/jpeg"
+  },
+  "algorithm": "image-cluster-v2",
+  "samples": [
+    {
+      "id": "sample-01",
+      "hex": "#416886",
+      "frequency": 2589,
+      "pixelShare": 0.0411108993902439,
+      "region": {
+        "x": 0.82638197,
+        "y": 0.20187886,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.590526549796748,
+      "largestFamilyRegionPixelShare": 0.5590542428861789
+    },
+    {
+      "id": "sample-02",
+      "hex": "#536f77",
+      "frequency": 1447,
+      "pixelShare": 0.022977007113821137,
+      "region": {
+        "x": 0.75758007,
+        "y": 0,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.6761941056910569,
+      "largestFamilyRegionPixelShare": 0.6445471290650406
+    },
+    {
+      "id": "sample-03",
+      "hex": "#e0bebc",
+      "frequency": 2,
+      "pixelShare": 0.000031758130081300816,
+      "region": {
+        "x": 0,
+        "y": 0.68766378,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.002969385162601626,
+      "largestFamilyRegionPixelShare": 0.00033346036585365856
+    },
+    {
+      "id": "sample-04",
+      "hex": "#859334",
+      "frequency": 1,
+      "pixelShare": 0.000015879065040650408,
+      "region": {
+        "x": 0.00194543,
+        "y": 0.59990111,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.0027629573170731706,
+      "largestFamilyRegionPixelShare": 0.0002699441056910569
+    },
+    {
+      "id": "sample-05",
+      "hex": "#6b4a64",
+      "frequency": 3,
+      "pixelShare": 0.00004763719512195122,
+      "region": {
+        "x": 0.0517675,
+        "y": 0.69013597,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.0037315802845528457,
+      "largestFamilyRegionPixelShare": 0.000857469512195122
+    },
+    {
+      "id": "sample-06",
+      "hex": "#b7d0d5",
+      "frequency": 1,
+      "pixelShare": 0.000015879065040650408,
+      "region": {
+        "x": 0.56066429,
+        "y": 0.37245983,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.013576600609756097,
+      "largestFamilyRegionPixelShare": 0.00038109756097560977
+    },
+    {
+      "id": "sample-07",
+      "hex": "#173a1c",
+      "frequency": 1,
+      "pixelShare": 0.000015879065040650408,
+      "region": {
+        "x": 0,
+        "y": 0.65305315,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.009987931910569106,
+      "largestFamilyRegionPixelShare": 0.0004604928861788618
+    },
+    {
+      "id": "sample-08",
+      "hex": "#8d7c74",
+      "frequency": 1,
+      "pixelShare": 0.000015879065040650408,
+      "region": {
+        "x": 0.79791222,
+        "y": 0.81621755,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.0049860264227642274,
+      "largestFamilyRegionPixelShare": 0.00025406504065040653
+    },
+    {
+      "id": "sample-09",
+      "hex": "#16294a",
+      "frequency": 1,
+      "pixelShare": 0.000015879065040650408,
+      "region": {
+        "x": 0.03278766,
+        "y": 0.69013597,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.003461636178861789,
+      "largestFamilyRegionPixelShare": 0.0002858231707317073
+    },
+    {
+      "id": "sample-10",
+      "hex": "#50a294",
+      "frequency": 1,
+      "pixelShare": 0.000015879065040650408,
+      "region": {
+        "x": 0.87620403,
+        "y": 0.22907293,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.029138084349593495,
+      "largestFamilyRegionPixelShare": 0.0007145579268292683
+    },
+    {
+      "id": "sample-11",
+      "hex": "#9395b5",
+      "frequency": 3,
+      "pixelShare": 0.00004763719512195122,
+      "region": {
+        "x": 0.76588375,
+        "y": 0.39470952,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.02227832825203252,
+      "largestFamilyRegionPixelShare": 0.005335365853658537
+    },
+    {
+      "id": "sample-12",
+      "hex": "#c1c49a",
+      "frequency": 14,
+      "pixelShare": 0.00022230691056910568,
+      "region": {
+        "x": 0.6686121,
+        "y": 0.20805933,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "familyPixelShare": 0.0057641006097560975,
+      "largestFamilyRegionPixelShare": 0.00033346036585365856
+    }
+  ],
+  "nonColor": {
+    "fonts": [],
+    "typeSizes": [],
+    "spacing": [],
+    "radii": [],
+    "shadows": []
+  },
+  "width": 843,
+  "height": 809
+}

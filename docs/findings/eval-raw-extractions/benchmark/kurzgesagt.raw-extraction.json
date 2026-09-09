@@ -1,0 +1,262 @@
+{
+  "url": "https://kurzgesagt.org/",
+  "extractedAt": "2026-07-19T06:33:01.661Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#e5e7eb",
+      "frequency": 549,
+      "roles": []
+    },
+    {
+      "hex": "#0a1439",
+      "frequency": 463,
+      "roles": [
+        {
+          "role": "text",
+          "count": 464
+        },
+        {
+          "role": "accent",
+          "count": 465
+        },
+        {
+          "role": "border",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 132,
+      "roles": [
+        {
+          "role": "background",
+          "count": 132
+        },
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#47cc5e",
+      "frequency": 5,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "hex": "#970cda",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#0c46da",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#c174e6",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#0f172a",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#1e293b",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#475569",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Montserrat-Medium"
+      ],
+      "role": "unknown",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Montserrat-Medium"
+      ],
+      "role": "heading",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "Montserrat-Regular"
+      ],
+      "role": "unknown",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "Montserrat-Regular"
+      ],
+      "role": "body",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "Montserrat-Regular"
+      ],
+      "role": "heading",
+      "frequency": 1
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 14,
+      "frequency": 2,
+      "fontWeight": 500,
+      "lineHeightPx": 21
+    },
+    {
+      "px": 18,
+      "frequency": 4,
+      "fontWeight": 500,
+      "lineHeightPx": 27
+    },
+    {
+      "px": 22,
+      "frequency": 3,
+      "fontWeight": 500,
+      "lineHeightPx": 33
+    },
+    {
+      "px": 26,
+      "frequency": 1,
+      "fontWeight": 500,
+      "lineHeightPx": 39
+    },
+    {
+      "px": 130,
+      "frequency": 2,
+      "fontWeight": 500,
+      "lineHeightPx": 130
+    },
+    {
+      "px": 156,
+      "frequency": 1,
+      "fontWeight": 500,
+      "lineHeightPx": 112.32
+    }
+  ],
+  "spacing": [
+    {
+      "px": 5.76,
+      "frequency": 1
+    },
+    {
+      "px": 10.8,
+      "frequency": 1
+    },
+    {
+      "px": 16,
+      "frequency": 19
+    },
+    {
+      "px": 32,
+      "frequency": 5
+    },
+    {
+      "px": 48,
+      "frequency": 7
+    },
+    {
+      "px": 64,
+      "frequency": 6
+    },
+    {
+      "px": 80,
+      "frequency": 7
+    },
+    {
+      "px": 95.04,
+      "frequency": 1
+    },
+    {
+      "px": 96,
+      "frequency": 6
+    },
+    {
+      "px": 144,
+      "frequency": 4
+    },
+    {
+      "px": 157.536,
+      "frequency": 1
+    }
+  ],
+  "radii": [
+    {
+      "px": 8,
+      "frequency": 1
+    },
+    {
+      "px": 100,
+      "frequency": 8
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/kurzgesagt.viewport.png"
+    }
+  ],
+  "warnings": [
+    "1 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

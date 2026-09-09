@@ -1,0 +1,240 @@
+{
+  "$description": "Dark-mode overlay synthesized from image-cluster-v2 palette evidence (color values only).",
+  "$extensions": {
+    "onbrand": {
+      "schemaVersion": 1
+    }
+  },
+  "color": {
+    "$type": "color",
+    "primitive": {
+      "brand": {
+        "1": {
+          "$value": "#15181a"
+        },
+        "2": {
+          "$value": "#1b2024"
+        },
+        "3": {
+          "$value": "#222b33"
+        },
+        "4": {
+          "$value": "#283946"
+        },
+        "5": {
+          "$value": "#2f495e"
+        },
+        "6": {
+          "$value": "#335c7c"
+        },
+        "7": {
+          "$value": "#3675a2"
+        },
+        "8": {
+          "$value": "#3b8fca"
+        },
+        "9": {
+          "$value": "#48a7e9"
+        },
+        "10": {
+          "$value": "#62bafa"
+        },
+        "11": {
+          "$value": "#8cd3ff"
+        },
+        "12": {
+          "$value": "#d8f0ff"
+        }
+      },
+      "neutral": {
+        "1": {
+          "$value": "#151818"
+        },
+        "2": {
+          "$value": "#1d2021"
+        },
+        "3": {
+          "$value": "#272b2c"
+        },
+        "4": {
+          "$value": "#333839"
+        },
+        "5": {
+          "$value": "#424749"
+        },
+        "6": {
+          "$value": "#53595b"
+        },
+        "7": {
+          "$value": "#697072"
+        },
+        "8": {
+          "$value": "#81898c"
+        },
+        "9": {
+          "$value": "#97a0a3"
+        },
+        "10": {
+          "$value": "#a9b3b6"
+        },
+        "11": {
+          "$value": "#c3cccf"
+        },
+        "12": {
+          "$value": "#e7eef0"
+        }
+      }
+    },
+    "semantic": {
+      "bg": {
+        "$value": "#151818"
+      },
+      "surface": {
+        "$value": "#272b2c"
+      },
+      "text": {
+        "$value": "#e7eef0"
+      },
+      "text-muted": {
+        "$value": "#c3cccf"
+      },
+      "border": {
+        "$value": "#424749"
+      },
+      "accent": {
+        "$value": "#62bafa"
+      },
+      "code-bg": {
+        "$value": "#333839"
+      },
+      "shadow-color": {
+        "$value": "#00000080"
+      }
+    },
+    "status": {
+      "success": {
+        "fg": {
+          "$value": "#7be693"
+        },
+        "bg": {
+          "$value": "#1a211b"
+        }
+      },
+      "warning": {
+        "fg": {
+          "$value": "#ffb572"
+        },
+        "bg": {
+          "$value": "#251e19"
+        }
+      },
+      "danger": {
+        "fg": {
+          "$value": "#ffaea3"
+        },
+        "bg": {
+          "$value": "#281c1a"
+        }
+      },
+      "info": {
+        "fg": {
+          "$value": "#a6cbff"
+        },
+        "bg": {
+          "$value": "#1a1f29"
+        }
+      }
+    },
+    "chart": {
+      "categorical": {
+        "1": {
+          "$value": "#62bafa"
+        },
+        "2": {
+          "$value": "#b5b852"
+        },
+        "3": {
+          "$value": "#e292d2"
+        },
+        "4": {
+          "$value": "#a5a6ff"
+        },
+        "5": {
+          "$value": "#f78f8d"
+        },
+        "6": {
+          "$value": "#abbb58"
+        },
+        "7": {
+          "$value": "#33cbb6"
+        },
+        "8": {
+          "$value": "#78c781"
+        }
+      },
+      "sequential": {
+        "1": {
+          "$value": "#222b33"
+        },
+        "2": {
+          "$value": "#283946"
+        },
+        "3": {
+          "$value": "#2f495e"
+        },
+        "4": {
+          "$value": "#3675a2"
+        },
+        "5": {
+          "$value": "#48a7e9"
+        },
+        "6": {
+          "$value": "#62bafa"
+        },
+        "7": {
+          "$value": "#d8f0ff"
+        }
+      },
+      "chrome": {
+        "grid": {
+          "$value": "#424749"
+        },
+        "axis": {
+          "$value": "#81898c"
+        },
+        "label": {
+          "$value": "#c3cccf"
+        },
+        "tooltip-bg": {
+          "$value": "#272b2c"
+        }
+      }
+    },
+    "diagram": {
+      "canvas": {
+        "$value": "#1d2021"
+      },
+      "node-fill": {
+        "$value": "#1f2733"
+      },
+      "node-stroke": {
+        "$value": "#a2a636"
+      },
+      "link": {
+        "$value": "#9293ee"
+      },
+      "spine-accent": {
+        "$value": "#62bafa"
+      },
+      "label": {
+        "$value": "#e7eef0"
+      },
+      "chip-highlight": {
+        "$value": "#d07dc0"
+      },
+      "warning": {
+        "$value": "#e3a542"
+      }
+    }
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "url": "https://www.duolingo.com/",
+  "extractedAt": "2026-07-19T06:32:17.787Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#3c3c3c",
+      "frequency": 7581,
+      "roles": [
+        {
+          "role": "text",
+          "count": 7581
+        },
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#777777",
+      "frequency": 268,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#a5ed6e",
+      "frequency": 133,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 134
+        },
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#4b4b4b",
+      "frequency": 30,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#58cc02",
+      "frequency": 24,
+      "roles": []
+    },
+    {
+      "hex": "#1cb0f6",
+      "frequency": 14,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "hex": "#afafaf",
+      "frequency": 14,
+      "roles": []
+    },
+    {
+      "hex": "#d7ffb8",
+      "frequency": 14,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 8,
+      "roles": [
+        {
+          "role": "background",
+          "count": 8
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#0000ee",
+      "frequency": 4,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#000437",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#808080",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#000000",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#042c60",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#6cc04a",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#100f3e",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#c1c1c1",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#e5e5e5",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "feather"
+      ],
+      "role": "unknown",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "feather"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "duolingo-sans"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "duolingo-sans"
+      ],
+      "role": "unknown",
+      "frequency": 7
+    },
+    {
+      "families": [
+        "duolingo-sans"
+      ],
+      "role": "body",
+      "frequency": 4
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 13,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 15.99
+    },
+    {
+      "px": 13.008,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 15.609599999999999
+    },
+    {
+      "px": 14,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 16.939999999999998
+    },
+    {
+      "px": 15,
+      "frequency": 4,
+      "fontWeight": 700,
+      "lineHeightPx": 17.25
+    },
+    {
+      "px": 17,
+      "frequency": 4,
+      "fontWeight": 500,
+      "lineHeightPx": 20.06
+    },
+    {
+      "px": 32,
+      "frequency": 1,
+      "fontWeight": 700
+    },
+    {
+      "px": 48,
+      "frequency": 2,
+      "fontWeight": 700
+    },
+    {
+      "px": 64,
+      "frequency": 1,
+      "fontWeight": 700
+    }
+  ],
+  "spacing": [
+    {
+      "px": 1,
+      "frequency": 2
+    },
+    {
+      "px": 8,
+      "frequency": 60
+    },
+    {
+      "px": 9.5,
+      "frequency": 4
+    },
+    {
+      "px": 10,
+      "frequency": 3
+    },
+    {
+      "px": 12,
+      "frequency": 12
+    },
+    {
+      "px": 13.008,
+      "frequency": 3
+    },
+    {
+      "px": 16,
+      "frequency": 4
+    },
+    {
+      "px": 20,
+      "frequency": 1
+    },
+    {
+      "px": 40,
+      "frequency": 3
+    },
+    {
+      "px": 48,
+      "frequency": 2
+    },
+    {
+      "px": 64,
+      "frequency": 2
+    },
+    {
+      "px": 70,
+      "frequency": 1
+    },
+    {
+      "px": 96,
+      "frequency": 6
+    },
+    {
+      "px": 140,
+      "frequency": 1
+    },
+    {
+      "px": 185,
+      "frequency": 2
+    }
+  ],
+  "radii": [
+    {
+      "px": 2,
+      "frequency": 4
+    },
+    {
+      "px": 12,
+      "frequency": 9
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgb(128, 128, 128) 0px 0px 5px 0px",
+      "frequency": 1
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.2) 0px 0px 18px 0px",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/duolingo.viewport.png"
+    }
+  ]
+}

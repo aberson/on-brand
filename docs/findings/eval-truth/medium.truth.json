@@ -1,0 +1,116 @@
+{
+  "id": "medium",
+  "url": "https://medium.com",
+  "archetype": "media",
+  "sliderTags": {
+    "warmth": 0.45,
+    "saturation": 0.15,
+    "lightness": 0.9,
+    "contrast": 0.85,
+    "hueDiversity": 0.2,
+    "accentDominance": 0.25,
+    "neutralRatio": 0.9,
+    "vibrancy": 0.25
+  },
+  "isControl": false,
+  "isMultiAccent": false,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#191919",
+      "evidenceCount": 6,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "frequency": 3,
+      "lightness": 1
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#000000",
+        "frequency": 130,
+        "dominantRole": null
+      },
+      {
+        "hex": "#242424",
+        "frequency": 26,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#6b6b6b",
+        "frequency": 22,
+        "dominantRole": null
+      },
+      {
+        "hex": "#191919",
+        "frequency": 4,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#f7f4ed",
+        "frequency": 3,
+        "dominantRole": null
+      },
+      {
+        "hex": "#ffffff",
+        "frequency": 3,
+        "dominantRole": "background"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#1a8917",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": {
+      "hex": "#242424",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Söhne",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "medium"
+      },
+      "body": {
+        "family": "Charter",
+        "lookalikes": [
+          "Source Serif 4",
+          "Georgia"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": {
+        "family": "Source Code Pro",
+        "lookalikes": [
+          "JetBrains Mono"
+        ],
+        "source": "official-site-css",
+        "confidence": "medium"
+      }
+    },
+    "secondaryAccents": []
+  },
+  "goldHex": "#1a8917",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "medium",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/medium.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

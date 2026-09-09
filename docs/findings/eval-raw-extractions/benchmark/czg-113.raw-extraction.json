@@ -1,0 +1,146 @@
+{
+  "url": "https://www.csszengarden.com/113/",
+  "extractedAt": "2026-07-19T06:31:33.524Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#ffffff",
+      "frequency": 165,
+      "roles": [
+        {
+          "role": "text",
+          "count": 165
+        },
+        {
+          "role": "border",
+          "count": 2
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#99ff00",
+      "frequency": 77,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 78
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 5,
+      "roles": [
+        {
+          "role": "background",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "hex": "#cccccc",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "verdana",
+        "arial"
+      ],
+      "role": "heading",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "verdana",
+        "arial"
+      ],
+      "role": "unknown",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Arial"
+      ],
+      "role": "unknown",
+      "frequency": 2
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 10,
+      "frequency": 2,
+      "fontWeight": 400
+    },
+    {
+      "px": 10.6667,
+      "frequency": 5,
+      "fontWeight": 400
+    },
+    {
+      "px": 12.48,
+      "frequency": 2,
+      "fontWeight": 700
+    }
+  ],
+  "spacing": [
+    {
+      "px": 5,
+      "frequency": 8
+    },
+    {
+      "px": 10,
+      "frequency": 10
+    },
+    {
+      "px": 10.6667,
+      "frequency": 28
+    },
+    {
+      "px": 12.48,
+      "frequency": 11
+    },
+    {
+      "px": 13.28,
+      "frequency": 2
+    },
+    {
+      "px": 14,
+      "frequency": 2
+    },
+    {
+      "px": 14.2933,
+      "frequency": 2
+    },
+    {
+      "px": 25,
+      "frequency": 4
+    },
+    {
+      "px": 390,
+      "frequency": 1
+    }
+  ],
+  "radii": [],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/czg-113.viewport.png"
+    }
+  ]
+}

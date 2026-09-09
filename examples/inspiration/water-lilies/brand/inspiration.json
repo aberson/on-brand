@@ -1,0 +1,344 @@
+{
+  "schema": "onbrand.inspiration",
+  "schemaVersion": 1,
+  "id": "image-06367197ac8d6745",
+  "reviewStatus": "operator-reviewed",
+  "summary": "Palette generated from Water Lilies.",
+  "asset": {
+    "path": "assets/inspiration.jpg",
+    "sha256": "06367197ac8d6745537dcfe6722ff4b8ef2cb33e044168d8c471782b55f7dd39",
+    "mediaType": "image/jpeg",
+    "alt": "Water lilies floating on a pond.",
+    "creator": "Claude Monet",
+    "title": "Water Lilies",
+    "date": "1906",
+    "sourceUrl": "https://www.artic.edu/artworks/16568/water-lilies",
+    "rights": "CC0 Public Domain Designation",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "retrievedAt": "2026-08-25"
+  },
+  "analysis": {
+    "sourceKind": "image",
+    "algorithm": "image-cluster-v2",
+    "basePreset": "default",
+    "primary": {
+      "sampleId": "sample-01",
+      "selectionSource": "deterministic"
+    },
+    "neutral": {
+      "sampleId": "sample-02",
+      "selectionSource": "deterministic"
+    },
+    "secondaries": [
+      {
+        "sampleId": "sample-12",
+        "selectionSource": "deterministic"
+      },
+      {
+        "sampleId": "sample-05",
+        "selectionSource": "deterministic"
+      },
+      {
+        "sampleId": "sample-11",
+        "selectionSource": "deterministic"
+      },
+      {
+        "sampleId": "sample-03",
+        "selectionSource": "deterministic"
+      },
+      {
+        "sampleId": "sample-04",
+        "selectionSource": "deterministic"
+      },
+      {
+        "sampleId": "sample-10",
+        "selectionSource": "deterministic"
+      },
+      {
+        "sampleId": "sample-07",
+        "selectionSource": "deterministic"
+      }
+    ],
+    "unobservedDefaults": [
+      "typography",
+      "spacing",
+      "radius",
+      "shadow",
+      "motion",
+      "status"
+    ],
+    "defaultDerivedColorTargets": []
+  },
+  "mappings": [
+    {
+      "id": "sample-01",
+      "label": "Sample 01",
+      "region": {
+        "x": 0.82638197,
+        "y": 0.20187886,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#416886",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.0411108993902439
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.1",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.1."
+        },
+        {
+          "token": "color.diagram.spine-accent",
+          "presentation": "swatch-only",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.diagram.spine-accent."
+        },
+        {
+          "token": "color.primitive.brand.9",
+          "presentation": "swatch-only",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.primitive.brand.9."
+        },
+        {
+          "token": "color.semantic.accent",
+          "presentation": "swatch-only",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.semantic.accent."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.1 by image-cluster-v2.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-02",
+      "label": "Sample 02",
+      "region": {
+        "x": 0.75758007,
+        "y": 0,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#536f77",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.022977007113821137
+      },
+      "targets": [
+        {
+          "token": "color.primitive.neutral.9",
+          "presentation": "swatch-only",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.primitive.neutral.9."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.primitive.neutral.9 by image-cluster-v2.",
+      "confidence": "medium"
+    },
+    {
+      "id": "sample-12",
+      "label": "Sample 12",
+      "region": {
+        "x": 0.6686121,
+        "y": 0.20805933,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#c1c49a",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.00022230691056910568
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.2",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.2."
+        },
+        {
+          "token": "color.diagram.node-stroke",
+          "presentation": "swatch-only",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.diagram.node-stroke."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.2 by image-cluster-v2.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-05",
+      "label": "Sample 05",
+      "region": {
+        "x": 0.0517675,
+        "y": 0.69013597,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#6b4a64",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.00004763719512195122
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.3",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.3."
+        },
+        {
+          "token": "color.diagram.chip-highlight",
+          "presentation": "swatch-only",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.diagram.chip-highlight."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.3 by image-cluster-v2.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-11",
+      "label": "Sample 11",
+      "region": {
+        "x": 0.76588375,
+        "y": 0.39470952,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#9395b5",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.00004763719512195122
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.4",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.4."
+        },
+        {
+          "token": "color.diagram.link",
+          "presentation": "swatch-only",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.diagram.link."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.4 by image-cluster-v2.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-03",
+      "label": "Sample 03",
+      "region": {
+        "x": 0,
+        "y": 0.68766378,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#e0bebc",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.000031758130081300816
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.5",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.5."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.5 by image-cluster-v2.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-04",
+      "label": "Sample 04",
+      "region": {
+        "x": 0.00194543,
+        "y": 0.59990111,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#859334",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.000015879065040650408
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.6",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.6."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.6 by image-cluster-v2.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-10",
+      "label": "Sample 10",
+      "region": {
+        "x": 0.87620403,
+        "y": 0.22907293,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#50a294",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.000015879065040650408
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.7",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.7."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.7 by image-cluster-v2.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-07",
+      "label": "Sample 07",
+      "region": {
+        "x": 0,
+        "y": 0.65305315,
+        "width": 0.04,
+        "height": 0.04
+      },
+      "sample": {
+        "hex": "#173a1c",
+        "method": "image-cluster-v2",
+        "selectionSource": "deterministic",
+        "pixelShare": 0.000015879065040650408
+      },
+      "targets": [
+        {
+          "token": "color.chart.categorical.8",
+          "presentation": "chart-series",
+          "relationship": "adjusted-for-contrast",
+          "usage": "Palette assignment for color.chart.categorical.8."
+        }
+      ],
+      "rationale": "Measured sample mapped to color.chart.categorical.8 by image-cluster-v2.",
+      "confidence": "high"
+    }
+  ]
+}

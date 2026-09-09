@@ -1,0 +1,120 @@
+{
+  "id": "robinhood",
+  "url": "https://robinhood.com",
+  "archetype": "fintech",
+  "sliderTags": {
+    "warmth": 0.45,
+    "saturation": 0.65,
+    "lightness": 0.35,
+    "contrast": 0.75,
+    "hueDiversity": 0.3,
+    "accentDominance": 0.75,
+    "neutralRatio": 0.6,
+    "vibrancy": 0.7
+  },
+  "isControl": false,
+  "isMultiAccent": false,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#ccff00",
+      "evidenceCount": 28,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#000000",
+      "frequency": 268,
+      "lightness": 0
+    },
+    "backgroundDark": {
+      "hex": "#000000",
+      "frequency": 268,
+      "lightness": 0
+    },
+    "topClusters": [
+      {
+        "hex": "#110e08",
+        "frequency": 783,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#ffffff",
+        "frequency": 307,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#000000",
+        "frequency": 268,
+        "dominantRole": "background"
+      },
+      {
+        "hex": "#ccff00",
+        "frequency": 26,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#4d4a46",
+        "frequency": 12,
+        "dominantRole": null
+      },
+      {
+        "hex": "#35322d",
+        "frequency": 9,
+        "dominantRole": "border"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#ccff00",
+      "source": "reputable-aggregator",
+      "confidence": "medium"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "backgroundDark": {
+      "hex": "#000000",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Capsule Sans Display",
+        "lookalikes": [
+          "Inter",
+          "Manrope"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Capsule Sans Text",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": {
+        "family": "Capsule Sans Text Mono",
+        "lookalikes": [
+          "JetBrains Mono"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      }
+    },
+    "secondaryAccents": []
+  },
+  "goldHex": "#ccff00",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "robinhood",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/robinhood.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

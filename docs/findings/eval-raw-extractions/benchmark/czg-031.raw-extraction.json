@@ -1,0 +1,189 @@
+{
+  "url": "https://www.csszengarden.com/031/",
+  "extractedAt": "2026-07-19T06:31:19.377Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#888888",
+      "frequency": 163,
+      "roles": [
+        {
+          "role": "text",
+          "count": 163
+        },
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#009900",
+      "frequency": 88,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 89
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 4,
+      "roles": [
+        {
+          "role": "background",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#336633",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#d9d98b",
+      "frequency": 1,
+      "roles": []
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Times New Roman"
+      ],
+      "role": "heading",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "Times New Roman"
+      ],
+      "role": "body",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "Times New Roman"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "Verdana",
+        "Arial"
+      ],
+      "role": "unknown",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Georgia"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 12.8,
+      "frequency": 1,
+      "fontWeight": 400
+    },
+    {
+      "px": 12.96,
+      "frequency": 4,
+      "fontWeight": 700,
+      "lineHeightPx": 14.385600000000002
+    },
+    {
+      "px": 13.6,
+      "frequency": 1,
+      "fontWeight": 400
+    },
+    {
+      "px": 13.6896,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 17.796480000000003
+    },
+    {
+      "px": 14.88,
+      "frequency": 1,
+      "fontWeight": 400
+    },
+    {
+      "px": 16,
+      "frequency": 2,
+      "fontWeight": 400
+    },
+    {
+      "px": 18.72,
+      "frequency": 1,
+      "fontWeight": 700
+    },
+    {
+      "px": 32,
+      "frequency": 1,
+      "fontWeight": 700
+    }
+  ],
+  "spacing": [
+    {
+      "px": 7.2,
+      "frequency": 15
+    },
+    {
+      "px": 10,
+      "frequency": 2
+    },
+    {
+      "px": 14.4,
+      "frequency": 6
+    },
+    {
+      "px": 16,
+      "frequency": 28
+    },
+    {
+      "px": 19.92,
+      "frequency": 2
+    },
+    {
+      "px": 75,
+      "frequency": 1
+    },
+    {
+      "px": 90,
+      "frequency": 1
+    }
+  ],
+  "radii": [],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/czg-031.viewport.png"
+    }
+  ]
+}

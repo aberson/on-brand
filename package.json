@@ -1,0 +1,36 @@
+{
+  "name": "on-brand",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portable brand kits from design tokens, websites, and images: CSS, Tailwind, TypeScript, Python, SVG, and design guides",
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "bin": {
+    "onbrand": "./bin/onbrand.mjs"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "colorjs.io": "^0.5.2",
+    "sharp": "0.35.3",
+    "tsx": "^4.19.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "dembrandt": "^0.23.1",
+    "playwright": "^1.61.1",
+    "postcss": "^8.5.19",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aberson/on-brand.git"
+  }
+}

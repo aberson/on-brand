@@ -1,0 +1,243 @@
+{
+  "url": "http://127.0.0.1:8791/",
+  "extractedAt": "2026-07-17T15:56:43.792Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#1a1f29",
+      "frequency": 29,
+      "roles": [
+        {
+          "role": "text",
+          "count": 29
+        },
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 7,
+      "roles": [
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#5b6472",
+      "frequency": 6,
+      "roles": []
+    },
+    {
+      "hex": "#3355e0",
+      "frequency": 4,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 5
+        },
+        {
+          "role": "border",
+          "count": 1
+        },
+        {
+          "role": "text",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#d5dae2",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#00000000",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#2540b0",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#eef0f4",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#f7f8fa",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "background",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Poppins",
+        "Segoe UI",
+        "system-ui"
+      ],
+      "role": "heading",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "Inter",
+        "Helvetica Neue",
+        "Arial"
+      ],
+      "role": "body",
+      "frequency": 3
+    },
+    {
+      "families": [
+        "Inter",
+        "Helvetica Neue",
+        "Arial"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "Arial"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 13.3333,
+      "frequency": 1,
+      "fontWeight": 600
+    },
+    {
+      "px": 14,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 21.7
+    },
+    {
+      "px": 16,
+      "frequency": 2,
+      "fontWeight": 600,
+      "lineHeightPx": 24.8
+    },
+    {
+      "px": 18,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 27.900000000000002
+    },
+    {
+      "px": 24,
+      "frequency": 1,
+      "fontWeight": 600,
+      "lineHeightPx": 37.2
+    },
+    {
+      "px": 40,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 48
+    }
+  ],
+  "spacing": [
+    {
+      "px": 2,
+      "frequency": 2
+    },
+    {
+      "px": 12,
+      "frequency": 6
+    },
+    {
+      "px": 14,
+      "frequency": 2
+    },
+    {
+      "px": 16,
+      "frequency": 9
+    },
+    {
+      "px": 24,
+      "frequency": 7
+    },
+    {
+      "px": 32,
+      "frequency": 4
+    },
+    {
+      "px": 48,
+      "frequency": 2
+    }
+  ],
+  "radii": [
+    {
+      "px": 4,
+      "frequency": 1
+    },
+    {
+      "px": 8,
+      "frequency": 3
+    },
+    {
+      "px": 12,
+      "frequency": 2
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(26, 31, 41, 0.08) 0px 4px 12px 0px",
+      "frequency": 2
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "brand/assets/127.0.0.1-fda54c93.png"
+    }
+  ],
+  "warnings": [
+    "1 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

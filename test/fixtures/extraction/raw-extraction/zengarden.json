@@ -1,0 +1,206 @@
+{
+  "url": "https://csszengarden.com/221/",
+  "extractedAt": "2026-07-17T03:02:52.738Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#0d2c40",
+      "frequency": 177,
+      "roles": [
+        {
+          "role": "text",
+          "count": 177
+        },
+        {
+          "role": "accent",
+          "count": 178
+        },
+        {
+          "role": "border",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 106,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#31c5da",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#f15a30",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#c879b2",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#f6efe5",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "background",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#00bcd9",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#000000",
+      "frequency": 1,
+      "roles": []
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "ff-meta-web-pro"
+      ],
+      "role": "heading",
+      "frequency": 4
+    },
+    {
+      "families": [
+        "ff-meta-web-pro"
+      ],
+      "role": "body",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "ff-meta-web-pro"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 16,
+      "frequency": 3,
+      "fontWeight": 700,
+      "lineHeightPx": 32
+    },
+    {
+      "px": 24,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 25.92
+    },
+    {
+      "px": 40,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 50
+    },
+    {
+      "px": 48,
+      "frequency": 1,
+      "fontWeight": 700,
+      "lineHeightPx": 96
+    }
+  ],
+  "spacing": [
+    {
+      "px": 16,
+      "frequency": 36
+    },
+    {
+      "px": 24,
+      "frequency": 10
+    },
+    {
+      "px": 32,
+      "frequency": 13
+    },
+    {
+      "px": 48,
+      "frequency": 4
+    },
+    {
+      "px": 120,
+      "frequency": 2
+    },
+    {
+      "px": 128,
+      "frequency": 2
+    },
+    {
+      "px": 160,
+      "frequency": 10
+    },
+    {
+      "px": 224,
+      "frequency": 1
+    },
+    {
+      "px": 240,
+      "frequency": 1
+    },
+    {
+      "px": 260.8,
+      "frequency": 1
+    },
+    {
+      "px": 320,
+      "frequency": 4
+    },
+    {
+      "px": 352,
+      "frequency": 2
+    },
+    {
+      "px": 400,
+      "frequency": 1
+    },
+    {
+      "px": 512,
+      "frequency": 1
+    },
+    {
+      "px": 624,
+      "frequency": 1
+    },
+    {
+      "px": 880,
+      "frequency": 1
+    },
+    {
+      "px": 960,
+      "frequency": 1
+    }
+  ],
+  "radii": [],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "test/fixtures/extraction/screenshots/zengarden.png",
+      "width": 1920,
+      "height": 1080
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 222" font-family="ui-monospace,'Cascadia Code','SF Mono',Consolas,'Roboto Mono',monospace" role="img" aria-labelledby="title desc">
+  <title id="title">From an image to an explained palette</title>
+  <desc id="desc">A local PNG, JPEG, or WebP is measured into color samples and locations, synthesized into ramps and roles, explained with source-to-token mappings, and inspected in the component specimen before adoption.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#6E9BFF"/></marker>
+    <marker id="step" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#384153"/></marker>
+    <filter id="shadow" x="-20%" y="-45%" width="140%" height="190%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,.5)"/></filter>
+  </defs>
+  <style>
+    .bg{fill:#161C26;stroke:#29313F;stroke-width:1.5}
+    .spine{fill:none;stroke:#6E9BFF;stroke-width:2.4;marker-end:url(#arrow)}
+    .link{fill:none;stroke:#384153;stroke-width:1.7;marker-end:url(#step)}
+    .node rect{fill:#161C26;stroke:#384153;stroke-width:1.4;filter:url(#shadow)}
+    .name{fill:#6E9BFF;font-size:13px;font-weight:600}
+    .sub{fill:#7C8598;font-size:10.5px}
+    .label{fill:#7C8598;font-size:11px;letter-spacing:.12em;font-weight:600}
+    .caption{fill:#7C8598;font-size:10.5px}
+  </style>
+  <rect class="bg" x="6" y="6" width="988" height="210" rx="16"/>
+  <text class="label" x="24" y="32">FROM IMAGE TO IMPLEMENTATION</text>
+  <path class="spine" d="M192,108 H220"/>
+  <path class="spine" d="M388,108 H416"/>
+  <path class="spine" d="M584,108 H612"/>
+  <path class="spine" d="M780,108 H808"/>
+  <g class="node"><rect x="24" y="68" width="168" height="80" rx="10"/><text class="name" x="38" y="89">local raster</text><text class="sub" x="38" y="106">PNG · JPEG · WebP</text></g>
+  <text class="sub" x="38" y="130">exact source copy kept</text>
+  <g class="node"><rect x="220" y="68" width="168" height="80" rx="10"/><text class="name" x="234" y="89">measure</text><text class="sub" x="234" y="106">families + coverage</text></g>
+  <text class="sub" x="234" y="130">sample locations</text>
+  <g class="node"><rect x="416" y="68" width="168" height="80" rx="10"/><text class="name" x="430" y="89">synthesize</text><text class="sub" x="430" y="106">ramps + color roles</text></g>
+  <text class="sub" x="430" y="130">light + dark values</text>
+  <g class="node"><rect x="612" y="68" width="168" height="80" rx="10"/><text class="name" x="626" y="89">explain</text><text class="sub" x="626" y="106">source → token map</text></g>
+  <text class="sub" x="626" y="130">image zoom + details</text>
+  <g class="node"><rect x="808" y="68" width="168" height="80" rx="10"/><text class="name" x="822" y="89">review</text><text class="sub" x="822" y="106">component specimen</text></g>
+  <text class="sub" x="822" y="130">adopt when ready</text>
+  <text class="caption" x="24" y="183">Colors are measured from pixels. Typography, spacing, and component shape retain the preset defaults.</text>
+  <text class="caption" x="24" y="201">The image pipeline is deterministic and local. New proposals always start as generated-draft.</text>
+</svg>

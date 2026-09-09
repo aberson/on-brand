@@ -1,0 +1,173 @@
+/**
+ * Unit tests for the theme.tw.css emitter: the verified-namespace mapping
+ * (docs/findings/tailwind-v4-theme-namespaces.md), the deliberate exclusions,
+ * the remap injectivity gate, and the dark companion-block structure. The
+ * postcss @theme parse + golden checks live in emitters.e2e.test.ts
+ * (integration through the production CLI).
+ */
+
+import { describe, expect, it } from 'vitest';
+import {
+  assertUniqueTwVarNames,
+  emitThemeTw,
+  tokenPathToTwVar,
+} from '../src/build/emitters/tailwind.ts';
+import type { EmitterContext, FlatToken } from '../src/build/compile.ts';
+import type { TokensDocument } from '../src/schema/types.ts';
+
+function flat(path: string[], type: FlatToken['type'], value: FlatToken['value']): FlatToken {
+  return { path, dotPath: path.join('.'), type, value };
+}
+
+function ctx(light: FlatToken[], darkOverrides: FlatToken[] = []): EmitterContext {
+  return { light, darkOverrides, lightDocument: {} as TokensDocument };
+}
+
+describe('tokenPathToTwVar (the verified-namespace mapping)', () => {
+  it('maps each token category onto its Tailwind v4 namespace', () => {
+    expect(tokenPathToTwVar(['color', 'semantic', 'bg'])).toBe('--color-semantic-bg');
+    expect(tokenPathToTwVar(['font', 'sans'])).toBe('--font-sans');
+    expect(tokenPathToTwVar(['space', '4'])).toBe('--spacing-4');
+    expect(tokenPathToTwVar(['radius', 'md'])).toBe('--radius-md');
+    expect(tokenPathToTwVar(['shadow', 'elevation-2'])).toBe('--shadow-elevation-2');
+    expect(tokenPathToTwVar(['type', 'size', 'base'])).toBe('--text-base');
+    expect(tokenPathToTwVar(['type', 'scale', 'step-0'])).toBe('--text-step-0');
+    expect(tokenPathToTwVar(['type', 'weight', 'bold'])).toBe('--font-weight-bold');
+    expect(tokenPathToTwVar(['type', 'line-height', 'tight'])).toBe('--leading-tight');
+    expect(tokenPathToTwVar(['motion', 'easing', 'standard'])).toBe('--ease-standard');
+  });
+
+  it('returns undefined for tokens without a verified namespace (never invents one)', () => {
+    expect(tokenPathToTwVar(['motion', 'duration', 'fast'])).toBeUndefined();
+    expect(tokenPathToTwVar(['brandx', 'thing'])).toBeUndefined(); // unknown category
+    expect(tokenPathToTwVar(['color'])).toBeUndefined(); // bare top-level token
+    expect(tokenPathToTwVar(['type', 'kerning', 'x'])).toBeUndefined(); // unknown type.* subgroup
+  });
+
+  it('applies the same character sanitization as tokens.css vars', () => {
+    expect(tokenPathToTwVar(['color', 'my brand'])).toBe('--color-my-brand');
+    expect(tokenPathToTwVar(['type', 'scale', 'step--1'])).toBe('--text-step--1');
+  });
+});
+
+describe('assertUniqueTwVarNames (the remap injectivity gate)', () => {
+  it('catches collisions the raw css-var gate cannot see (namespace remap)', () => {
+    // type.weight.bold -> --font-weight-bold AND font.weight-bold -> --font-weight-bold,
+    // while their raw css vars (--type-weight-bold / --font-weight-bold) differ.
+    const colliding = [
+      flat(['type', 'weight', 'bold'], 'fontWeight', 700),
+      flat(['font', 'weight-bold'], 'fontFamily', 'Inter'),
+    ];
+    expect(() => assertUniqueTwVarNames(colliding)).toThrowError(/--font-weight-bold/);
+    expect(() => assertUniqueTwVarNames(colliding)).toThrowError(/type\.weight\.bold/);
+    expect(() => assertUniqueTwVarNames(colliding)).toThrowError(/font\.weight-bold/);
+  });
+
+  it('catches type.size vs type.scale collisions (both land on --text-*)', () => {
+    const colliding = [
+      flat(['type', 'size', 'base'], 'dimension', '1rem'),
+      flat(['type', 'scale', 'base'], 'dimension', '1.05rem'),
+    ];
+    expect(() => assertUniqueTwVarNames(colliding)).toThrowError(/--text-base/);
+  });
+
+  it('accepts a dark override of the same token (same dot path, same var)', () => {
+    const bg = flat(['color', 'semantic', 'bg'], 'color', '#fcfcfd');
+    const bgDark = flat(['color', 'semantic', 'bg'], 'color', '#14181f');
+    expect(() => assertUniqueTwVarNames([bg, bgDark])).not.toThrow();
+  });
+
+  it('ignores unmapped tokens (they emit nothing, so they cannot collide)', () => {
+    const fine = [
+      flat(['motion', 'duration', 'fast'], 'duration', '120ms'),
+      flat(['brandx', 'duration', 'fast'], 'duration', '120ms'),
+    ];
+    expect(() => assertUniqueTwVarNames(fine)).not.toThrow();
+  });
+});
+
+describe('emitThemeTw', () => {
+  const light = [
+    flat(['color', 'semantic', 'bg'], 'color', '#fcfcfd'),
+    flat(['space', '1'], 'dimension', '0.25rem'),
+    flat(['motion', 'duration', 'fast'], 'duration', '120ms'),
+    flat(['shadow', 'elevation-1'], 'shadow', {
+      color: '#1f242c14',
+      offsetX: '0px',
+      offsetY: '1px',
+      blur: '2px',
+      spread: '0px',
+    }),
+  ];
+  const dark = [flat(['color', 'semantic', 'bg'], 'color', '#14181f')];
+
+  it('starts with the DO-NOT-EDIT header and wraps light values in ONE @theme block', () => {
+    const [file] = emitThemeTw(ctx(light, dark));
+    expect(file!.relPath).toBe('theme.tw.css');
+    expect(file!.content.startsWith('/* GENERATED by on-brand - DO NOT EDIT.')).toBe(true);
+    expect(file!.content.match(/@theme \{/g)).toHaveLength(1);
+    expect(file!.content).toContain('  --color-semantic-bg: #fcfcfd;');
+    expect(file!.content).toContain('  --spacing-1: 0.25rem;');
+    expect(file!.content).not.toContain('\r');
+  });
+
+  it('renders composite values through the shared CSS conversion (shadow string)', () => {
+    const [file] = emitThemeTw(ctx(light, dark));
+    expect(file!.content).toContain('--shadow-elevation-1: 0px 1px 2px 0px #1f242c14;');
+  });
+
+  it('lists unmapped tokens in a comment instead of inventing a namespace', () => {
+    const [file] = emitThemeTw(ctx(light, dark));
+    expect(file!.content).toContain('/* Not mapped');
+    expect(file!.content).toContain('motion.duration.fast');
+    expect(file!.content).not.toContain('--duration');
+  });
+
+  it('omits the unmapped comment when every token maps', () => {
+    const [file] = emitThemeTw(ctx([flat(['color', 'semantic', 'bg'], 'color', '#fcfcfd')]));
+    expect(file!.content).not.toContain('/* Not mapped');
+  });
+
+  it('emits dark overrides in companion blocks AFTER @theme: @media then [data-theme="dark"]', () => {
+    const [file] = emitThemeTw(ctx(light, dark));
+    const themeAt = file!.content.indexOf('@theme {');
+    const mediaAt = file!.content.indexOf('@media (prefers-color-scheme: dark)');
+    const dataAt = file!.content.indexOf('[data-theme="dark"]');
+    expect(themeAt).toBeGreaterThan(-1);
+    expect(mediaAt).toBeGreaterThan(themeAt);
+    expect(dataAt).toBeGreaterThan(mediaAt);
+    expect(file!.content.match(/--color-semantic-bg: #14181f;/g)).toHaveLength(2);
+  });
+
+  it('omits both dark blocks when there are no overrides', () => {
+    const [file] = emitThemeTw(ctx(light, []));
+    expect(file!.content).not.toContain('@media');
+    expect(file!.content).not.toContain('data-theme');
+  });
+
+  it('refuses to emit a remap-colliding token set (never silent last-wins)', () => {
+    const colliding = [
+      flat(['type', 'weight', 'bold'], 'fontWeight', 700),
+      flat(['font', 'weight-bold'], 'fontFamily', 'Inter'),
+    ];
+    expect(() => emitThemeTw(ctx(colliding))).toThrowError(/--font-weight-bold/);
+  });
+
+  it('refuses declaration-breakout values via the shared guard (@theme is build config)', () => {
+    const hostile = [
+      flat(['color', 'semantic', 'bg'], 'color', 'rgb(0,0,0); } html { --pwn: url(x)'),
+    ];
+    expect(() => emitThemeTw(ctx(hostile))).toThrowError(/color\.semantic\.bg/);
+    expect(() => emitThemeTw(ctx(hostile))).toThrowError(/forbidden/);
+  });
+
+  it('neutralizes star-slash pairs in unmapped dot paths (CSS comments cannot escape)', () => {
+    const tricky = [flat(['motion', 'duration', 'fa*/st'], 'duration', '120ms')];
+    const [file] = emitThemeTw(ctx(tricky));
+    expect(file!.content).toContain('/* Not mapped');
+    expect(file!.content).toContain('motion.duration.fa* /st'); // pair broken with a space
+    // exactly two closers in the whole file: the header's and this comment's —
+    // the token name contributed none (no early close)
+    expect(file!.content.match(/\*\//g)).toHaveLength(2);
+  });
+});

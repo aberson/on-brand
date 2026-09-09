@@ -1,0 +1,368 @@
+{
+  "url": "https://robinhood.com/us/en/",
+  "extractedAt": "2026-07-19T06:32:26.900Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#110e08",
+      "frequency": 783,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        },
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 307,
+      "roles": [
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 268,
+      "roles": [
+        {
+          "role": "background",
+          "count": 268
+        },
+        {
+          "role": "text",
+          "count": 268
+        },
+        {
+          "role": "border",
+          "count": 3
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ccff00",
+      "frequency": 26,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 28
+        },
+        {
+          "role": "border",
+          "count": 10
+        },
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#4d4a46",
+      "frequency": 12,
+      "roles": []
+    },
+    {
+      "hex": "#35322d",
+      "frequency": 9,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#d9d9d9",
+      "frequency": 8,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#808080",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "hex": "#00000000",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "hex": "#010101",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#110e0800",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#110e08e3",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#1c180d",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Martina Plantijn"
+      ],
+      "role": "unknown",
+      "frequency": 2
+    },
+    {
+      "families": [
+        "Phonic",
+        "Helvetica",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Arial"
+      ],
+      "role": "heading",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Phonic",
+        "Helvetica",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Arial"
+      ],
+      "role": "body",
+      "frequency": 4
+    },
+    {
+      "families": [
+        "Capsule Sans Text"
+      ],
+      "role": "unknown",
+      "frequency": 11
+    },
+    {
+      "families": [
+        "Phonic",
+        "Helvetica",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Arial"
+      ],
+      "role": "unknown",
+      "frequency": 3
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 12,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 18.96
+    },
+    {
+      "px": 13,
+      "frequency": 8,
+      "fontWeight": 400
+    },
+    {
+      "px": 16,
+      "frequency": 6,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 22,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 23.98
+    },
+    {
+      "px": 40,
+      "frequency": 3,
+      "fontWeight": 400,
+      "lineHeightPx": 48
+    },
+    {
+      "px": 52,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 61.879999999999995
+    },
+    {
+      "px": 72,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 64.8
+    },
+    {
+      "px": 110,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 110
+    }
+  ],
+  "spacing": [
+    {
+      "px": 1,
+      "frequency": 1
+    },
+    {
+      "px": 2,
+      "frequency": 4
+    },
+    {
+      "px": 4,
+      "frequency": 8
+    },
+    {
+      "px": 5,
+      "frequency": 2
+    },
+    {
+      "px": 8,
+      "frequency": 102
+    },
+    {
+      "px": 12,
+      "frequency": 2
+    },
+    {
+      "px": 16,
+      "frequency": 66
+    },
+    {
+      "px": 24,
+      "frequency": 42
+    },
+    {
+      "px": 30,
+      "frequency": 4
+    },
+    {
+      "px": 32,
+      "frequency": 9
+    },
+    {
+      "px": 36,
+      "frequency": 1
+    },
+    {
+      "px": 44,
+      "frequency": 1
+    },
+    {
+      "px": 50,
+      "frequency": 2
+    },
+    {
+      "px": 52,
+      "frequency": 2
+    },
+    {
+      "px": 60,
+      "frequency": 1
+    },
+    {
+      "px": 64,
+      "frequency": 1
+    },
+    {
+      "px": 77,
+      "frequency": 1
+    },
+    {
+      "px": 84,
+      "frequency": 1
+    }
+  ],
+  "radii": [
+    {
+      "px": 3,
+      "frequency": 4
+    },
+    {
+      "px": 20,
+      "frequency": 2
+    },
+    {
+      "px": 36,
+      "frequency": 12
+    }
+  ],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/robinhood.viewport.png"
+    }
+  ]
+}

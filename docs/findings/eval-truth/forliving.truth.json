@@ -1,0 +1,110 @@
+{
+  "id": "forliving",
+  "url": "https://www.for-living.it/",
+  "archetype": "luxury",
+  "sliderTags": {
+    "warmth": 0.6,
+    "saturation": 0.45,
+    "lightness": 0.8,
+    "contrast": 0.65,
+    "hueDiversity": 0.4,
+    "accentDominance": 0.5,
+    "neutralRatio": 0.6,
+    "vibrancy": 0.45
+  },
+  "isControl": false,
+  "isMultiAccent": false,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#d37955",
+      "evidenceCount": 3,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "frequency": 2733,
+      "lightness": 1
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#ffffff",
+        "frequency": 2733,
+        "dominantRole": "background"
+      },
+      {
+        "hex": "#000000",
+        "frequency": 422,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#1863dc",
+        "frequency": 6,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#f4f4f4",
+        "frequency": 6,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#212121",
+        "frequency": 2,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#d37955",
+        "frequency": 2,
+        "dominantRole": "accent"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#d37955",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "backgroundDark": {
+      "hex": "#080e00",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "fonts": {
+      "heading": {
+        "family": "PP Fragment",
+        "lookalikes": [
+          "Playfair Display",
+          "Fraunces"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Instrument Sans",
+        "lookalikes": [
+          "Instrument Sans",
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": null
+    },
+    "secondaryAccents": []
+  },
+  "goldHex": "#d37955",
+  "status": "pinned",
+  "notes": "Swapped in for the louisvuitton bot-block deny-page fixture. True accent is terracotta; the extractor read a blue (#1863dc), which is Webflow's default link colour, not the brand.",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "forliving",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/forliving.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

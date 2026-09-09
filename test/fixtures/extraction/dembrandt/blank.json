@@ -1,0 +1,111 @@
+{
+  "url": "http://127.0.0.1:61346/",
+  "extractedAt": "2026-07-17T03:07:54.181Z",
+  "meta": {
+    "dembrandtVersion": "0.23.1",
+    "schemaVersion": "1.2.0",
+    "flags": {}
+  },
+  "siteName": null,
+  "logo": null,
+  "logoInstances": [],
+  "favicons": [
+    {
+      "type": "favicon.ico",
+      "url": "http://127.0.0.1:61346/favicon.ico",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "palette": [],
+    "cssVariables": {},
+    "detected": [
+      {
+        "color": "rgb(0, 0, 0)",
+        "normalized": "#000000",
+        "count": 2,
+        "usageFrac": 1,
+        "confidence": "low",
+        "sources": [],
+        "isToken": false
+      }
+    ],
+    "_raw": []
+  },
+  "typography": {
+    "styles": [],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false,
+      "selfHostedFonts": [],
+      "customFonts": []
+    }
+  },
+  "spacing": {
+    "scaleType": "8px",
+    "commonValues": [
+      {
+        "px": "8px",
+        "display": "8px",
+        "rem": "0.50rem",
+        "count": 2,
+        "numericValue": 8
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": []
+  },
+  "borders": {
+    "combinations": []
+  },
+  "shadows": [],
+  "gradients": [],
+  "motion": {
+    "durations": [
+      {
+        "value": "0.001s",
+        "ms": 1,
+        "count": 2
+      }
+    ],
+    "easings": [
+      {
+        "value": "ease",
+        "type": "ease",
+        "count": 2
+      }
+    ],
+    "animations": [],
+    "contexts": {},
+    "interactiveDeltas": []
+  },
+  "components": {
+    "buttons": [],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [],
+    "badges": {
+      "all": [],
+      "byVariant": {
+        "error": [],
+        "warning": [],
+        "success": [],
+        "info": [],
+        "neutral": []
+      }
+    }
+  },
+  "breakpoints": [],
+  "iconSystem": [],
+  "frameworks": []
+}

@@ -1,0 +1,213 @@
+{
+  "url": "https://example.com/",
+  "extractedAt": "2026-07-17T03:03:52.598Z",
+  "meta": {
+    "dembrandtVersion": "0.23.1",
+    "schemaVersion": "1.2.0",
+    "flags": {}
+  },
+  "siteName": null,
+  "logo": null,
+  "logoInstances": [],
+  "favicons": [
+    {
+      "type": "icon",
+      "url": "data:,",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {
+      "background": "rgb(238, 238, 238)",
+      "text": "rgb(0, 0, 0)"
+    },
+    "palette": [
+      {
+        "color": "rgb(16, 16, 16)",
+        "normalized": "#101010",
+        "count": 1,
+        "confidence": "medium",
+        "sources": [
+          "hover/focus"
+        ]
+      }
+    ],
+    "cssVariables": {},
+    "detected": [
+      {
+        "color": "rgb(0, 0, 0)",
+        "normalized": "#000000",
+        "count": 12,
+        "usageFrac": 0.8,
+        "confidence": "medium",
+        "sources": [],
+        "isToken": false
+      },
+      {
+        "color": "rgb(51, 68, 136)",
+        "normalized": "#334488",
+        "count": 2,
+        "usageFrac": 0.13333333333333333,
+        "confidence": "low",
+        "sources": [],
+        "isToken": false
+      },
+      {
+        "color": "rgb(238, 238, 238)",
+        "normalized": "#eeeeee",
+        "count": 1,
+        "usageFrac": 0.06666666666666667,
+        "confidence": "low",
+        "sources": [],
+        "isToken": false
+      }
+    ],
+    "_raw": [
+      {
+        "color": "rgb(0, 0, 0)",
+        "normalized": "#000000",
+        "count": 12
+      }
+    ]
+  },
+  "typography": {
+    "styles": [
+      {
+        "context": "heading-1",
+        "family": "system-ui",
+        "fallbacks": null,
+        "size": "24px (1.50rem)",
+        "weight": 700,
+        "lineHeight": null,
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "body",
+        "family": "system-ui",
+        "fallbacks": null,
+        "size": "16px (1.00rem)",
+        "weight": 400,
+        "lineHeight": null,
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "system-ui",
+        "fallbacks": null,
+        "size": "16px (1.00rem)",
+        "weight": 400,
+        "lineHeight": null,
+        "spacing": null,
+        "transform": null
+      }
+    ],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false,
+      "selfHostedFonts": [],
+      "customFonts": []
+    }
+  },
+  "spacing": {
+    "scaleType": "8px",
+    "commonValues": [
+      {
+        "px": "16px",
+        "display": "16px",
+        "rem": "1.00rem",
+        "count": 4,
+        "numericValue": 16
+      },
+      {
+        "px": "16.08px",
+        "display": "16.08px",
+        "rem": "1.00rem",
+        "count": 2,
+        "numericValue": 16.08
+      },
+      {
+        "px": "162px",
+        "display": "162px",
+        "rem": "10.13rem",
+        "count": 2,
+        "numericValue": 162
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": []
+  },
+  "borders": {
+    "combinations": []
+  },
+  "shadows": [],
+  "gradients": [],
+  "motion": {
+    "durations": [
+      {
+        "value": "0.001s",
+        "ms": 1,
+        "count": 7
+      }
+    ],
+    "easings": [
+      {
+        "value": "ease",
+        "type": "ease",
+        "count": 7
+      }
+    ],
+    "animations": [],
+    "contexts": {
+      "link": {
+        "count": 1,
+        "durations": [
+          "0.001s"
+        ],
+        "easing": "ease",
+        "easingType": "ease",
+        "props": []
+      }
+    },
+    "interactiveDeltas": []
+  },
+  "components": {
+    "buttons": [],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [
+      {
+        "color": "rgb(51, 68, 136)",
+        "textDecoration": "underline",
+        "fontWeight": "400",
+        "states": {
+          "default": {
+            "color": "rgb(51, 68, 136)",
+            "textDecoration": "underline"
+          },
+          "hover": null
+        }
+      }
+    ],
+    "badges": {
+      "all": [],
+      "byVariant": {
+        "error": [],
+        "warning": [],
+        "success": [],
+        "info": [],
+        "neutral": []
+      }
+    }
+  },
+  "breakpoints": [],
+  "iconSystem": [],
+  "frameworks": []
+}

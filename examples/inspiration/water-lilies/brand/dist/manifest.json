@@ -1,0 +1,68 @@
+{
+  "onbrandVersion": "0.1.0",
+  "schemaVersion": 1,
+  "sourceHash": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+  "sources": [
+    {
+      "path": "tokens.json",
+      "sha256": "ca613053e5b08bbe21d5c697249353c2edfba9f1c53c48d212d59c161c8db4f8"
+    },
+    {
+      "path": "modes.dark.json",
+      "sha256": "cd526171d994b52dae117e6377a4d058ee98956ee20b3e52d3d09cbf10824158"
+    }
+  ],
+  "emitters": [
+    "css",
+    "tw",
+    "ts",
+    "py",
+    "svg",
+    "components",
+    "designmd"
+  ],
+  "outputs": {
+    "DESIGN.md": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "components.css": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "diagram-palette.json": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "inspiration-to-implementation.html": "bdab0eab5174325fa5649cc9054ebfc31c5d31a76153bfe01005d585fbc27d1f",
+    "palette.svg": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "specimen.html": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "theme.ts": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "theme.tw.css": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "tokens.css": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c",
+    "tokens.py": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c"
+  },
+  "outputSources": {
+    "inspiration-to-implementation.html": [
+      {
+        "label": "core",
+        "sourcePath": null,
+        "kind": "digest",
+        "sha256": "6481635ecf9c68d3b6ba7d8f79d20c37cfc2af46ea4c79db7a56cc9a6594951c"
+      },
+      {
+        "label": "trace",
+        "sourcePath": "inspiration.json",
+        "kind": "text-lf",
+        "sha256": "f4c934d7130bd49cb569c27db20aab8588676ad42a2b4d1ca05d9943838e4ca0"
+      },
+      {
+        "label": "asset",
+        "sourcePath": "assets/inspiration.jpg",
+        "kind": "binary",
+        "sha256": "06367197ac8d6745537dcfe6722ff4b8ef2cb33e044168d8c471782b55f7dd39"
+      }
+    ],
+    "specimen.html": [
+      {
+        "label": "specimen-html",
+        "sourcePath": null,
+        "kind": "digest",
+        "sha256": "f0a221439aaf0eaf45e6555f17eb90dac16c2d6190a73ffb5c2e4f36122cc3f8"
+      }
+    ]
+  },
+  "llm": "none",
+  "timestamp": "2026-08-25T03:37:37.575Z"
+}

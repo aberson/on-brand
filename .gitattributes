@@ -1,0 +1,32 @@
+# Golden files are byte-compared in tests — never let git line-ending
+# conversion touch them (emitters write LF; CRLF checkout would fail the
+# byte-identity contract, plan.md §3.2).
+test/golden/** -text
+
+# The frozen catalog fixture is byte-compared with LF-only production output -
+# preserve its exact bytes across Windows checkouts.
+test/fixtures/inspiration/catalog-v1.json -text
+
+# The UAT PowerShell was partitioned VERBATIM out of the three fences in
+# documentation/inspiration-real-artwork-uat.md and is re-verified line-by-line.
+# Checkout line-ending conversion would break that byte-identity, and the
+# UTF-8 BOM these files carry is load-bearing (PS 5.1 decodes a BOM-less .ps1
+# as ANSI/cp1252 and can misparse a non-ASCII character with no parse error).
+scripts/uat/*.ps1 -text
+
+# Phase I2I.2 Step 36 real-artwork demo. test/inspiration.demo.test.ts byte-
+# compares this whole tree against a live production `from-image` regeneration,
+# so checkout line-ending conversion would break that byte-identity exactly the
+# way it would for a golden file. The selected raster is the operator-verified
+# M3a byte sequence and is marked binary explicitly - it must never be sniffed,
+# diffed, or converted as text.
+examples/inspiration/** -text
+examples/inspiration/water-lilies/brand/assets/inspiration.jpg binary
+
+# ...but PROVENANCE.md is hand-authored and human-edited, and has no producer
+# counterpart at all - it is NOT part of the byte-identity comparison the rule
+# above exists for. Keep git's newline normalization on it (this repo has
+# core.autocrlf enabled) so a later edit from a CRLF-emitting editor cannot
+# commit mixed line endings. More specific, and listed LAST so it wins over
+# the tree-wide -text; eol=lf keeps the checkout matching the rest of the tree.
+examples/inspiration/**/PROVENANCE.md text eol=lf

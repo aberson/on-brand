@@ -1,0 +1,137 @@
+{
+  "url": "fixture://czg-luxe",
+  "extractedAt": "2026-07-18T12:00:00.000Z",
+  "engine": {
+    "name": "synthetic-czg-skin",
+    "version": "1"
+  },
+  "colors": [
+    {
+      "hex": "#1c1a17",
+      "frequency": 168,
+      "roles": [
+        {
+          "role": "background",
+          "count": 168
+        }
+      ]
+    },
+    {
+      "hex": "#ece5d8",
+      "frequency": 150,
+      "roles": [
+        {
+          "role": "text",
+          "count": 150
+        }
+      ]
+    },
+    {
+      "hex": "#c9a24b",
+      "frequency": 88,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 88
+        },
+        {
+          "role": "border",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "hex": "#8c7b52",
+      "frequency": 26,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "hex": "#3a352c",
+      "frequency": 48,
+      "roles": [
+        {
+          "role": "border",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "hex": "#a39a86",
+      "frequency": 18,
+      "roles": [
+        {
+          "role": "text",
+          "count": 6
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Georgia",
+        "serif"
+      ],
+      "role": "heading",
+      "frequency": 6
+    },
+    {
+      "families": [
+        "Verdana",
+        "sans-serif"
+      ],
+      "role": "body",
+      "frequency": 12
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 16,
+      "frequency": 20,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 24,
+      "frequency": 4,
+      "fontWeight": 700,
+      "lineHeightPx": 30
+    },
+    {
+      "px": 40,
+      "frequency": 2,
+      "fontWeight": 700,
+      "lineHeightPx": 48
+    }
+  ],
+  "spacing": [
+    {
+      "px": 8,
+      "frequency": 30
+    },
+    {
+      "px": 16,
+      "frequency": 24
+    },
+    {
+      "px": 32,
+      "frequency": 10
+    }
+  ],
+  "radii": [
+    {
+      "px": 4,
+      "frequency": 8
+    }
+  ],
+  "shadows": [],
+  "screenshots": [],
+  "warnings": [
+    "SYNTHETIC control fixture: hand-authored palette (no live site); non-colour signal is a fixed csszengarden-DOM scaffold shared across skins."
+  ]
+}

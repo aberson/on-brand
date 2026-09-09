@@ -1,0 +1,113 @@
+{
+  "id": "spotify",
+  "url": "https://www.spotify.com",
+  "archetype": "media",
+  "sliderTags": {
+    "warmth": 0.45,
+    "saturation": 0.7,
+    "lightness": 0.25,
+    "contrast": 0.8,
+    "hueDiversity": 0.3,
+    "accentDominance": 0.8,
+    "neutralRatio": 0.55,
+    "vibrancy": 0.75
+  },
+  "isControl": false,
+  "isMultiAccent": false,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#1ed760",
+      "evidenceCount": 50,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#121212",
+      "frequency": 50,
+      "lightness": 0.1822
+    },
+    "backgroundDark": {
+      "hex": "#121212",
+      "frequency": 50,
+      "lightness": 0.1822
+    },
+    "topClusters": [
+      {
+        "hex": "#ffffff",
+        "frequency": 1414,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#b3b3b3",
+        "frequency": 1319,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#000000",
+        "frequency": 424,
+        "dominantRole": null
+      },
+      {
+        "hex": "#121212",
+        "frequency": 50,
+        "dominantRole": "background"
+      },
+      {
+        "hex": "#1ed760",
+        "frequency": 50,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#696969",
+        "frequency": 14,
+        "dominantRole": null
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#1ed760",
+      "source": "official-brand-guide",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "backgroundDark": {
+      "hex": "#121212",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Spotify Mix",
+        "lookalikes": [
+          "Poppins",
+          "Montserrat"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Spotify Mix",
+        "lookalikes": [
+          "Poppins"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": null
+    },
+    "secondaryAccents": []
+  },
+  "goldHex": "#1ed760",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "spotify",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/spotify.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

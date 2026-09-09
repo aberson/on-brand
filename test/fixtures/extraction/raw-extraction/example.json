@@ -1,0 +1,104 @@
+{
+  "url": "https://example.com/",
+  "extractedAt": "2026-07-17T03:03:52.598Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#000000",
+      "frequency": 12,
+      "roles": [
+        {
+          "role": "text",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "hex": "#334488",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#101010",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#eeeeee",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "background",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "system-ui"
+      ],
+      "role": "heading",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "system-ui"
+      ],
+      "role": "body",
+      "frequency": 1
+    },
+    {
+      "families": [
+        "system-ui"
+      ],
+      "role": "unknown",
+      "frequency": 1
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 16,
+      "frequency": 2,
+      "fontWeight": 400
+    },
+    {
+      "px": 24,
+      "frequency": 1,
+      "fontWeight": 700
+    }
+  ],
+  "spacing": [
+    {
+      "px": 16,
+      "frequency": 4
+    },
+    {
+      "px": 16.08,
+      "frequency": 2
+    },
+    {
+      "px": 162,
+      "frequency": 2
+    }
+  ],
+  "radii": [],
+  "shadows": [],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "test/fixtures/extraction/screenshots/example.png",
+      "width": 1920,
+      "height": 1080
+    }
+  ]
+}

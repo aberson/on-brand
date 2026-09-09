@@ -1,0 +1,133 @@
+{
+  "id": "github",
+  "url": "https://github.com",
+  "archetype": "developer-tool",
+  "sliderTags": {
+    "warmth": 0.4,
+    "saturation": 0.35,
+    "lightness": 0.6,
+    "contrast": 0.75,
+    "hueDiversity": 0.35,
+    "accentDominance": 0.45,
+    "neutralRatio": 0.8,
+    "vibrancy": 0.35
+  },
+  "isControl": false,
+  "isMultiAccent": true,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#8dd6ff",
+      "evidenceCount": 227,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#0d1117",
+      "frequency": 6,
+      "lightness": 0.1763
+    },
+    "backgroundDark": {
+      "hex": "#0d1117",
+      "frequency": 6,
+      "lightness": 0.1763
+    },
+    "topClusters": [
+      {
+        "hex": "#ffffff",
+        "frequency": 1516,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#8dd6ff",
+        "frequency": 226,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#a4aea6",
+        "frequency": 194,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#f0f6fc",
+        "frequency": 36,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#21262d",
+        "frequency": 26,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#000000",
+        "frequency": 17,
+        "dominantRole": "gradient"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#0fbf3e",
+      "source": "official-brand-guide",
+      "confidence": "high"
+    },
+    "backgroundLight": {
+      "hex": "#ffffff",
+      "source": "official-site-css",
+      "confidence": "medium"
+    },
+    "backgroundDark": {
+      "hex": "#0d1117",
+      "source": "official-site-css",
+      "confidence": "high"
+    },
+    "fonts": {
+      "heading": {
+        "family": "Mona Sans",
+        "lookalikes": [
+          "Inter",
+          "Overpass"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "body": {
+        "family": "Mona Sans",
+        "lookalikes": [
+          "Inter"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      },
+      "mono": {
+        "family": "Mona Sans Mono",
+        "lookalikes": [
+          "JetBrains Mono"
+        ],
+        "source": "official-site-css",
+        "confidence": "high"
+      }
+    },
+    "secondaryAccents": [
+      {
+        "hex": "#8534f3",
+        "label": "Copilot purple (sub-brand)",
+        "source": "official-brand-guide",
+        "confidence": "high"
+      },
+      {
+        "hex": "#3094ff",
+        "label": "Security blue (sub-brand)",
+        "source": "official-brand-guide",
+        "confidence": "high"
+      }
+    ]
+  },
+  "goldHex": "#0fbf3e",
+  "status": "pinned",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "github",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/github.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

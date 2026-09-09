@@ -1,0 +1,91 @@
+{
+  "id": "czg-cool",
+  "url": "fixture://czg-cool",
+  "archetype": "control-czg",
+  "sliderTags": {
+    "warmth": 0.15,
+    "saturation": 0.55,
+    "lightness": 0.55,
+    "contrast": 0.6,
+    "hueDiversity": 0.35,
+    "accentDominance": 0.6,
+    "neutralRatio": 0.45,
+    "vibrancy": 0.55
+  },
+  "isControl": true,
+  "isMultiAccent": false,
+  "extractorGuess": {
+    "accent": {
+      "hex": "#1d6fd6",
+      "evidenceCount": 96,
+      "source": "accent-role"
+    },
+    "backgroundLight": {
+      "hex": "#eef2f7",
+      "frequency": 140,
+      "lightness": 0.9595
+    },
+    "backgroundDark": null,
+    "topClusters": [
+      {
+        "hex": "#16202e",
+        "frequency": 150,
+        "dominantRole": "text"
+      },
+      {
+        "hex": "#eef2f7",
+        "frequency": 140,
+        "dominantRole": "background"
+      },
+      {
+        "hex": "#1d6fd6",
+        "frequency": 96,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#c3d0e0",
+        "frequency": 40,
+        "dominantRole": "border"
+      },
+      {
+        "hex": "#14aec4",
+        "frequency": 22,
+        "dominantRole": "accent"
+      },
+      {
+        "hex": "#5a6b80",
+        "frequency": 18,
+        "dominantRole": "text"
+      }
+    ]
+  },
+  "pinned": {
+    "accent": {
+      "hex": "#1d6fd6",
+      "source": "scaffold-guess",
+      "confidence": "low"
+    },
+    "backgroundLight": {
+      "hex": "#eef2f7",
+      "source": "scaffold-guess",
+      "confidence": "low"
+    },
+    "backgroundDark": null,
+    "fonts": {
+      "heading": null,
+      "body": null,
+      "mono": null
+    },
+    "secondaryAccents": []
+  },
+  "goldHex": null,
+  "goldHexNote": "csszengarden control: identical DOM across skins, no published brand gold-hex. Scored as a control (weighted <0.5x real sites), never against a gold anchor.",
+  "status": "scaffolded",
+  "notes": "",
+  "_generated": {
+    "scaffolder": "benchmark/truth-scaffold.ts",
+    "corpusId": "czg-cool",
+    "fromFixture": "docs/findings/eval-raw-extractions/benchmark/czg-cool.raw-extraction.json",
+    "note": "Scaffolded template. `extractorGuess` is a STARTING POINT (extractor output, not ground truth); `pinned` colour hexes seed from it with source `scaffold-guess`, and `pinned.fonts` start null. Operator (Step 3): replace each pinned role with an independently-sourced value (real `source` + `confidence`), pin the true fonts, fill `goldHex`, then set `status` to \"pinned\". A pinned template CANNOT keep any `scaffold-guess` source (schema-enforced §6 anti-circularity). Re-running the scaffolder will NOT overwrite a pinned or hand-edited file (see benchmark/truth-scaffold.ts)."
+  }
+}

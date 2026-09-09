@@ -1,0 +1,829 @@
+{
+  "url": "https://linear.app/",
+  "extractedAt": "2026-07-19T06:31:40.467Z",
+  "engine": {
+    "name": "dembrandt",
+    "version": "0.23.1"
+  },
+  "colors": [
+    {
+      "hex": "#f7f8f8",
+      "frequency": 2779,
+      "roles": [
+        {
+          "role": "text",
+          "count": 2780
+        },
+        {
+          "role": "border",
+          "count": 19
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#62666d",
+      "frequency": 713,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#d0d6e0",
+      "frequency": 444,
+      "roles": [
+        {
+          "role": "border",
+          "count": 46
+        },
+        {
+          "role": "gradient",
+          "count": 1
+        },
+        {
+          "role": "text",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#8a8f98",
+      "frequency": 252,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#e2e4e7",
+      "frequency": 239,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff",
+      "frequency": 224,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#f79ce0",
+      "frequency": 82,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff0d",
+      "frequency": 53,
+      "roles": [
+        {
+          "role": "border",
+          "count": 53
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#f7bf8b",
+      "frequency": 44,
+      "roles": []
+    },
+    {
+      "hex": "#08090a",
+      "frequency": 22,
+      "roles": [
+        {
+          "role": "background",
+          "count": 22
+        },
+        {
+          "role": "gradient",
+          "count": 1
+        },
+        {
+          "role": "text",
+          "count": 1
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffdf9f",
+      "frequency": 20,
+      "roles": []
+    },
+    {
+      "hex": "#83dcdc",
+      "frequency": 18,
+      "roles": []
+    },
+    {
+      "hex": "#f0bf00",
+      "frequency": 17,
+      "roles": []
+    },
+    {
+      "hex": "#8fa6ff",
+      "frequency": 16,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff14",
+      "frequency": 16,
+      "roles": [
+        {
+          "role": "border",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "hex": "#23252a",
+      "frequency": 10,
+      "roles": [
+        {
+          "role": "border",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "hex": "#27a644",
+      "frequency": 8,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "frequency": 6,
+      "roles": []
+    },
+    {
+      "hex": "#0f1011",
+      "frequency": 6,
+      "roles": []
+    },
+    {
+      "hex": "#6366f1",
+      "frequency": 5,
+      "roles": []
+    },
+    {
+      "hex": "#eb5757",
+      "frequency": 5,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "hex": "#e2e4e6",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#e5e5e6",
+      "frequency": 4,
+      "roles": [
+        {
+          "role": "border",
+          "count": 4
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#f34e52",
+      "frequency": 4,
+      "roles": []
+    },
+    {
+      "hex": "#02b8cc",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#383b3f",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#55ccff",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#8b5cf6",
+      "frequency": 3,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff1a",
+      "frequency": 3,
+      "roles": [
+        {
+          "role": "border",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#00000000",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 2
+        },
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#3b3b3b",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#5e6ad2",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#6d78d5",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#f34f52",
+      "frequency": 2,
+      "roles": []
+    },
+    {
+      "hex": "#ffffff0a",
+      "frequency": 2,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "hex": "#06b6d4",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#08090a00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#08090a80",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#090a0b",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#0b0b0bcc",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#0f3338",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#101112",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#10b981",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#121314",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#121414",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#161718",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#1c1c1d",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#232534",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#24282c",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#313234",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#323334",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#422222",
+      "frequency": 1,
+      "roles": []
+    },
+    {
+      "hex": "#e4f222",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "accent",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff00",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "gradient",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff1f",
+      "frequency": 1,
+      "roles": [
+        {
+          "role": "border",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "families": [
+        "Inter Variable",
+        "SF Pro Display",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue"
+      ],
+      "role": "heading",
+      "frequency": 5
+    },
+    {
+      "families": [
+        "Inter Variable",
+        "SF Pro Display",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue"
+      ],
+      "role": "unknown",
+      "frequency": 21
+    },
+    {
+      "families": [
+        "Inter Variable",
+        "SF Pro Display",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue"
+      ],
+      "role": "body",
+      "frequency": 18
+    },
+    {
+      "families": [
+        "Berkeley Mono",
+        "ui-monospace",
+        "SF Mono",
+        "Menlo"
+      ],
+      "role": "unknown",
+      "frequency": 3
+    }
+  ],
+  "typeSizes": [
+    {
+      "px": 10,
+      "frequency": 4,
+      "fontWeight": 400,
+      "lineHeightPx": 15
+    },
+    {
+      "px": 11,
+      "frequency": 2,
+      "fontWeight": 400,
+      "lineHeightPx": 15.399999999999999
+    },
+    {
+      "px": 12,
+      "frequency": 6,
+      "fontWeight": 510,
+      "lineHeightPx": 16.799999999999997
+    },
+    {
+      "px": 13,
+      "frequency": 9,
+      "fontWeight": 400,
+      "lineHeightPx": 19.5
+    },
+    {
+      "px": 13.3333,
+      "frequency": 2,
+      "fontWeight": 400
+    },
+    {
+      "px": 14,
+      "frequency": 5,
+      "fontWeight": 510,
+      "lineHeightPx": 21
+    },
+    {
+      "px": 15,
+      "frequency": 5,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 16,
+      "frequency": 6,
+      "fontWeight": 400,
+      "lineHeightPx": 24
+    },
+    {
+      "px": 17,
+      "frequency": 1,
+      "fontWeight": 590,
+      "lineHeightPx": 27.200000000000003
+    },
+    {
+      "px": 18,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 28.8
+    },
+    {
+      "px": 20,
+      "frequency": 1,
+      "fontWeight": 590,
+      "lineHeightPx": 26.6
+    },
+    {
+      "px": 24,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 31.92
+    },
+    {
+      "px": 32,
+      "frequency": 1,
+      "fontWeight": 400,
+      "lineHeightPx": 36.16
+    },
+    {
+      "px": 48,
+      "frequency": 1,
+      "fontWeight": 510,
+      "lineHeightPx": 48
+    },
+    {
+      "px": 64,
+      "frequency": 1,
+      "fontWeight": 510,
+      "lineHeightPx": 64
+    },
+    {
+      "px": 72,
+      "frequency": 1,
+      "fontWeight": 510,
+      "lineHeightPx": 72
+    }
+  ],
+  "spacing": [
+    {
+      "px": 1,
+      "frequency": 11
+    },
+    {
+      "px": 4,
+      "frequency": 5
+    },
+    {
+      "px": 7,
+      "frequency": 8
+    },
+    {
+      "px": 8,
+      "frequency": 45
+    },
+    {
+      "px": 11,
+      "frequency": 12
+    },
+    {
+      "px": 12,
+      "frequency": 21
+    },
+    {
+      "px": 16,
+      "frequency": 7
+    },
+    {
+      "px": 19,
+      "frequency": 8
+    },
+    {
+      "px": 19.2031,
+      "frequency": 16
+    },
+    {
+      "px": 20,
+      "frequency": 7
+    },
+    {
+      "px": 22,
+      "frequency": 21
+    },
+    {
+      "px": 24,
+      "frequency": 21
+    },
+    {
+      "px": 28,
+      "frequency": 10
+    },
+    {
+      "px": 32,
+      "frequency": 6
+    },
+    {
+      "px": 35,
+      "frequency": 5
+    },
+    {
+      "px": 39,
+      "frequency": 4
+    },
+    {
+      "px": 48,
+      "frequency": 11
+    },
+    {
+      "px": 56,
+      "frequency": 5
+    },
+    {
+      "px": 96,
+      "frequency": 5
+    },
+    {
+      "px": 128,
+      "frequency": 10
+    }
+  ],
+  "radii": [
+    {
+      "px": 0,
+      "frequency": 3
+    },
+    {
+      "px": 0,
+      "frequency": 4
+    },
+    {
+      "px": 1,
+      "frequency": 1
+    },
+    {
+      "px": 2,
+      "frequency": 48
+    },
+    {
+      "px": 2,
+      "frequency": 4
+    },
+    {
+      "px": 3.6,
+      "frequency": 4
+    },
+    {
+      "px": 4,
+      "frequency": 28
+    },
+    {
+      "px": 4,
+      "frequency": 3
+    },
+    {
+      "px": 6,
+      "frequency": 43
+    },
+    {
+      "px": 7,
+      "frequency": 2
+    },
+    {
+      "px": 8,
+      "frequency": 15
+    },
+    {
+      "px": 12,
+      "frequency": 12
+    },
+    {
+      "px": 12,
+      "frequency": 11
+    },
+    {
+      "px": 16,
+      "frequency": 3
+    },
+    {
+      "px": 20,
+      "frequency": 2
+    },
+    {
+      "px": 22,
+      "frequency": 5
+    },
+    {
+      "px": 50,
+      "frequency": 38
+    },
+    {
+      "px": 400,
+      "frequency": 1
+    },
+    {
+      "px": 9999,
+      "frequency": 23
+    }
+  ],
+  "shadows": [
+    {
+      "css": "rgba(0, 0, 0, 0.03) 0px 1.2px 0px 0px",
+      "frequency": 31
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.4) 0px 2px 4px 0px",
+      "frequency": 16
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.2) 0px 0px 12px 0px inset",
+      "frequency": 7
+    },
+    {
+      "css": "rgb(35, 37, 42) 0px 0px 0px 1px inset",
+      "frequency": 5
+    },
+    {
+      "css": "rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px",
+      "frequency": 4
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px",
+      "frequency": 3
+    },
+    {
+      "css": "rgba(255, 255, 255, 0.03) 0px 0px 0px 1px inset, rgba(255, 255, 255, 0.04) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.6) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 4px 0px",
+      "frequency": 3
+    },
+    {
+      "css": "rgba(8, 9, 10, 0.6) 0px 4px 32px 0px",
+      "frequency": 2
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.1) 0px 0px 0px 2px",
+      "frequency": 1
+    },
+    {
+      "css": "rgba(0, 0, 0, 0.4) 0px 1px 0px 0px",
+      "frequency": 1
+    },
+    {
+      "css": "rgba(8, 9, 10, 0.1) 0px 0px 0px 1px, rgba(8, 9, 10, 0.4) 0px 0px 64px 0px",
+      "frequency": 1
+    },
+    {
+      "css": "rgb(35, 37, 42) 1px 0px 0px 0px inset",
+      "frequency": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "viewport",
+      "path": "docs/findings/eval-raw-extractions/benchmark/linear.viewport.png"
+    }
+  ],
+  "warnings": [
+    "12 color-valued CSS custom properties reported by dembrandt were not mapped (no usage counts; v1 skips them)"
+  ]
+}

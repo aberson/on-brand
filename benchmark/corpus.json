@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "stripe",
+      "url": "https://stripe.com",
+      "archetype": "fintech",
+      "sliderCoords": {
+        "warmth": 0.35,
+        "saturation": 0.65,
+        "lightness": 0.85,
+        "contrast": 0.7,
+        "hueDiversity": 0.5,
+        "accentDominance": 0.75,
+        "neutralRatio": 0.55,
+        "vibrancy": 0.7
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "github",
+      "url": "https://github.com",
+      "archetype": "developer-tool",
+      "sliderCoords": {
+        "warmth": 0.4,
+        "saturation": 0.35,
+        "lightness": 0.6,
+        "contrast": 0.75,
+        "hueDiversity": 0.35,
+        "accentDominance": 0.45,
+        "neutralRatio": 0.8,
+        "vibrancy": 0.35
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "basecamp",
+      "url": "https://basecamp.com",
+      "archetype": "saas",
+      "sliderCoords": {
+        "warmth": 0.7,
+        "saturation": 0.6,
+        "lightness": 0.85,
+        "contrast": 0.6,
+        "hueDiversity": 0.6,
+        "accentDominance": 0.5,
+        "neutralRatio": 0.5,
+        "vibrancy": 0.65
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "nytimes",
+      "url": "https://www.nytimes.com",
+      "archetype": "media",
+      "sliderCoords": {
+        "warmth": 0.45,
+        "saturation": 0.1,
+        "lightness": 0.9,
+        "contrast": 0.9,
+        "hueDiversity": 0.15,
+        "accentDominance": 0.2,
+        "neutralRatio": 0.95,
+        "vibrancy": 0.2
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "imprintgenius",
+      "url": "https://www.imprintgenius.com",
+      "archetype": "ecommerce",
+      "sliderCoords": {
+        "warmth": 0.4,
+        "saturation": 0.5,
+        "lightness": 0.85,
+        "contrast": 0.65,
+        "hueDiversity": 0.45,
+        "accentDominance": 0.5,
+        "neutralRatio": 0.6,
+        "vibrancy": 0.5
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "duolingo",
+      "url": "https://www.duolingo.com",
+      "archetype": "education",
+      "sliderCoords": {
+        "warmth": 0.5,
+        "saturation": 0.85,
+        "lightness": 0.8,
+        "contrast": 0.6,
+        "hueDiversity": 0.65,
+        "accentDominance": 0.8,
+        "neutralRatio": 0.3,
+        "vibrancy": 0.9
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "kurzgesagt",
+      "url": "https://kurzgesagt.org",
+      "archetype": "media",
+      "sliderCoords": {
+        "warmth": 0.5,
+        "saturation": 0.9,
+        "lightness": 0.3,
+        "contrast": 0.8,
+        "hueDiversity": 0.9,
+        "accentDominance": 0.4,
+        "neutralRatio": 0.2,
+        "vibrancy": 0.95
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "forliving",
+      "url": "https://www.for-living.it/",
+      "archetype": "luxury",
+      "sliderCoords": {
+        "warmth": 0.6,
+        "saturation": 0.45,
+        "lightness": 0.8,
+        "contrast": 0.65,
+        "hueDiversity": 0.4,
+        "accentDominance": 0.5,
+        "neutralRatio": 0.6,
+        "vibrancy": 0.45
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "spotify",
+      "url": "https://www.spotify.com",
+      "archetype": "media",
+      "sliderCoords": {
+        "warmth": 0.45,
+        "saturation": 0.7,
+        "lightness": 0.25,
+        "contrast": 0.8,
+        "hueDiversity": 0.3,
+        "accentDominance": 0.8,
+        "neutralRatio": 0.55,
+        "vibrancy": 0.75
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "linear",
+      "url": "https://linear.app",
+      "archetype": "developer-tool",
+      "sliderCoords": {
+        "warmth": 0.3,
+        "saturation": 0.55,
+        "lightness": 0.25,
+        "contrast": 0.7,
+        "hueDiversity": 0.45,
+        "accentDominance": 0.6,
+        "neutralRatio": 0.6,
+        "vibrancy": 0.55
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "robinhood",
+      "url": "https://robinhood.com",
+      "archetype": "fintech",
+      "sliderCoords": {
+        "warmth": 0.45,
+        "saturation": 0.65,
+        "lightness": 0.35,
+        "contrast": 0.75,
+        "hueDiversity": 0.3,
+        "accentDominance": 0.75,
+        "neutralRatio": 0.6,
+        "vibrancy": 0.7
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "medium",
+      "url": "https://medium.com",
+      "archetype": "media",
+      "sliderCoords": {
+        "warmth": 0.45,
+        "saturation": 0.15,
+        "lightness": 0.9,
+        "contrast": 0.85,
+        "hueDiversity": 0.2,
+        "accentDominance": 0.25,
+        "neutralRatio": 0.9,
+        "vibrancy": 0.25
+      },
+      "isControl": false,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-031",
+      "url": "https://www.csszengarden.com/031/",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.6,
+        "saturation": 0.4,
+        "lightness": 0.7,
+        "contrast": 0.55,
+        "hueDiversity": 0.4,
+        "accentDominance": 0.4,
+        "neutralRatio": 0.6,
+        "vibrancy": 0.4
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-113",
+      "url": "https://www.csszengarden.com/113/",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.4,
+        "saturation": 0.5,
+        "lightness": 0.5,
+        "contrast": 0.6,
+        "hueDiversity": 0.45,
+        "accentDominance": 0.5,
+        "neutralRatio": 0.5,
+        "vibrancy": 0.5
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-157",
+      "url": "https://www.csszengarden.com/157/",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.5,
+        "saturation": 0.45,
+        "lightness": 0.4,
+        "contrast": 0.65,
+        "hueDiversity": 0.4,
+        "accentDominance": 0.45,
+        "neutralRatio": 0.55,
+        "vibrancy": 0.45
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-cool",
+      "url": "fixture://czg-cool",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.15,
+        "saturation": 0.55,
+        "lightness": 0.55,
+        "contrast": 0.6,
+        "hueDiversity": 0.35,
+        "accentDominance": 0.6,
+        "neutralRatio": 0.45,
+        "vibrancy": 0.55
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-dark",
+      "url": "fixture://czg-dark",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.45,
+        "saturation": 0.4,
+        "lightness": 0.12,
+        "contrast": 0.85,
+        "hueDiversity": 0.3,
+        "accentDominance": 0.5,
+        "neutralRatio": 0.6,
+        "vibrancy": 0.4
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-warm",
+      "url": "fixture://czg-warm",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.9,
+        "saturation": 0.6,
+        "lightness": 0.7,
+        "contrast": 0.55,
+        "hueDiversity": 0.35,
+        "accentDominance": 0.6,
+        "neutralRatio": 0.4,
+        "vibrancy": 0.6
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-rainbow",
+      "url": "fixture://czg-rainbow",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.5,
+        "saturation": 0.85,
+        "lightness": 0.6,
+        "contrast": 0.6,
+        "hueDiversity": 0.95,
+        "accentDominance": 0.2,
+        "neutralRatio": 0.15,
+        "vibrancy": 0.9
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "czg-luxe",
+      "url": "fixture://czg-luxe",
+      "archetype": "control-czg",
+      "sliderCoords": {
+        "warmth": 0.65,
+        "saturation": 0.35,
+        "lightness": 0.3,
+        "contrast": 0.7,
+        "hueDiversity": 0.25,
+        "accentDominance": 0.65,
+        "neutralRatio": 0.7,
+        "vibrancy": 0.4
+      },
+      "isControl": true,
+      "tier": "v1",
+      "heldOut": false
+    },
+    {
+      "id": "notion",
+      "url": "https://www.notion.so",
+      "archetype": "saas",
+      "sliderCoords": {
+        "warmth": 0.45,
+        "saturation": 0.15,
+        "lightness": 0.9,
+        "contrast": 0.8,
+        "hueDiversity": 0.2,
+        "accentDominance": 0.25,
+        "neutralRatio": 0.9,
+        "vibrancy": 0.25
+      },
+      "isControl": false,
+      "tier": "later",
+      "heldOut": false
+    },
+    {
+      "id": "airbnb",
+      "url": "https://www.airbnb.com",
+      "archetype": "consumer",
+      "sliderCoords": {
+        "warmth": 0.75,
+        "saturation": 0.6,
+        "lightness": 0.85,
+        "contrast": 0.65,
+        "hueDiversity": 0.4,
+        "accentDominance": 0.7,
+        "neutralRatio": 0.55,
+        "vibrancy": 0.7
+      },
+      "isControl": false,
+      "tier": "later",
+      "heldOut": true
+    }
+  ]
+}
