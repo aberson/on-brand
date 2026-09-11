@@ -678,12 +678,12 @@ function paletteDeltaE(a: string, b: string): number | undefined {
 
 /**
  * Freeze the selection policy for measured palette evidence. The optional LLM
- * may replace only the primary with a caller-validated candidate ID; neutral
+ * or an explicit user choice may replace only the primary with a measured candidate ID; neutral
  * and secondary assignments always remain deterministic.
  */
 export function selectPaletteDecision(
   evidence: PaletteEvidence,
-  options: { primarySampleId?: string; primarySelectionSource?: 'deterministic' | 'llm' } = {},
+  options: { primarySampleId?: string; primarySelectionSource?: PaletteDecision['primary']['selectionSource'] } = {},
 ): PaletteDecision {
   // Fail closed at the boundary. This is an exported, source-neutral function,
   // so an unrecognized algorithm must be rejected HERE rather than downstream:
@@ -713,11 +713,12 @@ export function selectPaletteDecision(
     (candidate) => candidate.chroma >= PALETTE_CHROMA_FLOOR && candidate.supported,
   );
   const orderedColorful = [...colorful].sort(comparePrimaryCandidates);
-  if (options.primarySelectionSource === 'llm' && options.primarySampleId === undefined) {
-    throw new Error('an LLM palette decision must name one measured colorful candidate ID');
+  const explicitSelection = options.primarySelectionSource === 'llm' || options.primarySelectionSource === 'user';
+  if (explicitSelection && options.primarySampleId === undefined) {
+    throw new Error('an explicit palette decision must name one measured colorful candidate ID');
   }
-  if (options.primarySampleId !== undefined && options.primarySelectionSource !== 'llm') {
-    throw new Error('only an LLM decision may override the deterministic primary candidate');
+  if (options.primarySampleId !== undefined && !explicitSelection) {
+    throw new Error('only an explicit user or LLM decision may override the deterministic primary candidate');
   }
   const primaryOverride =
     options.primarySampleId === undefined
@@ -725,7 +726,7 @@ export function selectPaletteDecision(
       : colorful.find((candidate) => candidate.sample.id === options.primarySampleId);
   if (options.primarySampleId !== undefined && primaryOverride === undefined) {
     throw new Error(
-      `LLM palette decision ${JSON.stringify(options.primarySampleId)} is not a measured colorful candidate`,
+      `palette decision ${JSON.stringify(options.primarySampleId)} is not a measured colorful candidate`,
     );
   }
   // The last-resort fallback fires when NO candidate cleared the colourful gate,
@@ -740,7 +741,7 @@ export function selectPaletteDecision(
   const primary =
     primaryOverride ?? orderedColorful[0] ?? [...fallbackPool].sort(compareFallbackCandidates)[0]!;
   const primarySelectionSource =
-    primaryOverride !== undefined && options.primarySelectionSource === 'llm' ? 'llm' : 'deterministic';
+    primaryOverride !== undefined && explicitSelection ? options.primarySelectionSource! : 'deterministic';
 
   // The neutral selector deliberately does NOT consult `supported`, and that is
   // not a fail-open sibling of the primary/secondary gate: plan §3 scopes the
@@ -1039,7 +1040,7 @@ function targetRelationship(
 
 function makePaletteMapping(
   sample: PaletteSample,
-  selectionSource: 'deterministic' | 'llm',
+  selectionSource: PaletteDecision['primary']['selectionSource'],
   role: 'primary' | 'neutral' | 'secondary',
   targets: readonly string[],
   tokens: TokensDocument,
@@ -1063,7 +1064,9 @@ function makePaletteMapping(
       relationship: targetRelationship(sample, token, tokens),
       usage: `Palette assignment for ${token}.`,
     })),
-    rationale: `Measured sample mapped to ${targets[0]!} by ${algorithm}.`,
+    rationale: selectionSource === 'user'
+      ? `User selected this measured sample as the main accent. ${algorithm} supplies the measured evidence and generated ramps.`
+      : `Measured sample mapped to ${targets[0]!} by ${algorithm}.`,
     confidence: role === 'neutral' ? 'medium' : 'high',
   };
 }
@@ -1087,7 +1090,7 @@ function sameSecondaryIds(a: PaletteDecision, b: PaletteDecision): boolean {
   );
 }
 
-/** Enforce that only an explicit LLM primary may vary; all other roles are frozen. */
+/** Only an explicit user/LLM primary may vary; all other roles follow the same policy. */
 function assertPaletteDecision(evidence: PaletteEvidence, decision: PaletteDecision): void {
   const deterministic = selectPaletteDecision(evidence);
   if (
@@ -1097,10 +1100,10 @@ function assertPaletteDecision(evidence: PaletteEvidence, decision: PaletteDecis
     throw new Error('a deterministic palette decision must use the frozen primary candidate');
   }
   const expected =
-    decision.primary.selectionSource === 'llm'
+    decision.primary.selectionSource !== 'deterministic'
       ? selectPaletteDecision(evidence, {
           primarySampleId: decision.primary.sampleId,
-          primarySelectionSource: 'llm',
+          primarySelectionSource: decision.primary.selectionSource,
         })
       : deterministic;
   if (

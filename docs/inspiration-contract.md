@@ -12,6 +12,32 @@ retains the closed `llm` primary-selection value for compatible stored records,
 but the shipped image producer does not emit or exercise that path. `from-url`
 keeps its separate optional LLM-assist contract.
 
+## Explicit user accents and format compatibility
+
+`onbrand studio` wraps the same deterministic image producer with drag-and-drop
+input and a measured accent selector. `RunFromImageOptions.accentSampleId` names
+an existing colorful sample that must pass the same support gates as an automatic
+accent. It changes the primary choice; neutral and secondary selection still use
+the existing policy, with the chosen primary excluded from secondary slots.
+The source raster and raw measurement evidence do not change, and no model runs.
+
+An explicit choice emits `brand/inspiration.json` **schemaVersion 2**, with
+`selectionSource: "user"` on the primary selection and its mapping. Version 1
+continues to accept only `deterministic` and legacy `llm` values. The shape,
+measurement algorithm, output limits, and `generated-draft` review status remain
+the same. A user's accent choice does not constitute review of the generated kit.
+Automatic `from-image` and automatic studio runs retain version 1 and their
+existing output behavior. Readers in this release accept both trace versions.
+
+An inspiration catalog containing a user-selected mapping likewise emits
+**schemaVersion 2** for `onbrand.inspiration-to-implementation`. A catalog whose
+emitted items contain only the prior selection vocabulary stays version 1.
+Older strict readers must reject version 2 until updated; a user selection is
+never mislabeled as an LLM choice to pass an old decoder. Studio generation does
+not refresh an external inventory automatically. Regular token/CSS/TS/Python
+formats, standalone previews, and the separate brand-inventory format do not
+change. The checked-in version 1 demo and fixtures are not rewritten.
+
 ## Image algorithm versions
 
 The current producer emits `image-cluster-v2` (2026-08-23). The supported

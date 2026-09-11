@@ -32,6 +32,15 @@ as operator-reviewed.
 
 ## Views and validation
 
+`src/studio/` adds a local browser entry point via `onbrand studio`. A small
+loopback HTTP server accepts bounded raster uploads, runs the existing image
+producer in a separate worker thread, and serves only the current session's
+generated previews. The worker prevents color clustering from blocking progress
+requests. A session token plus exact Host/Origin checks protect mutation routes.
+Uploads are temporary; successful proposal directories persist under the explicit
+output root. Each request creates a new proposal, never adopting or overwriting
+an existing brand. No external service or new dependency is required.
+
 `src/preview/` renders a component specimen from the generated files.
 `src/inspiration/` renders the source-to-token explanation and validates its trace.
 `src/gallery/` discovers brand sets under an explicit root and distinguishes

@@ -229,8 +229,11 @@ export interface PaletteEvidence {
 }
 
 /** One source-neutral structural palette choice. */
+export const PALETTE_SELECTION_SOURCES = ['deterministic', 'llm', 'user'] as const;
+export type PaletteSelectionSource = (typeof PALETTE_SELECTION_SOURCES)[number];
+
 export interface PaletteDecision {
-  primary: { sampleId: string; selectionSource: 'deterministic' | 'llm' };
+  primary: { sampleId: string; selectionSource: PaletteSelectionSource };
   neutral: { sampleId: string; selectionSource: 'deterministic' } | null;
   secondaries: Array<{ sampleId: string; selectionSource: 'deterministic' }>;
 }
@@ -253,7 +256,7 @@ export interface TraceMappingDraft {
   sample: {
     hex: string;
     method: ImageClusterAlgorithm;
-    selectionSource: 'deterministic' | 'llm';
+    selectionSource: PaletteSelectionSource;
     pixelShare: number;
   };
   targets: Array<{

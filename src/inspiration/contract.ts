@@ -9,6 +9,7 @@
 
 import {
   SUPPORTED_IMAGE_CLUSTER_ALGORITHMS,
+  PALETTE_SELECTION_SOURCES,
   type ImageClusterAlgorithm,
   type ImageMediaType,
   type MappingPresentation,
@@ -19,6 +20,8 @@ import { isPlainObject, isUnsafeName } from '../schema/types.ts';
 
 export const INSPIRATION_SCHEMA = 'onbrand.inspiration' as const;
 export const INSPIRATION_SCHEMA_VERSION = 1 as const;
+/** User-selected accents require v2; automatic and legacy LLM traces stay v1. */
+export const INSPIRATION_USER_SCHEMA_VERSION = 2 as const;
 
 /** Fixed v1 limits; they are contract values, not caller-configurable hints. */
 export const INSPIRATION_LIMITS = {
@@ -37,7 +40,7 @@ export const INSPIRATION_LIMITS = {
 export const REVIEW_STATUSES = ['generated-draft', 'operator-reviewed'] as const;
 export type ReviewStatus = (typeof REVIEW_STATUSES)[number];
 
-export const SELECTION_SOURCES = ['deterministic', 'llm'] as const;
+export const SELECTION_SOURCES = PALETTE_SELECTION_SOURCES;
 export type SelectionSource = (typeof SELECTION_SOURCES)[number];
 
 export const CONFIDENCE_LEVELS = ['low', 'medium', 'high'] as const;
@@ -181,7 +184,7 @@ export interface InspirationMapping {
 
 export interface InspirationTrace {
   schema: typeof INSPIRATION_SCHEMA;
-  schemaVersion: typeof INSPIRATION_SCHEMA_VERSION;
+  schemaVersion: typeof INSPIRATION_SCHEMA_VERSION | typeof INSPIRATION_USER_SCHEMA_VERSION;
   id: string;
   reviewStatus: ReviewStatus;
   summary: string;
@@ -255,7 +258,9 @@ export function validateInspirationTrace(value: unknown): InspirationValidationR
 
   rejectUnknownKeys(value, '', ['schema', 'schemaVersion', 'id', 'reviewStatus', 'summary', 'asset', 'analysis', 'mappings'], issues);
   validateLiteral(value['schema'], INSPIRATION_SCHEMA, 'schema', issues);
-  validateLiteral(value['schemaVersion'], INSPIRATION_SCHEMA_VERSION, 'schemaVersion', issues);
+  if (value['schemaVersion'] !== INSPIRATION_SCHEMA_VERSION && value['schemaVersion'] !== INSPIRATION_USER_SCHEMA_VERSION) {
+    issues.push({ path: 'schemaVersion', message: 'must be 1 or 2' });
+  }
   validateId(value['id'], 'id', issues, 'source');
   enumField(value['reviewStatus'], REVIEW_STATUSES, 'reviewStatus', issues);
   textField(value['summary'], 'summary', issues);
@@ -263,6 +268,17 @@ export function validateInspirationTrace(value: unknown): InspirationValidationR
   validateAsset(value['asset'], issues);
   validateAnalysis(value['analysis'], issues);
   validateMappings(value['mappings'], issues);
+  if (value['schemaVersion'] === INSPIRATION_SCHEMA_VERSION) {
+    const analysis = value['analysis'];
+    if (isPlainObject(analysis) && isPlainObject(analysis['primary']) && analysis['primary']['selectionSource'] === 'user') {
+      issues.push({ path: 'analysis.primary.selectionSource', message: 'user selection requires schemaVersion 2' });
+    }
+    if (Array.isArray(value['mappings'])) value['mappings'].forEach((mapping, index) => {
+      if (isPlainObject(mapping) && isPlainObject(mapping['sample']) && mapping['sample']['selectionSource'] === 'user') {
+        issues.push({ path: `mappings[${index}].sample.selectionSource`, message: 'user selection requires schemaVersion 2' });
+      }
+    });
+  }
 
   if (issues.length === 0) {
     // All validation routines above establish this exact JSON-only shape.

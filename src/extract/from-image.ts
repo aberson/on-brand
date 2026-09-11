@@ -4,7 +4,7 @@ import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { compileBrand } from '../build/compile.ts';
 import { runCheck } from '../check/run.ts';
-import { inspirationIdForAssetSha256, type InspirationTrace } from '../inspiration/contract.ts';
+import { INSPIRATION_USER_SCHEMA_VERSION, inspirationIdForAssetSha256, type InspirationTrace } from '../inspiration/contract.ts';
 import { formatInspirationCatalogFailure } from '../inspiration/export.ts';
 import { recordSpecimenView } from '../inspiration/views.ts';
 import { generatePreview } from '../preview/specimen.ts';
@@ -40,6 +40,9 @@ export interface FromImageMetadata {
 
 export interface RunFromImageOptions extends FromImageMetadata {
   outDir?: string;
+  /** Explicit human choice from the measured colorful samples; never invokes a model. */
+  accentSampleId?: string;
+  onStage?: (stage: FromImageStage) => void;
   /** Backward-compatible no-op: image v1 is deterministic and never invokes an LLM. */
   noLlm?: boolean;
   force?: boolean;
@@ -146,10 +149,12 @@ function traceFromSynthesis(
   if (evidence.source.kind !== 'image') throw new Error('from-image requires image palette evidence');
   return {
     schema: 'onbrand.inspiration',
-    schemaVersion: 1,
+    schemaVersion: decision.primary.selectionSource === 'user' ? INSPIRATION_USER_SCHEMA_VERSION : 1,
     id: inspirationIdForAssetSha256(evidence.source.assetSha256),
     reviewStatus: 'generated-draft',
-    summary: `Palette generated from ${metadata.title}.`,
+    summary: decision.primary.selectionSource === 'user'
+      ? `Palette generated from ${metadata.title}. Main accent chosen by the user.`
+      : `Palette generated from ${metadata.title}.`,
     asset: {
       path: assetPath,
       sha256: evidence.source.assetSha256,
@@ -219,6 +224,7 @@ export async function runFromImage(sourcePath: string, options: RunFromImageOpti
 
   try {
     stage = 'measure';
+    options.onStage?.(stage);
     writeAtomicFile(markerPath, markerContent('measuring deterministic raster evidence'));
     const ext = mediaExtension(loaded.mediaType);
     const assetRelativePath = `assets/inspiration${ext}`;
@@ -233,8 +239,11 @@ export async function runFromImage(sourcePath: string, options: RunFromImageOpti
     writeAtomicBytes(path.join(brandDir, ...assetRelativePath.split('/')), loaded.bytes);
 
     stage = 'synthesize';
+    options.onStage?.(stage);
     writeAtomicFile(markerPath, markerContent('synthesizing tokens and canonical trace'));
-    const decision = selectPaletteDecision(evidence);
+    const decision = selectPaletteDecision(evidence, options.accentSampleId === undefined ? {} : {
+      primarySampleId: options.accentSampleId, primarySelectionSource: 'user',
+    });
     const synthesis = buildTokensFromPalette(evidence, decision);
     const trace = traceFromSynthesis(evidence, synthesis, decision, metadata, assetRelativePath);
     writeAtomicFile(path.join(brandDir, 'tokens.json'), `${JSON.stringify(synthesis.tokens, null, 2)}\n`);
@@ -244,15 +253,18 @@ export async function runFromImage(sourcePath: string, options: RunFromImageOpti
     writeFileSync(path.join(brandDir, 'assets', '.gitkeep'), '', { flag: 'a' });
 
     stage = 'build';
+    options.onStage?.(stage);
     writeAtomicFile(markerPath, markerContent('building regular outputs and side-by-side view'));
     const compilation = compileBrand(proposalDir, { llm: 'none', now: () => clock.toISOString() });
 
     stage = 'check';
+    options.onStage?.(stage);
     writeAtomicFile(markerPath, markerContent('running normal quality gate'));
     const firstCheck = runCheck(proposalDir);
     if (!firstCheck.ok) throw new Error(`normal build/check failed: ${firstCheck.findings.map((finding) => finding.message).join('; ')}`);
 
     stage = 'preview';
+    options.onStage?.(stage);
     writeAtomicFile(markerPath, markerContent('generating full specimen'));
     const preview = generatePreview(proposalDir);
     options.beforeSpecimenRecord?.(proposalDir);
@@ -266,6 +278,7 @@ export async function runFromImage(sourcePath: string, options: RunFromImageOpti
     if (!finalCheck.ok) throw new Error(`generated-view check failed: ${finalCheck.findings.map((finding) => finding.message).join('; ')}`);
 
     stage = 'report';
+    options.onStage?.(stage);
     writeAtomicFile(markerPath, markerContent('writing readable evidence report'));
     const reportPath = path.join(proposalDir, 'image-report.md');
     writeAtomicFile(reportPath, renderImageReport({

@@ -81,6 +81,8 @@ import {
 export const INSPIRATION_ARTIFACT_SCHEMA = 'onbrand.inspiration-to-implementation' as const;
 /** Increment only for backwards-incompatible artifact changes. */
 export const INSPIRATION_ARTIFACT_SCHEMA_VERSION = 1 as const;
+/** Catalogs carrying an explicit user selection require a v2-aware reader. */
+export const INSPIRATION_ARTIFACT_USER_SCHEMA_VERSION = 2 as const;
 /** The default producer artifact is intentionally outside every brand payload. */
 export const DEFAULT_INSPIRATION_ARTIFACT_FILENAME = '.observatory/inspiration-to-implementation.json';
 
@@ -216,10 +218,10 @@ export type InspirationArtifactItem =
   | InspirationArtifactStaleItem
   | InspirationArtifactUnavailableItem;
 
-/** Exact v1 producer artifact.  No path in this type is absolute. */
+/** Version 1 unless a user selection requires version 2. No absolute paths. */
 export interface InspirationArtifact {
   schema: typeof INSPIRATION_ARTIFACT_SCHEMA;
-  schemaVersion: typeof INSPIRATION_ARTIFACT_SCHEMA_VERSION;
+  schemaVersion: typeof INSPIRATION_ARTIFACT_SCHEMA_VERSION | typeof INSPIRATION_ARTIFACT_USER_SCHEMA_VERSION;
   generatedAt: string;
   limits: typeof INSPIRATION_EXPORT_LIMITS;
   summary: {
@@ -402,7 +404,8 @@ export function buildInspirationArtifact(options: BuildInspirationArtifactOption
   const items = allItems.slice(0, INSPIRATION_EXPORT_LIMITS.maxItems);
   return {
     schema: INSPIRATION_ARTIFACT_SCHEMA,
-    schemaVersion: INSPIRATION_ARTIFACT_SCHEMA_VERSION,
+    schemaVersion: items.some((item) => item.implementation?.mappings.some((mapping) => mapping.selectionSource === 'user'))
+      ? INSPIRATION_ARTIFACT_USER_SCHEMA_VERSION : INSPIRATION_ARTIFACT_SCHEMA_VERSION,
     generatedAt: (options.now ?? (() => new Date()))().toISOString(),
     limits: INSPIRATION_EXPORT_LIMITS,
     summary: {

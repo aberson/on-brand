@@ -138,7 +138,7 @@ describe('selectPaletteDecision — frozen measured-palette selection', () => {
       }),
     ).toThrow(/colorful candidate/);
     expect(() => selectPaletteDecision(VIVID_EVIDENCE, { primarySampleId: 'sample-03' })).toThrow(
-      /only an LLM/,
+      /only an explicit user or LLM/,
     );
   });
 

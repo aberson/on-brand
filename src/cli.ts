@@ -94,6 +94,8 @@ Usage:
                                                    extract a site -> proposal dir + report
   onbrand from-image <file> --title <title> --alt <alt> [--out <dir>] [--no-llm] [--force]
                                                    measure a local raster -> reviewable proposal
+  onbrand studio [--out <dir>] [--port <number>] [--open]
+                                                   create brands by dropping images into a local page
   onbrand inspiration-export --root <workspace> [--out <file>] [--recover-stale-lock]
                                                    write the bounded inspiration catalog artifact
   onbrand brands list|show --root <workspace> [--json]
@@ -194,6 +196,7 @@ export async function main(argv: readonly string[], hooks: CliRuntimeHooks = {})
   if (command === 'from-image') {
     return runFromImageCommand(rest, hooks);
   }
+  if (command === 'studio') return runStudioCommand(rest);
   if (command === 'inspiration-export') {
     try {
       return runInspirationExport(rest);
@@ -240,6 +243,49 @@ export async function main(argv: readonly string[], hooks: CliRuntimeHooks = {})
   err('');
   err(USAGE.trimEnd());
   return EXIT_USAGE;
+}
+
+async function runStudioCommand(args: readonly string[]): Promise<number> {
+  const usage = 'onbrand studio [--out <dir>] [--port <number>] [--open]\n\nOpen a local image drop zone with a measured accent selector.\nOutput defaults to ./brands. Each generation creates a new proposal.\nThe server binds only to 127.0.0.1; omit --port to use a free port.\nClose with the page\'s Quit button or Ctrl+C.';
+  if (args.includes('--help') || args.includes('-h')) { out(usage); return EXIT_OK; }
+  let outDir = path.resolve('brands');
+  let port = 0;
+  let open = false;
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i]!;
+    if (arg === '--open') open = true;
+    else if (arg === '--out' || arg === '--port') {
+      const value = args[++i];
+      if (value === undefined || value.startsWith('--') || (arg === '--port' && !/^\d+$/.test(value))) {
+        err(`onbrand studio: ${arg} requires ${arg === '--port' ? 'a port number' : 'a directory'}`); return EXIT_USAGE;
+      }
+      if (arg === '--out') outDir = path.resolve(value);
+      else port = Number(value);
+    } else { err(`onbrand studio: unknown option ${JSON.stringify(arg)}`); return EXIT_USAGE; }
+  }
+  if (port > 65535) { err('onbrand studio: port must be between 0 and 65535'); return EXIT_USAGE; }
+  try {
+    const { startStudio } = await import('./studio/server.ts');
+    const studio = await startStudio({ outDir, port });
+    out(`Create brand: ${studio.url}`);
+    out('Open that link in your browser, then drag your image onto "Drop your image here".');
+    out('This command window keeps the studio running; it does not accept image drops.');
+    out(`Saving new themes to: ${outDir}`);
+    out('Use Quit in the page or Ctrl+C to stop.');
+    const stop = (): void => { void studio.close(); };
+    process.once('SIGINT', stop);
+    process.once('SIGTERM', stop);
+    if (open) {
+      out('Opening the studio in your default browser...');
+      openInBrowser(studio.url, {
+        onError: (message) => err(`onbrand studio: ${message}\nOpen ${studio.url} in your browser to continue.`),
+      });
+    }
+    return EXIT_OK;
+  } catch (error) {
+    err(`onbrand studio: ${error instanceof Error ? error.message : String(error)}`);
+    return EXIT_FAILURE;
+  }
 }
 
 // ---------------------------------------------------------------------------

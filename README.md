@@ -46,6 +46,35 @@ Commands below run from the on-brand checkout. Project arguments point to the di
 
 ## Workflows
 
+### Drop an image into the local studio
+
+```powershell
+node bin/onbrand.mjs studio --out ../my-private-brands --open
+```
+
+In your browser, drop a PNG, JPEG, or WebP (up to 5 MB) onto **Drop your image here**
+to generate a theme. The command window keeps the studio running and does not
+accept image drops. If the browser does not open, use the address printed after
+**Create brand:**. The filename supplies
+the initial brand name; you can edit the name and optionally describe the image.
+The page shows progress, a component preview, measured color swatches, and the
+saved folder path. Click an available swatch to choose the main accent and
+generate another version. Every run creates a fresh proposal; earlier versions
+are preserved. Both light and dark tokens and all normal exports are included.
+
+The studio runs on `127.0.0.1`, chooses a free port, processes one image at a time,
+and uses no model. Images remain on your computer. Use **Quit** in the page or
+Ctrl+C to stop the local process. Saved HTML previews also work after it stops.
+Without `--out`, new themes are saved under `./brands`. Use `--port` to select a
+fixed port when wiring a launcher. A Windows shortcut can target `node.exe`
+with the absolute path to `bin/onbrand.mjs`, followed by `studio --out
+<directory> --open`; set the shortcut's working directory to this checkout.
+
+Choosing an accent records a human choice, without marking the draft as reviewed.
+Explicit choices use version 2 of the inspiration trace; automatic generation
+remains version 1. See [format compatibility](docs/inspiration-contract.md#explicit-user-accents-and-format-compatibility)
+before exporting these themes to an older inventory reader.
+
 ### From an image to an explained palette
 
 `from-image` accepts a local PNG, JPEG, or WebP. It measures color clusters, chooses primary, neutral, and secondary colors, and builds a complete proposal with an exact copy of the input image.
@@ -177,7 +206,9 @@ For separate tools that need a workspace inventory, `observatory-export --root <
 
 ## Status and development
 
-The token compiler, website and image proposal generators, previews, gallery, checks, and file exports are implemented. The released Water Lilies demo is available in this repository.
+The token compiler, website and image proposal generators, local image studio, previews, gallery, checks, and file exports are implemented. The studio supports drag and drop, measured accent selection, progress, and live previews. The released Water Lilies demo is available in this repository.
+
+Validation on 2026-09-11: **1,273 tests passed, 8 skipped**, and TypeScript checking passed.
 
 Current image output uses `image-cluster-v2`. The Water Lilies result remains blue-dominant: measured secondary colors appear in chart and diagram swatches but do not yet reach ordinary semantic components. See [current limitations](docs/architecture.md#current-limitations). External inventory consumers are separate integrations.
 
@@ -194,6 +225,7 @@ The screenshot command launches headless Chromium, exercises the documented pres
 
 - [`src/schema/`](src/schema/) resolves and validates tokens; [`src/build/`](src/build/) compiles the output formats and manifest.
 - [`src/extract/`](src/extract/) contains the website and image pipelines; [`src/inspiration/`](src/inspiration/) owns image traces and explanations.
+- [`src/studio/`](src/studio/) provides the local image drop page, upload server, and generation worker.
 - [`src/preview/`](src/preview/), [`src/gallery/`](src/gallery/), and [`src/check/`](src/check/) provide the browser views and validation.
 - [`src/eval/`](src/eval/) and [`benchmark/`](benchmark/) contain color/font fidelity scoring, source/specimen capture, and optional model-based mood evaluation. See the [benchmark guide](docs/benchmark.md) for calibration and evidence boundaries.
 - The [architecture guide](docs/architecture.md) describes the public interfaces and current limitations. Implementation investigations live in [`docs/findings/`](docs/findings/).

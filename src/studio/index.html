@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="onbrand-token" content="__ONBRAND_TOKEN__">
+  <title>Create brand · On Brand</title>
+  <style>
+    :root { color-scheme: dark; font: 15px/1.5 "Segoe UI", system-ui, sans-serif; color: #f0f2ee; background: #111513; --muted: #a8b3aa; --line: #354039; --accent: #d4efab; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    button, input { font: inherit; }
+    button, a, input, .drop { outline-offset: 5px; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    button:disabled { cursor: wait; opacity: .55; }
+    button, input { border: 1px solid var(--line); border-radius: 9px; }
+    button { background: #252e28; color: inherit; padding: 10px 16px; font-weight: 600; }
+    button:hover:not(:disabled) { border-color: var(--accent); }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    [hidden] { display: none !important; }
+    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding: 22px 36px; }
+    .wordmark { font-size: 18px; font-weight: 700; letter-spacing: -.6px; }
+    .local { color: var(--muted); font-size: 13px; }
+    .local::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; margin-right: 8px; }
+    main { max-width: 1520px; margin: auto; padding: 38px 36px; }
+    h1 { font-size: clamp(27px, 3vw, 40px); line-height: 1.15; letter-spacing: -1.3px; margin: 0 0 12px; }
+    .intro { margin: 0 0 32px; color: var(--muted); max-width: 650px; }
+    .workspace { display: grid; grid-template-columns: minmax(290px, 365px) minmax(0, 1fr); gap: 28px; align-items: start; }
+    .controls { display: grid; gap: 24px; }
+    .drop { min-height: 220px; padding: 24px; border: 1px dashed #647666; border-radius: 14px; background: #19201b; display: grid; place-items: center; text-align: center; cursor: pointer; }
+    .drop:hover, .drop.over { border-color: var(--accent); background: #232e24; }
+    .drop strong { display: block; font-size: 17px; margin: 12px 0 6px; }
+    .drop small, .help { color: var(--muted); font-size: 13px; }
+    .drop img { max-height: 180px; width: 100%; object-fit: contain; border-radius: 5px; }
+    .drop svg { color: var(--accent); }
+    .fields { display: grid; gap: 14px; }
+    label, .section-label { display: block; margin: 0 0 7px; font-size: 13px; font-weight: 600; }
+    input[type=text] { padding: 10px 12px; width: 100%; color: #f0f2ee; background: #171c18; }
+    .primary { color: #17200f; background: var(--accent); border-color: var(--accent); width: 100%; }
+    .help { margin: 7px 0 0; }
+    .palette-heading { display: flex; align-items: baseline; justify-content: space-between; }
+    .text-button { background: none; border: 0; padding: 0; color: var(--accent); font-size: 12px; }
+    .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 9px; margin-top: 10px; }
+    .swatch { padding: 0; min-height: 40px; border: 3px solid transparent; box-shadow: inset 0 0 0 1px #ffffff35; border-radius: 8px; }
+    .swatch[aria-pressed=true] { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .swatch:disabled { opacity: .3; cursor: not-allowed; }
+    #accent-name { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+    .status { padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: #1b231d; font-size: 14px; }
+    .status.error { background: #351d1f; border-color: #855258; color: #ffd5d9; }
+    .status.running::before { content: ""; width: 11px; height: 11px; border: 2px solid #647666; border-top-color: var(--accent); border-radius: 50%; display: inline-block; margin-right: 9px; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .preview { background: #19201b; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; min-width: 0; }
+    .preview-toolbar { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+    .preview-toolbar span { font-size: 13px; font-weight: 600; }
+    .mode { padding: 6px 12px; font-size: 12px; }
+    .empty { min-height: 580px; display: grid; place-content: center; padding: 50px; text-align: center; color: var(--muted); }
+    .empty strong { color: #dbe1d9; display: block; font-size: 20px; font-weight: 500; margin-bottom: 8px; }
+    .empty .blocks { display: flex; justify-content: center; gap: 8px; margin-bottom: 24px; }
+    .blocks i { display: block; width: 38px; height: 60px; border-radius: 8px; background: #323f34; }
+    .blocks i:nth-child(2) { background: #647d57; transform: translateY(-8px); }
+    .blocks i:nth-child(3) { background: #a6bf8c; }
+    iframe { width: 100%; height: 680px; border: 0; display: block; background: #171717; }
+    .result { border-top: 1px solid var(--line); padding: 17px 18px; }
+    .links { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; }
+    .saved { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+    .saved code { min-width: 0; overflow-wrap: anywhere; font-size: 11px; color: var(--muted); }
+    .saved button { flex-shrink: 0; padding: 5px 8px; font-size: 11px; }
+    footer { padding-top: 25px; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+    @media (max-width: 850px) { header { padding: 18px 20px; } main { padding: 28px 20px; } .workspace { grid-template-columns: 1fr; } .empty { min-height: 280px; } iframe { height: 600px; } }
+    @media (prefers-reduced-motion: reduce) { .status.running::before { animation: none; } }
+  </style>
+</head>
+<body>
+  <header><div class="wordmark">on brand<span aria-hidden="true" style="color:var(--accent)">.</span></div><div><span class="local">Local studio</span> <button class="mode" id="quit" style="margin-left:15px">Quit</button></div></header>
+  <main>
+    <h1>Create a brand from an image.</h1>
+    <p class="intro">Drop in your inspiration. Get a complete theme, then choose the accent that feels right.</p>
+    <div class="workspace">
+      <div class="controls">
+        <div class="drop" id="drop" role="button" tabindex="0" aria-label="Choose or drop an inspiration image">
+          <div>
+            <img id="source-image" alt="Selected inspiration image" hidden>
+            <svg id="upload-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 26V8m-7 7 7-7 7 7M8 27v6h24v-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <strong id="drop-label">Drop your image here</strong>
+            <small>or click to browse · PNG, JPEG, WebP · up to 5 MB</small>
+          </div>
+        </div>
+        <input type="file" id="file" accept="image/png,image/jpeg,image/webp" hidden>
+        <div class="fields">
+          <div><label for="title">Brand name</label><input type="text" id="title" maxlength="120" placeholder="Taken from your image filename" autocomplete="off"></div>
+          <details><summary class="help">Add an image description</summary><label for="alt" style="margin-top:10px">Description</label><input type="text" id="alt" maxlength="240" placeholder="Optional description of the image"></details>
+          <button class="primary" id="generate" disabled>Generate brand</button>
+        </div>
+        <div id="palette" hidden>
+          <div class="palette-heading"><span class="section-label">Main accent</span><button class="text-button" id="automatic">Use automatic choice</button></div>
+          <div class="swatches" id="swatches" role="group" aria-label="Choose the main accent"></div>
+          <span id="accent-name"></span>
+          <p class="help">Click a color to generate a fresh version. Dimmed swatches are neutrals or have too little image coverage.</p>
+        </div>
+        <div class="status" id="status" role="status" aria-live="polite">Ready for your first image.</div>
+      </div>
+      <section class="preview" aria-label="Brand preview">
+        <div class="preview-toolbar"><span>Component preview</span><button id="mode" class="mode" disabled aria-pressed="true">Dark mode</button></div>
+        <div class="empty" id="empty"><div class="blocks" aria-hidden="true"><i></i><i></i><i></i></div><strong>Your theme will appear here.</strong><span>Colors, type, buttons, and more.<br>Light and dark modes included.</span></div>
+        <iframe id="preview" title="Generated brand component preview" hidden></iframe>
+        <div class="result" id="result" hidden>
+          <div class="links"><a id="open-preview" target="_blank" rel="noopener">Open full preview ↗</a><a id="open-mapping" target="_blank" rel="noopener">Image → palette ↗</a></div>
+          <div class="saved"><code id="saved-path"></code><button id="copy-path">Copy path</button></div>
+        </div>
+      </section>
+    </div>
+    <footer>Your images are processed on this computer. Every generation saves a new version.<br><span id="output-dir"></span></footer>
+  </main>
+  <script>
+    const $ = id => document.getElementById(id);
+    const token = document.querySelector('meta[name=onbrand-token]').content;
+    const stages = { measure: 'Measuring colors in your image…', synthesize: 'Creating your palette…', build: 'Building your theme files…', check: 'Checking contrast and consistency…', preview: 'Preparing your preview…', report: 'Saving your theme…' };
+    let selectedFile, imageUrl, active = false, selectedAccent, samples = [], dark = true;
+    async function api(route, options = {}) {
+      const response = await fetch(route, { ...options, headers: { 'X-Onbrand-Token': token, ...options.headers } });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'The local request failed.');
+      return data;
+    }
+    function status(message, kind = '') { $('status').textContent = message; $('status').className = 'status ' + kind; }
+    function setBusy(value) {
+      active = value;
+      $('generate').disabled = value || !selectedFile;
+      $('title').disabled = $('alt').disabled = value;
+      $('automatic').disabled = value;
+      $('quit').disabled = value;
+      $('drop').setAttribute('aria-disabled', String(value));
+      renderSwatches();
+    }
+    function renderSwatches() {
+      $('swatches').replaceChildren();
+      for (const sample of samples) {
+        const button = document.createElement('button');
+        button.className = 'swatch'; button.style.backgroundColor = sample.hex;
+        button.setAttribute('aria-label', 'Use ' + sample.hex + ' as main accent');
+        button.setAttribute('aria-pressed', String(sample.id === selectedAccent));
+        button.title = sample.hex + (sample.selectable ? '' : ' — unavailable as main accent');
+        button.disabled = active || !sample.selectable;
+        button.addEventListener('click', () => generate(sample.id));
+        $('swatches').append(button);
+      }
+      const chosen = samples.find(sample => sample.id === selectedAccent);
+      $('accent-name').textContent = chosen ? 'Selected source color: ' + chosen.hex : '';
+    }
+    function applyMode() {
+      const doc = $('preview').contentDocument;
+      if (!doc) return;
+      const wanted = dark ? 'dark' : 'light';
+      if (doc.documentElement.getAttribute('data-theme') !== wanted) doc.getElementById('theme-toggle')?.click();
+      $('mode').textContent = dark ? 'Dark mode' : 'Light mode';
+      $('mode').setAttribute('aria-pressed', String(dark));
+    }
+    async function choose(file) {
+      if (active || !file) return;
+      if (file.size > 5000000 || !/\.(png|jpe?g|webp)$/i.test(file.name)) {
+        status('Choose a PNG, JPEG, or WebP image up to 5 MB.', 'error'); return;
+      }
+      selectedFile = file; selectedAccent = undefined; samples = [];
+      if (imageUrl) URL.revokeObjectURL(imageUrl);
+      imageUrl = URL.createObjectURL(file);
+      $('source-image').src = imageUrl; $('source-image').hidden = false;
+      $('upload-icon').setAttribute('hidden', ''); $('drop-label').textContent = 'Drop another image to start again';
+      $('title').value = file.name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').slice(0, 120);
+      $('alt').value = ''; $('palette').hidden = true;
+      $('preview').hidden = true; $('preview').src = 'about:blank';
+      $('result').hidden = true; $('empty').hidden = false; $('mode').disabled = true;
+      await generate();
+    }
+    async function generate(accent) {
+      if (active || !selectedFile) return;
+      const title = $('title').value.trim();
+      if (!title) { status('Give this brand a name before generating.', 'error'); $('title').focus(); return; }
+      setBusy(true); status('Uploading your image locally…', 'running');
+      try {
+        const params = new URLSearchParams({ name: selectedFile.name, title });
+        if ($('alt').value.trim()) params.set('alt', $('alt').value.trim());
+        if (accent) params.set('accent', accent);
+        let job = await api('/api/jobs?' + params, { method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: selectedFile });
+        while (job.status === 'running') {
+          status(stages[job.stage] || 'Creating your theme…', 'running');
+          await new Promise(resolve => setTimeout(resolve, 350));
+          job = await api('/api/jobs/' + job.id);
+        }
+        if (job.status !== 'complete') throw new Error(job.error || 'Theme generation did not finish.');
+        samples = job.samples; selectedAccent = job.primarySampleId;
+        const base = '/jobs/' + job.id + '/';
+        $('preview').src = base + 'specimen.html'; $('preview').hidden = false; $('empty').hidden = true;
+        $('mode').disabled = false; $('result').hidden = false; $('palette').hidden = false;
+        $('open-preview').href = base + 'specimen.html'; $('open-mapping').href = base + 'inspiration-to-implementation.html';
+        $('saved-path').textContent = job.proposalDir;
+        $('copy-path').textContent = 'Copy path';
+        $('generate').textContent = 'Generate another version';
+        status('Theme saved. Contrast and consistency checks passed.');
+      } catch (error) { status(error.message || 'Could not create the theme.', 'error'); }
+      finally { setBusy(false); }
+    }
+    $('drop').addEventListener('click', () => { if (!active) $('file').click(); });
+    $('drop').addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); if (!active) $('file').click(); } });
+    $('file').addEventListener('change', () => { void choose($('file').files[0]); $('file').value = ''; });
+    for (const name of ['dragenter', 'dragover']) $('drop').addEventListener(name, event => { event.preventDefault(); if (!active) $('drop').classList.add('over'); });
+    $('drop').addEventListener('dragleave', () => $('drop').classList.remove('over'));
+    $('drop').addEventListener('drop', event => { event.preventDefault(); $('drop').classList.remove('over'); void choose(event.dataTransfer.files[0]); });
+    // Dropping outside the target must not navigate away from an in-progress job.
+    window.addEventListener('dragover', event => event.preventDefault());
+    window.addEventListener('drop', event => event.preventDefault());
+    $('generate').addEventListener('click', () => generate(selectedAccent));
+    $('automatic').addEventListener('click', () => generate());
+    $('mode').addEventListener('click', () => { dark = !dark; applyMode(); });
+    $('preview').addEventListener('load', () => {
+      applyMode();
+      const doc = $('preview').contentDocument;
+      doc?.getElementById('theme-toggle')?.addEventListener('click', () => {
+        dark = doc.documentElement.getAttribute('data-theme') === 'dark';
+        $('mode').textContent = dark ? 'Dark mode' : 'Light mode';
+        $('mode').setAttribute('aria-pressed', String(dark));
+      });
+    });
+    $('copy-path').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText($('saved-path').textContent); $('copy-path').textContent = 'Copied'; }
+      catch { status('The saved path is shown below the preview. Select it to copy.'); }
+    });
+    $('quit').addEventListener('click', async () => {
+      try { await api('/api/shutdown', { method: 'POST' }); setBusy(true); status('Studio closed. Your themes are saved. Reopen the launcher to create another.'); }
+      catch (error) { status(error.message, 'error'); }
+    });
+    api('/api/session').then(session => { $('output-dir').textContent = 'Saving to ' + session.outDir; })
+      .catch(error => status(error.message, 'error'));
+  </script>
+</body>
+</html>
